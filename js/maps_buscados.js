@@ -13,7 +13,7 @@ function initMap() {
     map.addListener('click', function(event) {
       deleteMarkers();
       addMarker(event.latLng);
-      console.log(event.latLng.lat)
+      
     });
 
     // Adds a marker at the center of the map.
@@ -22,6 +22,7 @@ function initMap() {
 
    // Adds a marker to the map and push to the array.
   function addMarker(location) {
+    console.log(location)
     const marker = new google.maps.Marker({
       position: location,
       map: map
