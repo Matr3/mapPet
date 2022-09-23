@@ -22,7 +22,7 @@ function initMap() {
 
    // Adds a marker to the map and push to the array.
   function addMarker(location) {
-    console.log(location)
+    
     const marker = new google.maps.Marker({
       position: location,
       map: map
@@ -32,6 +32,7 @@ function initMap() {
 
   // Sets the map on all markers in the array.
   function setMapOnAll(map) {
+    console.log(markers)
     for (let i = 0; i < markers.length; i++) {
       markers[i].setMap(map);
     }
