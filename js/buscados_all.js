@@ -1,4 +1,4 @@
-import { listaServices } from "../service/client_service.js";
+import { listaServices } from "../service/cliente_service.js";
 //backticks
 const crearNuevaLinea = (imagen, categoria, nombre_prod, precio_prod, id) => {
     const linea = document.createElement("div");
