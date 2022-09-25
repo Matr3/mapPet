@@ -11,6 +11,8 @@ function initMap() {
 
     // This event listener will call addMarker() when the map is clicked.
     map.addListener('click', function(event) {
+      console.log(event.latLng.lat());
+      console.log(event.latLng.lng());
       deleteMarkers();
       addMarker(event.latLng);
       
@@ -27,14 +29,14 @@ function initMap() {
       position: location,
       map: map
     });
+    console.log();
     markers.push(marker);
   }
 
   // Sets the map on all markers in the array.
   function setMapOnAll(map) {
-    console.log(markers)
     for (let i = 0; i < markers.length; i++) {
-      markers[i].setMap(map);
+      markers[i].setMap(map);     
     }
   }
 

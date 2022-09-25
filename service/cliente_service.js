@@ -1,12 +1,9 @@
 //Fetch API
-const url = "https://62faaedbffd7197707f152a5.mockapi.io/prod";
+const url = "https://62faaedbffd7197707f152a5.mockapi.io/pets";
 
-const listaClientes = () =>{
-    return fetch("https://62faaedbffd7197707f152a5.mockapi.io/user").then(respuesta =>{
-        return respuesta.json();
-    });
-};
-const listaProductos = () => fetch("https://62faaedbffd7197707f152a5.mockapi.io/prod").then((respuesta) => respuesta.json()).catch((error) => error);
+const listaBuscados = () => fetch("https://62faaedbffd7197707f152a5.mockapi.io/pets").then((respuesta) => respuesta.json()).catch((error) => error);
+
+const listaEncontrados = () => fetch("https://62faaedbffd7197707f152a5.mockapi.io/pest_encontrados").then((respuesta) => respuesta.json()).catch((error) => error);
 
 const crearCliente = (imagen, categoria, nombre_prod, precio_prod, descripcion_prod) => {
     console.log(imagen, categoria, nombre_prod, precio_prod, descripcion_prod)
@@ -47,7 +44,7 @@ const actualizarProducto = (imagen, categoria, nombre_prod, precio_prod, descrip
 }
 
 export const clientServices = {
-    listaClientes,
+    //listaClientes,
  
     
     eliminarCliente,
@@ -55,7 +52,8 @@ export const clientServices = {
 }
 export const listaServices = {
     eliminarCliente,
-    listaProductos,
+    listaEncontrados,
+    listaBuscados,
     crearCliente,
     actualizarProducto,
     detalleProducto

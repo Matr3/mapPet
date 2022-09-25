@@ -25,10 +25,10 @@ const crearNuevaLinea = (imagen, raza, descripcion, latlgn, id) => {
   };
 
   
-const div = document.querySelector("[data-buscados]");
+const div = document.querySelector("[data-encontrados]");
 
 listaServices
-  .listaBuscados()
+  .listaEncontrados()
   .then((data) => {
     data.forEach(({ imagen, raza, descripcion, latlgn, id}) => {
       const nuevaLinea = crearNuevaLinea(imagen, raza, descripcion, latlgn, id);

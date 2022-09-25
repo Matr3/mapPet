@@ -1,0 +1,9 @@
+.agregar__imagen-div{
+    background-image: url("../img/no-img-photo.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    width: 100%;
+    height: calc(30vh + 72px);
+    margin-bottom: 1rem;
+}
