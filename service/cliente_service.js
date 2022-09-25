@@ -29,7 +29,7 @@ const eliminarCliente = (id) =>{
 }
 
 const detalleProducto = (id) =>{
-    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/prod/${id}`)
+    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/pets/${id}`)
     .then( (respuesta) => respuesta.json())
 }
 

@@ -5,7 +5,7 @@ const crearNuevaLinea = (imagen, raza, descripcion, latlgn, id) => {
     
     const contenido = `
     <div class="mascotas">
-    <a class="link_mascotas" href="./descripcion_mascotas.html?id=${id}&categoria=${raza}">
+    <a class="link_mascotas" href="./detalle_pets.html?id=${id}&categoria=${raza}">
     <div class="bng_box">
     <img class="img" src="${imagen}" alt="${raza}">
     </div>
