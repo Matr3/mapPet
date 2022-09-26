@@ -85,6 +85,14 @@
 .mascotas{
     background-color:snow;
     max-width: 174px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgb(188, 188, 188);
+}
+.mascotas:hover{
+    background-color: rgb(201, 201, 201);
+    transition: all .5s;
+    transform : translateY(5px);
+    box-shadow: 4px 4px 4px rgb(59, 59, 59);
 }
 .link_mascotas{
     text-decoration: none;
@@ -95,15 +103,10 @@
     line-height: 19px;
     color: #2A7AE4;
 }
+
 .detalles_tarjeta{
     padding: 5px;
 }
 
-  .mascotas:hover{
-    border-radius: 5px;
-    background-color: rgb(201, 201, 201);
-    transition: all .5s;
-    transform : translateY(5px);
-    box-shadow: 3px 3px 3px rgb(59, 59, 59);
-  }
+
 
