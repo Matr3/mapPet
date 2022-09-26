@@ -10,8 +10,8 @@ const crearNuevaLinea = (imagen, raza, descripcion, latlgn, id) => {
     <img class="img" src="${imagen}" alt="${raza}">
     </div>
     <div>
-      <ul>
-        <li class="descripcion">${descripcion}</li>
+      <ul class="detalles_tarjeta">
+        <li class="descripcion">${raza}</li>
         <li class="ubicacion">${latlgn}</li>
         <li>Mas detalles</li>
       </ul>   

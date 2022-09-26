@@ -9,6 +9,9 @@
 .contenedor{
     background-color: #464646;
     padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgb(59, 59, 59);
+    
     
 }
 .titulo_mapa{
@@ -20,6 +23,7 @@
     /* The height is 400 pixels */
     width: 100%;
     /* The width is the width of the web page */
+    border-radius: 5px;
 }
 
 /*Estilos Css*/
@@ -28,7 +32,8 @@
     background-color: whitesmoke;
     margin: 1rem 0;
     border: solid 2px #f0e537;
-    border-radius: 15px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgb(59, 59, 59);
 }
 .buscados_titulo, .encontrados_titulo{
     margin: 0 auto;
@@ -92,3 +97,15 @@
     line-height: 19px;
     color: #2A7AE4;
 }
+.detalles_tarjeta{
+    padding: 5px;
+}
+
+  .mascotas:hover{
+    border-radius: 5px;
+    background-color: rgb(201, 201, 201);
+    transition: all .5s;
+    transform : translateY(10px);
+    box-shadow: 3px 3px 3px rgb(59, 59, 59);
+  }
+
