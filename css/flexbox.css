@@ -1,0 +1,71 @@
+/*Flexbox*/
+/*headers*/
+.caja{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+ .menu_links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+}
+
+/*main*/
+.maps .contenedor{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+}
+.buscados .buscados_titulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.buscados .tarjeta_buscados{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    
+}
+.encontrados .encontrados_titulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.encontrados .tarjeta_encontrados{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+/*Footer*/
+.rodapie .menu_contacto{
+    display: flex;
+    justify-content: space-between;
+}
+.menu_contacto .menu_contacto__box{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.menu_contacto__box .menu_contacto__contenido{
+    display: flex;
+}
+.menu_contacto__box .main{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.menu_contacto .contacto{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    
+}

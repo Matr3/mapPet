@@ -1,0 +1,94 @@
+.contenido{
+    margin: 5%;
+}
+.caja{
+    background-color: #f0e537;
+    height: 15rem;
+    box-shadow: 0px 24px 32px -8px rgb(0, 0, 0);
+}
+.contenedor{
+    background-color: #464646;
+    padding: 1rem;
+    
+}
+.titulo_mapa{
+    font-family: 'Fredoka One', cursive;
+    color: white;
+}
+#map {
+    height: 30rem;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+
+/*Estilos Css*/
+
+.buscados, .encontrados{
+    background-color: whitesmoke;
+    margin: 1rem 0;
+    border: solid 2px #f0e537;
+    border-radius: 15px;
+}
+.buscados_titulo, .encontrados_titulo{
+    margin: 0 auto;
+    padding: 16px;
+}
+.buscados_titulo_estilo, .encontrados_titulo_estilo{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #464646;
+}
+.btn_todo{
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2A7AE4;
+}
+
+.tarjeta_buscados, .tarjeta_encontrados{ 
+    margin: 0 auto;
+    padding: 32px;
+    
+}
+.img{
+    width: 174px;
+    height: 174px;
+}
+.descripcion{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #464646;
+    /*align-self: stretch;*/
+}
+.ubicacion{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #464646;
+    align-self: stretch;
+}
+.mascotas{
+    background-color:snow;
+    max-width: 174px;
+}
+.link_mascotas{
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2A7AE4;
+}

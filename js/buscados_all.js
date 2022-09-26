@@ -26,13 +26,16 @@ const crearNuevaLinea = (imagen, raza, descripcion, latlgn, id) => {
 
   
 const div = document.querySelector("[data-buscados]");
-
+let cont_b = 0;
 listaServices
   .listaBuscados()
   .then((data) => {
     data.forEach(({ imagen, raza, descripcion, latlgn, id}) => {
-      const nuevaLinea = crearNuevaLinea(imagen, raza, descripcion, latlgn, id);
-      div.appendChild(nuevaLinea);
+      if (cont_b < 6){
+        const nuevaLinea = crearNuevaLinea(imagen, raza, descripcion, latlgn, id);
+        div.appendChild(nuevaLinea);
+        cont_b++;
+      }
     });
   })
   .catch((error) => alert("Oops! Error. Comuniquese con Matr3"));

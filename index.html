@@ -6,7 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">    
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <!--Api google maps-->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script type="module" src="js/maps_buscados.js"></script>
@@ -19,22 +26,20 @@
     <title>Map Pet - ::Si Buscas o Encontraste una mascota...::</title>
 </head>
 <body>
-    <header>
-        <div class="caja">
-            <h1><img class="logo_imgen" src="img/Pet Finder.png"></h1>
-            <nav>
-                <ul>
-                    <li><a href="#">buscar</a></li>
-                    <li><a href="#">encontrado</a></li>
-                    <li><a href="#">mappet</a></li>
+    <header class="caja">
+            <img class="logo_imgen" src="img/Pet Finder.png">
+            <nav class="menu">
+                <ul class="menu_links">
+                    <li><a class="links_decoration" href="buscar_pets.html">buscar</a></li>
+                    <li><a class="links_decoration" href="mapa_pets.html">mappet</a></li>
+                    <li><a class="links_decoration" href="encontro_pets.html">encontrado</a></li> 
                 </ul>
             </nav>
-        </div>
     </header>
-    <main>
+    <main class="contenido">
         <section class="maps">
             <div class="contenedor">
-                <h3>Map Pet</h3>
+                <h3 class="titulo_mapa">Map Pet</h3>
                     <!--The div element for the map -->
                     <div id="map"></div>
 
