@@ -109,5 +109,41 @@
     padding: 5px;
 }
 
+/*Main pagina buscados*/
+.buscados_cuerpo{
+    margin: 0 5rem;
+}
+/*Main pagina detalle_pets*/
+.detalle_cuerpo{
+    margin: 0 5rem;
+}
+.pets_detalles{
+    padding: 3rem;
+}
+.img_pets{
+    width: 350px;
+}
+.detalles{
+    padding: 2rem;
+}
+.raza_detalles{
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.5rem;
+    line-height: 19px;
+    padding: 10px 10px;
+}
+.color_detalles{
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.2rem;
+    color: #464646;
+    padding: 10px 10px;
+}
+.descripcion_detalles{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 1rem;
+    color: #464646;
+    padding: 10px 10px;
+}
 
 

@@ -45,6 +45,15 @@
     flex-wrap: wrap;
     gap: 16px;
 }
+/*Main pagina buscados*/
+.buscados_cuerpo{
+    display: flex;
+    justify-content: space-around;
+}
+/*Main pagina detalle_pets*/
+.pets_detalles{
+    display: flex;
+}
 /*Footer*/
 .rodapie .menu_contacto{
     display: flex;
