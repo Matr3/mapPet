@@ -1,7 +1,7 @@
-import express from 'express';
-import session from 'express-session';
-import { initialize, session as _session, authenticate } from 'passport';
-import './auth';
+const express = require('express');
+const session = require('express-session');
+const passport = require('passport');
+require('./auth');
 
 const app = express();
 
@@ -10,19 +10,19 @@ function isLoggedIn(req, res, next) {
 }
 
 app.use(session({ secret: 'cats', resave: false, saveUninitialized: true }));
-app.use(initialize());
-app.use(_session());
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.get('/', (req, res) => {
   res.send('<a href="/auth/google">Authenticate with Google</a>');
 });
 
 app.get('/auth/google',
-  authenticate('google', { scope: [ 'email', 'profile' ] }
+  passport.authenticate('google', { scope: [ 'email', 'profile' ] }
 ));
 
 app.get( '/google/callback',
-  authenticate( 'google', {
+  passport.authenticate( 'google', {
     successRedirect: '/protected',
     failureRedirect: '/auth/google/failure'
   })
