@@ -16,6 +16,7 @@ const crearNuevaLinea = (imagen, raza, color, descripcion, email) => {
         <h5 class="color_detalles">${color}</h5>
         <p class="descripcion_detalles">${descripcion}</p>
         <a href="mailto:${email}">Contactate</a>
+        
     </div>
     `;
 
