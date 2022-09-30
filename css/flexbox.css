@@ -54,6 +54,16 @@
 .pets_detalles{
     display: flex;
 }
+/*Main pagina buscar_pets*/
+.contenido_cargaPets{
+    display: flex;
+    justify-content: space-around;
+}
+.carga_pets{
+    display: flex;
+    flex-direction: column;
+}
+
 /*Footer*/
 .rodapie .menu_contacto{
     display: flex;

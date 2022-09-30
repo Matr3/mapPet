@@ -1,3 +1,10 @@
+.carga_pets{
+    margin: 5%;
+}
+.maps{
+    height: auto;
+    width: 60%;
+}
 .agregar__imagen-div{
     background-image: url("../img/no-img-photo.jpg");
     background-size: cover;

@@ -1,27 +1,3 @@
-.contenido{
-    margin: 5%;
-}
-
-.contenedor{
-    background-color: #464646;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 3px 3px 3px rgb(59, 59, 59);
-    
-    
-}
-.titulo_mapa{
-    font-family: 'Fredoka One', cursive;
-    color: white;
-}
-#map {
-    height: 30rem;
-    /* The height is 400 pixels */
-    width: 100%;
-    /* The width is the width of the web page */
-    border-radius: 5px;
-}
-
 /*Estilos Css*/
 
 .buscados, .encontrados{
