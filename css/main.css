@@ -37,10 +37,16 @@
     padding: 32px;
     
 }
+.bng_box{
+    max-width: 174px;
+    max-height: 174px;
+}
+/*
 .img{
     width: 174px;
     height: 174px;
 }
+*/
 .descripcion{
     font-family: 'Raleway';
     font-style: normal;
