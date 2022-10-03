@@ -1,17 +1,20 @@
 .contenido{
-    
-    margin: 0 auto;
-    width: 1200px;
+
 }
 
 .contenedor{
-    
+    /*
     background-color: #1a1a1a;
     padding: 1rem;
     border-radius: 0 0 5px;
     box-shadow: 3px 3px 3px rgb(59, 59, 59);
+    */
     
-    
+    background-color: #1a1a1a;
+    box-shadow: 3px 3px 3px rgb(59, 59, 59);
+}
+.espacio{
+    padding: 1rem;
 }
 .titulo_mapa{
     font-family: 'Fredoka One', cursive;
