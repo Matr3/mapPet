@@ -1,11 +1,12 @@
 /*Estilos Css*/
 .rodapie{
-    background-color: #f0e537;
+    background-color: #fff159;
       
 }
 .menu_contacto{
     /*width: 85%;*/
     margin: 0 auto;
+    max-width: 1200px;
     padding: 16px 10%;
 }
 .menu_contacto__box{
@@ -19,7 +20,7 @@
 }
 .title_contacto{
     color: #464646;
-    font-family: 'Raleway';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -50,7 +51,7 @@
     height: 51px;
     background: #2A7AE4;
     border-style: none;
-    font-family: 'Raleway';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -67,7 +68,7 @@
 }
 .desarrollo{
     color: #ffffff;
-    font-family: 'Raleway';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;

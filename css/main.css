@@ -2,7 +2,8 @@
 
 .buscados, .encontrados{
     background-color: whitesmoke;
-    margin: 3rem 0;
+    margin: 3rem auto;
+    max-width: 1200px;
     /*border: solid 1px gray;*/
     border-radius: 5px;
     box-shadow: 2px 2px 2px rgb(188, 188, 188);
@@ -15,7 +16,7 @@
     padding: 16px;
 }
 .buscados_titulo_estilo, .encontrados_titulo_estilo{
-    font-family: 'Raleway';
+    font-family: 'Open Sans', sans-serif;;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -24,12 +25,12 @@
 }
 .btn_todo{
     text-decoration: none;
-    font-family: 'Raleway';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
-    color: #2A7AE4;
+    color: #263850;
 }
 
 .tarjeta_buscados, .tarjeta_encontrados{ 
@@ -37,9 +38,19 @@
     padding: 32px;
     
 }
-.bng_box{
-    width: 174px;
+.wh_box{
+    background-color: rgb(243, 243, 243);
+    border-bottom: 1px solid  #f0e537;
     height: 174px;
+    width: 174px;
+    
+}
+.bng_box{
+    position: relative;
+    max-width: 174px;
+    max-height: 174px;
+    
+    overflow:hidden;
 }
 
 .img{
@@ -48,7 +59,7 @@
 }
 
 .descripcion{
-    font-family: 'Raleway';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -57,7 +68,7 @@
     /*align-self: stretch;*/
 }
 .ubicacion{
-    font-family: 'Raleway';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -68,6 +79,7 @@
 .mascotas{
     background-color:snow;
     max-width: 174px;
+    height: 250px;
     border-radius: 5px;
     box-shadow: 3px 3px 3px rgb(188, 188, 188);
 }
@@ -79,7 +91,7 @@
 }
 .link_mascotas{
     text-decoration: none;
-    font-family: 'Raleway';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -96,8 +108,13 @@
     margin: 0 5rem;
 }
 /*Main pagina detalle_pets*/
-.detalle_cuerpo{
-    margin: 0 5rem;
+.detalle_cuerpo, .carga_pets{
+    width: 1200px;
+    margin: 5% auto;
+}
+.formulario_carga{
+    width: 80%;
+    margin: 5% auto;
 }
 .pets_detalles{
     padding: 3rem;
@@ -109,19 +126,19 @@
     padding: 2rem;
 }
 .raza_detalles{
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;
     line-height: 19px;
     padding: 10px 10px;
 }
 .color_detalles{
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
     color: #464646;
     padding: 10px 10px;
 }
 .descripcion_detalles{
-    font-family: 'Raleway';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-size: 1rem;
     color: #464646;

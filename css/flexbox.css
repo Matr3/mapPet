@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
 }
  .menu_links{
     display: flex;
@@ -17,6 +17,7 @@
 .maps .contenedor{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 16px;
     
 }
@@ -57,7 +58,8 @@
 /*Main pagina buscar_pets*/
 .contenido_cargaPets{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
 }
 .carga_pets{
     display: flex;
@@ -71,8 +73,8 @@
 }
 .menu_contacto .menu_contacto__box{
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 .menu_contacto__box .menu_contacto__contenido{
     display: flex;
@@ -87,4 +89,11 @@
     align-items: flex-start;
     flex-direction: column;
     
+}
+
+/*Estilo caja js buscados encontrados*/
+.wh_box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }

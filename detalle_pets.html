@@ -17,10 +17,12 @@
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <!--Carga CRUB de Pets Buscados y Encontrados-->
     <script type="module" src="js/detalle_pets.js"></script>
     <script type="module" src="js/buscados.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script type ="module" src="login.js"></script>
 
 
     
@@ -41,20 +43,22 @@
         <section data-detalle>
             <!--
                         <div>
-                            <img class="img_producto" src="./img/unsplash_6FDXGY9J6y4.png" alt="">
+                            <img class="img_pets" src="${imagen}" alt="Imagen del Producto ${raza}">
                         </div>
                         <div class="detalles">
-                            <h1 class="nombre_prod">Producto XYZ</h1>
-                            <h5 class="precio_prod">$ 60,00</h5>
-                            <p class="descripcion_prod">Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam</p>
+                            <h1 class="raza_detalles">${raza}</h1>
+                            <h5 class="color_detalles">${color}</h5>
+                            <p class="descripcion_detalles">${descripcion}</p>
+                            <a href="mailto:${email}">Contactate</a>
                         </div>
             -->
+            
         </section>
-
+        
         <section class="buscados">
             <div class="buscados_titulo">
                 <h2 class="buscados_titulo_estilo">Buscados</h2>
-                <a class="btn_todo" href="./detalle_pets.html">Ver todo →</a>
+                <a class="btn_todo" href="./buscados.html">Ver todo →</a>
             </div>
             <div class="tarjeta_buscados" data-buscados>
             </div>
