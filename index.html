@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">    
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="css/maps.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -28,13 +29,14 @@
 <body>
     <header class="caja">
             <img class="logo_imgen" src="img/Pet Finder.png">
-            <nav class="menu">
-                <ul class="menu_links">
-                    <li><a class="links_decoration" href="buscar_pets.html">buscar</a></li>
-                    <li><a class="links_decoration" href="mapa_pets.html">mappet</a></li>
-                    <li><a class="links_decoration" href="encontro_pets.html">encontrado</a></li> 
-                </ul>
-            </nav>
+            <section class="container">
+                <div class="buscador">
+                  <form id="form">
+                    <input type="text" name="buscador" id="buscadorPrincipal" placeholder="Busca a la mascota.">
+                    <input type="button" value="Buscar" id="btnBuscar">
+                  </form>
+                </div>
+            </section>
     </header>
     <main class="contenido">
         <section class="maps">
@@ -52,6 +54,13 @@
                     -->
             </div>
         </section>
+        <nav class="menu">
+            <ul class="menu_links">
+                <li><a class="links_decoration" href="buscar_pets.html">buscar</a></li>
+                <li><a class="links_decoration" href="mapa_pets.html">mappet</a></li>
+                <li><a class="links_decoration" href="encontro_pets.html">encontrado</a></li> 
+            </ul>
+        </nav>
         <section class="buscados">
             <div class="buscados_titulo">
                 <h2 class="buscados_titulo_estilo">Buscados</h2>

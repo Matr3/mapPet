@@ -1,14 +1,15 @@
 .caja{
     background-color: #fff159;
-    height: 6.5rem;
-    box-shadow: 0px 24px 32px -8px rgb(0, 0, 0);
+    height: 5rem;
+    
 }
-.links_decoration{
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-}
+
 .logo_imgen{
-    height: 100px;
+    height: 80px;
+    transition: .5s;
+}
+
+.logo_imgen:hover{
+    -webkit-filter:brightness(2);
+    filter:brightness(2);
 }

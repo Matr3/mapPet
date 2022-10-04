@@ -33,6 +33,7 @@
 }
 .formulario_contenedor{
     text-align: left;
+    padding: 32px;
 }
 .title_addProducto{
     font-family: 'Open Sans', sans-serif;

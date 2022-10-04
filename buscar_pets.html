@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">    
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="css/maps.css">
     <link rel="stylesheet" href="css/buscar_pets__estilos.css">
     <link rel="stylesheet" href="css/main.css">
@@ -22,13 +23,23 @@
     <!--Carga CRUB de Pets Buscados y Encontrados-->
     <script type="module" src="js/buscados.js"></script>
     
-
-    
     <title>Map Pet - ::Si Buscas o Encontraste una mascota...::</title>
 </head>
 <body>
-    <header class="caja">
-        <img class="logo_imgen" src="img/Pet Finder.png">
+    <header >
+        <section class="caja">
+            <img class="logo_imgen" src="img/Pet Finder.png">
+        <div class="container">
+            <div class="buscador">
+              <form id="form">
+                <input type="text" name="buscador" id="buscadorPrincipal" placeholder="Busca a la mascota.">
+                <input type="button" value="Buscar" id="btnBuscar">
+              </form>
+            </div>
+        </div>
+
+        </section>
+        
         <nav class="menu">
             <ul class="menu_links">
                 <li><a class="links_decoration" href="buscar_pets.html">buscar</a></li>
@@ -37,8 +48,11 @@
             </ul>
         </nav>
     </header>
+    
     <main class="carga_pets">
+        
         <div class="contenido_cargaPets">
+            
             <section class="maps">
                 <div class="contenedor espacio">
                     <h3 class="titulo_mapa">Marque la ultima ubicación</h3>
@@ -53,6 +67,7 @@
                         -->
                 </div>
             </section>
+            
             <section class="formulario_carga">
                 <form action="#" class="formulario_contenedor" data-form>
                     <fieldset>

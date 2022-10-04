@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/search.css">    
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/maps.css">
     <link rel="stylesheet" href="css/header.css">
@@ -24,8 +25,20 @@
     <title>Map Pet - ::Si Buscas o Encontraste una mascota...::</title>
 </head>
 <body>
-    <header class="caja">
-        <img class="logo_imgen" src="img/Pet Finder.png">
+    <header >
+        <section class="caja">
+            <img class="logo_imgen" src="img/Pet Finder.png">
+        <div class="container">
+            <div class="buscador">
+              <form id="form">
+                <input type="text" name="buscador" id="buscadorPrincipal" placeholder="Busca a la mascota.">
+                <input type="button" value="Buscar" id="btnBuscar">
+              </form>
+            </div>
+        </div>
+
+        </section>
+        
         <nav class="menu">
             <ul class="menu_links">
                 <li><a class="links_decoration" href="buscar_pets.html">buscar</a></li>
@@ -37,7 +50,6 @@
     <main class="contenido">
         <section class="maps">
             <div class="contenedor">
-                <h3>Map Pet</h3>
                     <!--The div element for the map -->
                     <div id="map"></div>
 
