@@ -21,6 +21,7 @@
     <script type="module" src="js/maps_buscados.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN5uKtimx71A6YXqkXYEyUOzLYR-XG2G4&callback=initMap&v=weekly" defer></script>
     <!--Carga CRUB de Pets Buscados y Encontrados-->
+    <script type="module" src="js/add_pets.js"></script>
     <script type="module" src="js/buscados.js"></script>
     
     <title>Map Pet - ::Si Buscas o Encontraste una mascota...::</title>
@@ -71,44 +72,52 @@
             <section class="formulario_carga">
                 <form action="#" class="formulario_contenedor" data-form>
                     <fieldset>
-                        <legend class="title_addProducto">Agregar una imagen</legend>
+                        <legend class="title_addPets">Agregar una imagen</legend>
         
         
                         <div class="agregar__form__imagen">
                             <div class="agregar__imagen-div" id="box__imagen"></div>
                             <label for="input__imagen" class="input__image-label">Elegir archivo</label>
-                            <input type="file" class="agregar__imagen input" id="input__imagen" data-input="imagen_agregar_producto" accept="image/*">
+                            <input type="file" class="agregar__imagen input" id="input__imagen" data-input="imagen_agregar" accept="image/*">
                         </div>
                         <div class="falta__carga__archivo">
-                            <span class="mensaje__error archivo__faltante">Debe seleccionar un archivo de imagen para cargar en el producto</span>
+                            <span class="mensaje__error archivo__faltante">Debe seleccionar un archivo de imagen para cargar la mascota</span>
                         </div>
                         <!--
                         <label for="formFileLg" class="input-label"></label>
                         <input class="form-control input" id="formFileLg" type="file" required data-tipo="imagen_prod">
                         -->
                         <div class="input-container top_limit">
-                            <input name="categoria" id="categoria" class="input" type="text" placeholder="Categoria" required data-tipo="categoria" pattern="[\s\S]{4,40}">
-                            <label class="input-label" for="categoria"></label>
+                            <select name="select" class="input" data-tipo="selector">
+                                <option value="value1">Perdiste tu mascota?</option>
+                                <option value="value2">Encontraste alguna mascota?</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-container">
+                            <input name="animal" id="animal" class="input" type="text" placeholder="Raza y Animal" required data-tipo="animal" pattern="[\s\S]{4,40}">
+                            <label class="input-label" for="animal"></label>
+                            
+                        </div>
+                        
+                        <div class="input-container">
+                            <input name="color" id="color" class="input" type="text" placeholder="Color del animal" required data-tipo="color" pattern="[\s\S]{4,20}">
+                            <label class="input-label" for="color"></label>
                             
                         </div>
                         <div class="input-container">
-                            <input name="nombreProducto" id="nombreProducto" class="input" type="text" placeholder="Nombre del producto" required data-tipo="nombre_prod" pattern="[\s\S]{4,20}">
-                            <label class="input-label" for="nombreProducto"></label>
+                            <input name="tamanio" id="tamanio" class="input" type="text" placeholder="Tamaño y peso del animal" required data-tipo="tamanio" pattern="[(s\S]{1,100}">
+                            <label class="input-label" for="tamanio"></label>
                             
                         </div>
                         <div class="input-container">
-                            <input name="precioProducto" id="precioProducto" class="input" type="text" placeholder="Precio del producto" required data-tipo="precio_prod" pattern="([$][0-9]).{1,100}">
-                            <label class="input-label" for="precioProducto"></label>
+                            <input name="descripcion" id="descripcion" class="input_descripcion" type="text" placeholder="Descripción del producto" required data-tipo="descripcion" pattern="[\s\S]{5,150}">
+                            <label class="input-label" for="descripcion"></label>
                             
                         </div>
                         <div class="input-container">
-                            <input name="descripcionProducto" id="descripcionProducto" class="input_descripcion" type="text" placeholder="Descripción del producto" required data-tipo="descripcion_prod" pattern="[\s\S]{5,150}">
-                            <label class="input-label" for="descripcionProducto"></label>
-                            
-                        </div>
-                        <div class="input-container">
-                            <input name="descripcionProducto" id="descripcionProducto" class="input_descripcion" type="text" placeholder="Descripción del producto" required data-tipo="descripcion_prod" pattern="[\s\S]{5,150}">
-                            <label class="input-label" for="descripcionProducto"></label>
+                            <input name="email" id="email" class="input" type="text" placeholder="Email de Contacto" required data-tipo="email" pattern="[\s\S]{5,30}">
+                            <label class="input-label" for="email"></label>
                             
                         </div>
                     </fieldset>

@@ -8,17 +8,18 @@ const listaEncontrados = () => fetch("https://62faaedbffd7197707f152a5.mockapi.i
 
 const listaUsuarios = () => fetch("https://62faaedbffd7197707f152a5.mockapi.io/user").then((respuesta) => respuesta.json()).catch((error) => error);
 
-const crearCliente = (imagen, categoria, nombre_prod, precio_prod, descripcion_prod) => {
-    console.log(imagen, categoria, nombre_prod, precio_prod, descripcion_prod)
+const crearBusqueda = (imagen, animal, color, descripcion,tamanio,email) => {
+    //console.log(imagen, categoria, nombre_prod, precio_prod, descripcion_prod)
     return fetch((`${url}`),{
         method:"POST",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({
             imagen,
-            categoria,
-            nombre_prod,
-            precio_prod,
-            descripcion_prod
+            animal,
+            color,
+            descripcion,
+            tamanio,
+            email
       
         })
     })
@@ -47,7 +48,7 @@ const eliminarCliente = (id) =>{
     })
 }
 
-const detalleProducto = (id) =>{
+const detallePets = (id) =>{
     return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/pets/${id}`)
     .then( (respuesta) => respuesta.json())
 }
@@ -73,10 +74,11 @@ export const listaServices = {
     eliminarCliente,
     listaEncontrados,
     listaBuscados,
-    crearCliente,
+    crearBusqueda,
     actualizarProducto,
-    detalleProducto
+    detallePets
 }
 export const listaClientes = {
-    crearUsuario
+    crearUsuario,
+    listaUsuarios
 }

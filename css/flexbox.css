@@ -70,7 +70,11 @@
     display: flex;
     flex-direction: column;
 }
-
+.box_botonInicio{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 /*Footer*/
 .rodapie .menu_contacto{
     display: flex;
@@ -101,4 +105,12 @@
     display:flex;
     justify-content: center;
     align-items: center;
+}
+
+/*Estilo box usuario*/
+.user_display{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
 }

@@ -1,9 +1,8 @@
 import { listaServices } from "../service/cliente_service.js";
 
-
-
-const url = new URL(window.location);
-const id = url.searchParams.get("id");
+export function detallePets(){
+    const url = new URL(window.location);
+    const id = url.searchParams.get("id");
 
 //backticks
 const crearNuevaLinea = (imagen, raza, color, descripcion, email) => {
@@ -17,7 +16,10 @@ const crearNuevaLinea = (imagen, raza, color, descripcion, email) => {
         <h1 class="raza_detalles">${raza}</h1>
         <h5 class="color_detalles">${color}</h5>
         <p class="descripcion_detalles">${descripcion}</p>
-        <a href="mailto:${email}">Contactate</a>
+        <email class="email_stylos">
+        <a class="text_email" href="mailto:${email}">Contactate</a> 
+        </email>
+
         
     </div>
     `;
@@ -31,8 +33,9 @@ const crearNuevaLinea = (imagen, raza, color, descripcion, email) => {
 const div = document.querySelector("[data-detalle]");
 
 
-listaServices
-    .detalleProducto(id)
+
+   listaServices
+    .detallePets(id)
     .then((data) => {
 
         const nuevaLinea = crearNuevaLinea(data.imagen, data.raza, data.color, data.descripcion, data.email);
@@ -40,3 +43,6 @@ listaServices
 
     })
     .catch((error) => alert("Oops! Error. Comuniquese con Matr3"));
+}
+
+

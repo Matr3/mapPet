@@ -1,5 +1,9 @@
 var map;
+var lat = 0;
+var lng= 0;
 var markers = [];
+var markers_buscado = {lat: lat, lng: lng} ;
+
 
 function initMap() {
     const obelisco = { lat: -34.6037345, lng: -58.3837591 };
@@ -7,29 +11,40 @@ function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
       zoom: 12,
       center: obelisco,
+      
     });
-
+    
     // This event listener will call addMarker() when the map is clicked.
     map.addListener('click', function(event) {
-      console.log(event.latLng.lat());
-      console.log(event.latLng.lng());
+      lat = event.latLng.lat();
+      lng = event.latLng.lng();
+      guardarMarker(lat,lng)
       deleteMarkers();
       addMarker(event.latLng);
       
+      
+      
     });
-
+    //console.log(markers_buscado)
+    
     // Adds a marker at the center of the map.
     addMarker(obelisco);
+    
   }
-
+  
+function guardarMarker(lat,lng){
+      markers_buscado = {lat: lat, lng: lng};
+      return markers_buscado;
+    }
+    
    // Adds a marker to the map and push to the array.
-  function addMarker(location) {
+ function addMarker(location) {
     
     const marker = new google.maps.Marker({
       position: location,
       map: map
     });
-    console.log();
+    //console.log();
     markers.push(marker);
   }
 
@@ -56,4 +71,7 @@ function initMap() {
     markers = [];
   }
 
-  window.initMap = initMap;
+
+ 
+
+window.initMap = initMap;
