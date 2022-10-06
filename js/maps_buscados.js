@@ -1,8 +1,8 @@
 var map;
-var lat = 0;
-var lng= 0;
+export var lat = " ";
+export var lng = " ";  
 var markers = [];
-var markers_buscado = {lat: lat, lng: lng} ;
+//var markers_buscado = {lat: lat, lng: lng} ;
 
 
 function initMap() {
@@ -33,8 +33,9 @@ function initMap() {
   }
   
 function guardarMarker(lat,lng){
-      markers_buscado = {lat: lat, lng: lng};
-      return markers_buscado;
+        lat = lat;
+        lng = lng;
+      console.log(lat, lng)
     }
     
    // Adds a marker to the map and push to the array.

@@ -1,5 +1,6 @@
 import {listaServices} from "../service/cliente_service.js"
-//import  "../js/maps_buscados.js"
+import {lat} from "../js/maps_buscados.js";
+import { lng } from "../js/maps_buscados.js";
 //console.log(guardarMarker());
 /*Muestra la imagen seleccionada para agregar en el nuevo producto
 y deja la URL del archivo para usar luego*/
@@ -38,7 +39,10 @@ formAgregarProducto.addEventListener("submit", (evento) => {
         document.querySelector(".archivo__faltante").parentElement.classList.add("input__invalido");
 
     }else{
+       
         
+console.log(lat,lng)
+        //const latlgn  = {lat: lat, lng: lng} ;
         const color = document.querySelector("[data-tipo=color]").value;
         //const precio_prod = document.querySelector("[data-tipo=precio_prod]").value;
         const animal = document.querySelector("[data-tipo=animal]").value;
