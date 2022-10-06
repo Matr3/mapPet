@@ -1,11 +1,11 @@
 import {listaServices} from "../service/cliente_service.js"
 import {lat} from "../js/maps_buscados.js";
 import { lng } from "../js/maps_buscados.js";
-//console.log(guardarMarker());
+
+
+
 /*Muestra la imagen seleccionada para agregar en el nuevo producto
 y deja la URL del archivo para usar luego*/
-
-
 
 const btnAgregarImagen = document.querySelector(".agregar__imagen");
 
@@ -39,24 +39,20 @@ formAgregarProducto.addEventListener("submit", (evento) => {
         document.querySelector(".archivo__faltante").parentElement.classList.add("input__invalido");
 
     }else{
-       
-        
-console.log(lat,lng)
-        //const latlgn  = {lat: lat, lng: lng} ;
+        var fecha = Date();
+        const selectorBusqueda = document.querySelector("[data-tipo=selector]");
+        const selector = selectorBusqueda.options[selectorBusqueda.selectedIndex].text;
+        const raza = document.querySelector("[data-tipo=animal]").value;
         const color = document.querySelector("[data-tipo=color]").value;
-        //const precio_prod = document.querySelector("[data-tipo=precio_prod]").value;
-        const animal = document.querySelector("[data-tipo=animal]").value;
         const tamanio = document.querySelector("[data-tipo=tamanio]").value;
         const descripcion = document.querySelector("[data-tipo=descripcion]").value;
         const email = document.querySelector("[data-tipo=email]").value;
-        
+        const latlgn = {lat: lat, lng: lng};
+
         listaServices
-        .crearBusqueda(imagen, animal, color, descripcion,tamanio,email)
+        .crearBusqueda(selector,imagen, raza, color, descripcion,tamanio,email,latlgn,fecha)
         .then((respuesta) => {
-            
-            //console.log(respuesta)
-            //console.log(imagen, categoria, nombre_prod, precio_prod, descripcion_prod)
-            //window.location.href ="productos.html"
+             //window.location.href ="productos.html"
         }).catch((error) => console.log(error));
 
     }

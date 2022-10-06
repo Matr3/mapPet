@@ -2,7 +2,6 @@ var map;
 export var lat = " ";
 export var lng = " ";  
 var markers = [];
-//var markers_buscado = {lat: lat, lng: lng} ;
 
 
 function initMap() {
@@ -22,10 +21,7 @@ function initMap() {
       deleteMarkers();
       addMarker(event.latLng);
       
-      
-      
     });
-    //console.log(markers_buscado)
     
     // Adds a marker at the center of the map.
     addMarker(obelisco);
@@ -35,7 +31,6 @@ function initMap() {
 function guardarMarker(lat,lng){
         lat = lat;
         lng = lng;
-      console.log(lat, lng)
     }
     
    // Adds a marker to the map and push to the array.
@@ -45,7 +40,7 @@ function guardarMarker(lat,lng){
       position: location,
       map: map
     });
-    //console.log();
+    
     markers.push(marker);
   }
 
@@ -71,8 +66,5 @@ function guardarMarker(lat,lng){
     clearMarkers();
     markers = [];
   }
-
-
- 
 
 window.initMap = initMap;

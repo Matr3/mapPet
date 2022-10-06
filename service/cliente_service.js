@@ -8,18 +8,21 @@ const listaEncontrados = () => fetch("https://62faaedbffd7197707f152a5.mockapi.i
 
 const listaUsuarios = () => fetch("https://62faaedbffd7197707f152a5.mockapi.io/user").then((respuesta) => respuesta.json()).catch((error) => error);
 
-const crearBusqueda = (imagen, animal, color, descripcion,tamanio,email) => {
+const crearBusqueda = (selector,imagen, raza, color, descripcion,tamanio,email,latlgn,fecha) => {
     //console.log(imagen, categoria, nombre_prod, precio_prod, descripcion_prod)
     return fetch((`${url}`),{
         method:"POST",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({
+            selector,
             imagen,
-            animal,
+            raza,
             color,
             descripcion,
             tamanio,
-            email
+            email,
+            latlgn,
+            fecha
       
         })
     })
