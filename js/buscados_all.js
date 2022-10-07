@@ -1,8 +1,8 @@
 import { listaServices } from "../service/cliente_service.js";
 //backticks
-const crearNuevaLinea = (imagen, raza, descripcion, latlgn, id) => {
+
+const crearNuevaLinea = (imagen, raza, descripcion, id) => {
     const linea = document.createElement("div");
-    
     const contenido = `
     <div class="mascotas">
     <a class="link_mascotas" href="./detalle_pets.html?id=${id}&categoria=${raza}">
@@ -12,7 +12,6 @@ const crearNuevaLinea = (imagen, raza, descripcion, latlgn, id) => {
     <div>
       <ul class="detalles_tarjeta">
         <li class="descripcion">${raza}</li>
-        <li class="ubicacion">${latlgn}</li>
         <li>Mas detalles</li>
       </ul>   
     </div>
@@ -30,9 +29,9 @@ const div = document.querySelector("[data-buscados-all]");
 listaServices
   .listaBuscados()
   .then((data) => {
-    data.forEach(({ imagen, raza, descripcion, latlgn, id}) => {
-      
-        const nuevaLinea = crearNuevaLinea(imagen, raza, descripcion, latlgn, id);
+    data.forEach(({ imagen, raza, descripcion, id}) => {
+        
+        const nuevaLinea = crearNuevaLinea(imagen, raza, descripcion, id);
         div.appendChild(nuevaLinea);
     });
   })
