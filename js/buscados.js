@@ -14,7 +14,7 @@ const crearNuevaLinea = (imagen, raza, descripcion, latlgn, id) => {
     <div>
       <ul class="detalles_tarjeta">
         <li class="descripcion">${raza}</li>
-        <li class="ubicacion">${latlgn}</li>
+        
         <li>Mas detalles</li>
       </ul>   
     </div>
@@ -32,9 +32,9 @@ let cont_b = 0;
 listaServices
   .listaBuscados()
   .then((data) => {
-    data.forEach(({ imagen, raza, descripcion, latlgn, id}) => {
+    data.forEach(({ imagen, raza, descripcion,  id}) => {
       if (cont_b < 6){
-        const nuevaLinea = crearNuevaLinea(imagen, raza, descripcion, latlgn, id);
+        const nuevaLinea = crearNuevaLinea(imagen, raza, descripcion, id);
         div.appendChild(nuevaLinea);
         cont_b++;
       }
