@@ -1,6 +1,6 @@
 import { listaServices } from "../service/cliente_service.js";
 //backticks
-const crearNuevaLinea = (imagen, raza, descripcion, latlgn, id) => {
+const crearNuevaLinea = (imagen, raza, id) => {
     const linea = document.createElement("div");
     
     const contenido = `

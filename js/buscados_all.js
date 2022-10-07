@@ -1,7 +1,7 @@
 import { listaServices } from "../service/cliente_service.js";
 //backticks
 
-const crearNuevaLinea = (imagen, raza, descripcion, id) => {
+const crearNuevaLinea = (imagen, raza, id) => {
     const linea = document.createElement("div");
     const contenido = `
     <div class="mascotas">
@@ -29,9 +29,9 @@ const div = document.querySelector("[data-buscados-all]");
 listaServices
   .listaBuscados()
   .then((data) => {
-    data.forEach(({ imagen, raza, descripcion, id}) => {
+    data.forEach(({ imagen, raza, id}) => {
         
-        const nuevaLinea = crearNuevaLinea(imagen, raza, descripcion, id);
+        const nuevaLinea = crearNuevaLinea(imagen, raza, id);
         div.appendChild(nuevaLinea);
     });
   })
