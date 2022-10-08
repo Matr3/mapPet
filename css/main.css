@@ -15,19 +15,19 @@
     height: 3rem;
     width: 15rem;
     background-color: white;
-    
-    border-left: solid 2px rgb(143, 143, 143);
+    transition: .6S;
+    border-left: solid 1px rgb(143, 143, 143);
     
 }
 .last{
     
-    border-right: solid 2px rgb(143, 143, 143);
+    border-right: solid 1px rgb(143, 143, 143);
 }
 
 .menu_links_lista:hover{
-    border-left: solid 2px rgb(53, 52, 52);
     
-    
+    background: orangered;
+
 }
 
 .links_decoration{
@@ -38,11 +38,6 @@
     font-weight: 700;
     color: black;
     
-}
-
-.links_decoration:hover{
-    
-    color:  rgb(143, 143, 143);
 }
 
 .buscados, .encontrados{
