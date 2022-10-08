@@ -2,16 +2,21 @@
 
 .menu{
     margin: 0 auto;
-    height: 1.7rem;
-    background-color: #f7911c;
-    box-shadow: 3px 3px 3px rgb(59, 59, 59);
+    
+    border-bottom: solid 3px #fff159;
+    /*box-shadow: 3px 3px 3px rgb(59, 59, 59);*/
 }
 .menu_links{
     margin: 0 5%;
+    
+}
+.menu_links_lista{
+    height: 3rem;
+    border-left: solid 2px rgb(48, 48, 48);
 }
 
 .links_decoration{
-    padding: 0 4rem;
+    margin: 0 auto;
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
@@ -19,11 +24,13 @@
     color: black;
     transition: .7s;
 }
+/*
 .links_decoration:hover{
     background-color:#f0e4373f;
     color: #464646;
     box-shadow: 3px 3px 3px rgb(59, 59, 59);
 }
+*/
 .buscados, .encontrados{
     background-color: whitesmoke;
     margin: 3rem auto;
