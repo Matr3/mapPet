@@ -10,7 +10,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10rem;
+    
+}
+.menu_links_lista{
+    display: flex;
+    align-items: center;
 }
 
 /*main*/
@@ -74,6 +78,11 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+.formulario_carga{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 /*Footer*/
 .rodapie .menu_contacto{

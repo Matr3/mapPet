@@ -10,7 +10,7 @@
     display: flex;
     width: 100%;
     height: calc(30vh + 72px);
-    margin-bottom: 1rem;
+    border: 2px solid rgb(165, 163, 163);
 }
 
 

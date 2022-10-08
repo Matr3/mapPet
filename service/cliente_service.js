@@ -28,6 +28,7 @@ const crearBusqueda = (selector,imagen, raza, color, descripcion,tamanio,email,l
     })
 }
 
+
 const crearUsuario = (email, nombre, apellido, nombreCompleto, imagen) => {
     console.log(email, nombre, apellido, nombreCompleto, imagen)
     return fetch((`${url1}`),{
@@ -79,7 +80,8 @@ export const listaServices = {
     listaBuscados,
     crearBusqueda,
     actualizarProducto,
-    detallePets
+    detallePets,
+
 }
 export const listaClientes = {
     crearUsuario,

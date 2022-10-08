@@ -11,8 +11,23 @@
     
 }
 .menu_links_lista{
+    padding: 0 20px 0 20px;
     height: 3rem;
-    border-left: solid 2px rgb(48, 48, 48);
+    width: 15rem;
+    background-color: white;
+    
+    border-left: solid 2px rgb(143, 143, 143);
+    
+}
+.last{
+    
+    border-right: solid 2px rgb(143, 143, 143);
+}
+
+.menu_links_lista:hover{
+    border-left: solid 2px rgb(53, 52, 52);
+    
+    
 }
 
 .links_decoration{
@@ -22,15 +37,14 @@
     font-size: 1.2rem;
     font-weight: 700;
     color: black;
-    transition: .7s;
+    
 }
-/*
+
 .links_decoration:hover{
-    background-color:#f0e4373f;
-    color: #464646;
-    box-shadow: 3px 3px 3px rgb(59, 59, 59);
+    
+    color:  rgb(143, 143, 143);
 }
-*/
+
 .buscados, .encontrados{
     background-color: whitesmoke;
     margin: 3rem auto;
@@ -154,8 +168,17 @@
 .formulario_carga{
     width: 80%;
     margin: 5% auto;
-    background-color: #f2f2f2;
-    box-shadow: 2px 2px 2px rgb(188, 188, 188);
+    background-color: #f1efef;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px rgb(151, 151, 151);
+}
+.title_addPets{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #464646;
+    padding: 10px 10px;
 }
 .pets_detalles{
     padding: 3rem;
@@ -216,6 +239,7 @@
 }
 .img_user{
     height: 50px;
+    border: 2px solid #F76B1C;
     border-radius: 50%;
 }
 .email_stylos{
