@@ -1,14 +1,7 @@
 import { listaServices } from "../service/cliente_service.js";
 var map;
-var marcadoresBuscados = [];
 var markers = [];
 
-
-
-
-
-  
-  
 function initMap() {
   const obelisco = { lat: -34.6037345, lng: -58.3837591 };
 
@@ -21,7 +14,7 @@ function initMap() {
   addMarker(obelisco);
    
 }
-  
+
  // Adds a marker to the map and push to the array.
 function addMarker() {
 listaServices
@@ -42,23 +35,5 @@ listaServices
   .catch((error) => alert("Oops! Error. Comuniquese con Matr3"));
   
 }
-
-// Sets the map on all markers in the array.
-function setMapOnAll(map) {
-  for (let i = 0; i < markers.length; i++) {
-    markers[i].setMap(map);     
-  }
-}
-
-// Removes the markers from the map, but keeps them in the array.
-function clearMarkers() {
-  setMapOnAll(null);
-}
-
-// Shows any markers currently in the array.
-function showMarkers() {
-  setMapOnAll(map);
-}
-
 
 window.initMap = initMap;

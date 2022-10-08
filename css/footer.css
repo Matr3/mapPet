@@ -40,6 +40,7 @@
     border: none;
     border-bottom: 1px solid #C8C8C8;
     margin-bottom: 8px;
+    
 }
 .input_mensaje{
     padding: 5px;
@@ -53,6 +54,7 @@
     border-radius: 4px;
     border: none;
     border-bottom: 1px solid #C8C8C8;
+    padding-top: 12px;
     
 }
 .estilos_form{
