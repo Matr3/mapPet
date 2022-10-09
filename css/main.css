@@ -10,36 +10,31 @@
     margin: 0 5%;
     
 }
-.menu_links_lista{
-    padding: 0 20px 0 20px;
-    height: 3rem;
-    width: 15rem;
-    background-color: white;
-    transition: .6S;
-    border-left: solid 1px rgb(143, 143, 143);
-    
-}
 .last{
     
     border-right: solid 1px rgb(143, 143, 143);
 }
 
-.menu_links_lista:hover{
-    
-    background: orangered;
-
-}
-
 .links_decoration{
+    padding: 12px;
+    height: 3rem;
+    width: 15rem;
+    background-color: white;
+    border-left: solid 1px rgb(143, 143, 143);
     margin: 0 auto;
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
     font-weight: 700;
     color: black;
-    
+    text-align: center;
+    transition: .6S;
 }
+.links_decoration:hover{
+    color: rgb(54, 54, 54);
+    background: orangered;
 
+}
 .buscados, .encontrados{
     background-color: whitesmoke;
     margin: 3rem auto;
@@ -155,6 +150,12 @@
     color: #263850;
 }
 /*Main pagina detalle_pets*/
+.contenido_cargaPets{
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(240,229,55,1) 85%, rgba(240,229,55,1) 99%);
+border-radius: 5px;
+    box-shadow: 3px 3px 3px rgb(188, 188, 188);
+}
 .detalle_cuerpo, .carga_pets{
     width: 1200px;
     margin: 5% auto;
@@ -211,6 +212,7 @@
 }
 .box_botonInicio{
     background-color: whitesmoke;
+    width: 1200px;
     height: 250px;
     padding: 30px;
     border-radius: 5px;
@@ -220,7 +222,8 @@
 .box_detalle_user{
     display: none;
     background-color: #f0e537;
-    background-image: linear-gradient(90deg, #f0e537 0%, #F76B1C 100%);
+    background-image: linear-gradient(90deg, #f0e537 0%, #F76B1C 100%); 
+    /*https://cssgradient.io/*/
     width: 1200px;
     height: 60px;
     margin: 0 auto;

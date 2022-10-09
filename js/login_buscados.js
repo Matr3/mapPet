@@ -1,6 +1,10 @@
 import {listaClientes} from "../service/cliente_service.js";
 import { detalleUsuarios } from "./barraUsuario.js";
-import { detallePets } from "./detalle_pets.js";
+
+function estilos(){
+  document.querySelector(".maps").style.display="block";
+  document.querySelector(".formulario_carga").style.display="flex";
+}
 
   var dato1 = {};
 
@@ -28,7 +32,7 @@ import { detallePets } from "./detalle_pets.js";
           document.querySelector(".box_detalle_user").style.display="block";
 
           detalleUsuarios(nombreCompletoAdd,imagenAdd);
-          detallePets();
+          estilos()
           return count = false; 
          }
         
@@ -44,7 +48,7 @@ import { detallePets } from "./detalle_pets.js";
           document.querySelector(".box_detalle_user").style.display="block";
 
           detalleUsuarios(nombreCompletoAdd,imagenAdd);
-          detallePets();
+          
 
           }).catch((error) => console.log(error));
 

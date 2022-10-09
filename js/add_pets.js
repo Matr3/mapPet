@@ -4,6 +4,7 @@ import { lng } from "../js/maps_buscados.js";
 
 
 
+
 /*Muestra la imagen seleccionada para agregar en el nuevo producto
 y deja la URL del archivo para usar luego*/
 
@@ -40,6 +41,7 @@ formAgregarProducto.addEventListener("submit", (evento) => {
 
     }else{
         var fecha = Date();
+
         const selectorBusqueda = document.querySelector("[data-tipo=selector]");
         const selector = selectorBusqueda.options[selectorBusqueda.selectedIndex].text;
         const raza = document.querySelector("[data-tipo=animal]").value;

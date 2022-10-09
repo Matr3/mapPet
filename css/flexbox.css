@@ -80,7 +80,7 @@
     flex-direction: column;
 }
 .formulario_carga{
-    display: flex;
+    
     flex-direction: column;
     align-items: center;
 }
