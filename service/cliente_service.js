@@ -4,8 +4,6 @@ const url1 = "https://62faaedbffd7197707f152a5.mockapi.io/user";
 
 const listaBuscados = () => fetch("https://62faaedbffd7197707f152a5.mockapi.io/pets").then((respuesta) => respuesta.json()).catch((error) => error);
 
-const listaEncontrados = () => fetch("https://62faaedbffd7197707f152a5.mockapi.io/pest_encontrados").then((respuesta) => respuesta.json()).catch((error) => error);
-
 const listaUsuarios = () => fetch("https://62faaedbffd7197707f152a5.mockapi.io/user").then((respuesta) => respuesta.json()).catch((error) => error);
 
 const crearBusqueda = (selector,imagen, raza, color, descripcion,tamanio,email,latlgn,fecha,nombreUser) => {
@@ -76,7 +74,6 @@ export const clientServices = {
 }
 export const listaServices = {
     eliminarCliente,
-    listaEncontrados,
     listaBuscados,
     crearBusqueda,
     actualizarProducto,

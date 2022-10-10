@@ -1,7 +1,7 @@
 import { listaServices } from "../service/cliente_service.js";
 //backticks
-const busca = "Perdiste tu mascota?";
-//const encontro = "Encontraste alguna mascota?";
+//const busca = "Perdiste tu mascota?";
+const encontro = "Encontraste alguna mascota?";
 const crearNuevaLinea = (imagen, raza, id) => {
     const linea = document.createElement("div");
     const contenido = `
@@ -28,19 +28,18 @@ const crearNuevaLinea = (imagen, raza, id) => {
 
 
   
-const div = document.querySelector("[data-buscados]");
-let cont_b = 0;
+const div = document.querySelector("[data-encontrados-all]");
+
 listaServices
   .listaBuscados()
   .then((data) => {
     data.forEach(({ selector, imagen, raza, id}) => {
-      if (cont_b < 6){
-          if(selector === busca){
+
+          if(selector === encontro){
             const nuevaLinea = crearNuevaLinea(imagen, raza, id);
-            div.appendChild(nuevaLinea);
-            cont_b++;
+            div.appendChild(nuevaLinea);  
           }
-      }
+      
     });
   })
-  .catch((error) => alert("Oops! Error. Comuniquese con Matr3"));
+  .catch((error) => alert(error));

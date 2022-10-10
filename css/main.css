@@ -35,10 +35,16 @@
     background: orangered;
 
 }
+.act{
+    background: orangered;
+}
+.act:hover{
+    background-color: white;
+}
 .buscados, .encontrados{
     background-color: whitesmoke;
     margin: 3rem auto;
-    max-width: 1200px;
+    width: 1200px;
     /*border: solid 1px gray;*/
     border-radius: 5px;
     box-shadow: 2px 2px 2px rgb(188, 188, 188);

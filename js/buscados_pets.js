@@ -1,7 +1,9 @@
 import { listaServices } from "../service/cliente_service.js";
+
+const url = new URL(window.location);
+const buscar_pets = url.searchParams.get("buscar");
+const buscarp = buscar_pets.toLocaleLowerCase();
 //backticks
-const busca = "Perdiste tu mascota?";
-//const encontro = "Encontraste alguna mascota?";
 const crearNuevaLinea = (imagen, raza, id) => {
     const linea = document.createElement("div");
     const contenido = `
@@ -26,21 +28,20 @@ const crearNuevaLinea = (imagen, raza, id) => {
     return linea;
   };
 
-
-  
-const div = document.querySelector("[data-buscados]");
-let cont_b = 0;
+const div = document.querySelector("[data-search]");
 listaServices
   .listaBuscados()
   .then((data) => {
-    data.forEach(({ selector, imagen, raza, id}) => {
-      if (cont_b < 6){
-          if(selector === busca){
+    data.forEach(({ raza, tamanio, descripcion, imagen, id}) => {
+        const razap = raza.toLowerCase();
+        const tamaniop = tamanio.toLowerCase();
+        const descripcionp = descripcion.toLowerCase();
+        
+        if(razap.includes(buscarp) || tamaniop.includes(buscarp) || descripcionp.includes(buscarp)){
             const nuevaLinea = crearNuevaLinea(imagen, raza, id);
-            div.appendChild(nuevaLinea);
-            cont_b++;
-          }
-      }
-    });
-  })
-  .catch((error) => alert("Oops! Error. Comuniquese con Matr3"));
+            div.appendChild(nuevaLinea); 
+            }
+        
+    })
+})
+.catch((error) => console.log(error));

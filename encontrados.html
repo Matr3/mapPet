@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">    
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/flexbox.css">
@@ -14,14 +15,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <!--Carga CRUB de Pets Buscados y Encontrados-->
-    <script type="module" src="js/encontrados_all.js"></script>
+    <script type="module" src="js/encontrar.js"></script>
+    <script type="module" src="js/search.js"></script>
 
     
     <title>Map Pet - ::Si Buscas o Encontraste una mascota...::</title>
 </head>
 <body>
-    <header class="caja">
-        <img class="logo_imgen" src="img/Pet Finder.png">
+    <header >
+        <section class="caja">
+            <a href="./index.html">                    
+                <img class="logo_imgen" src="img/Pet Finder.png" alt="mappet">
+            </a>
+        <div class="container">
+            <div class="buscador">
+              <form id="form">
+                <input type="text" name="buscador" id="buscadorPrincipal" placeholder="Busca a la mascota.">
+                <input type="button" value="Buscar" id="btnBuscar">
+              </form>
+            </div>
+        </div>
+
+        </section>
         <nav class="menu">
             <ul class="menu_links">
                 <li class="menu_links_lista"><a class="links_decoration" href="buscar_pets.html">BUSCAR</a></li>
@@ -30,12 +45,12 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="encontrados">
-            <div class="encontrados_titulo">
-                <h2 class="encontrados_titulo_estilo">Encontrados</h2>
+    <main class="buscados_cuerpo">
+        <section class="buscados">
+            <div class="buscados_titulo">
+                <h2 class="buscados_titulo_estilo">Encontrados</h2>
             </div>
-            <div class="tarjeta_encontrados" data-encontrados-all>
+            <div class="tarjeta_buscados" data-encontrados-all>
             </div>
         </section>
     </main>

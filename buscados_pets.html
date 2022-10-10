@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Login google-->
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script type ="module" src="js/login.js"></script>
     <!--Estilos Css-->
     <link rel="stylesheet" href="css/reset.css">    
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/maps.css">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="css/buscar_pets__estilos.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/flexbox.css">
@@ -19,13 +19,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <!--Carga CRUB de Pets Buscados y Encontrados-->
-    <script type="module" src="js/detalle_pets.js"></script>
-    <script type="module" src="js/buscados.js"></script>
+    <script type="module" src="js/buscados_pets.js"></script>
     <script type="module" src="js/search.js"></script>
-    
-    
-    
-
 
     
     <title>Map Pet - ::Si Buscas o Encontraste una mascota...::</title>
@@ -51,50 +46,24 @@
             <ul class="menu_links">
                 <li class="menu_links_lista"><a class="links_decoration" href="buscar_pets.html">BUSCAR</a></li>
                 <li class="menu_links_lista"><a class="links_decoration" href="mapa_pets.html">MAPPET</a></li>
-                <li class="menu_links_lista "><a class="links_decoration last" href="encontro_pets.html">ENCONTRADO</a></li> 
+                <li class="menu_links_lista "><a class="links_decoration last" href="buscar_pets.html">ENCONTRADO</a></li> 
             </ul>
         </nav>
     </header>
-    <main class="detalle_cuerpo">
-        <section class="box_botonInicio">
-            <div id="buttonDiv"></div>
-            <p class="descripcion_detalles">Acceda con su cuenta de google para mas información</p>
-        </section>
-        <section class="box_detalle_user" data-usuario>
-            
-            <!--
-                <div class="user_display">
-                <div>Imagen</div>
-                <div>Nombre Y Apellido</div>
-            </div>
-            -->
-
-        </section>
-        <section class="box_detalle_pets" data-detalle>
-            <!--
-                        <div>
-                            <img class="img_pets" src="${imagen}" alt="Imagen del Producto ${raza}">
-                        </div>
-                        <div class="detalles">
-                            <h1 class="raza_detalles">${raza}</h1>
-                            <h5 class="color_detalles">${color}</h5>
-                            <p class="descripcion_detalles">${descripcion}</p>
-                            <input type="submit" id="onclick" value="Contacto">
-                        </div>
-            -->
-            
-        </section>
-       
-        
-        
+    
+    <main class="carga_pets">
         <section class="buscados">
             <div class="buscados_titulo">
                 <h2 class="buscados_titulo_estilo">Buscados</h2>
-                <a class="btn_todo" href="./buscados.html">Ver todo →</a>
             </div>
-            <div class="tarjeta_buscados" data-buscados>
+            
+            <div class="tarjeta_buscados" data-search>
             </div>
         </section>
+
+            
+           
+       
     </main>
     <footer>
         <section class="rodapie">
@@ -126,6 +95,6 @@
         </div>
     </footer>
 
-   
+    
 </body>
 </html>
