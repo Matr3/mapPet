@@ -27,6 +27,18 @@ const crearNuevaLinea = (imagen, raza, id) => {
   
     return linea;
   };
+  const crearNuevaLineaError = () => {
+    const lineaError = document.createElement("div");
+    const contenidoError = `
+    <div class="mascotas">
+    
+    <img class="img" src="./img/errorBusqueda.png" alt="">
+ </div>
+    `;
+    lineaError.innerHTML = contenidoError;
+  
+    return linea;
+  };
 
 const div = document.querySelector("[data-search]");
 listaServices
@@ -40,7 +52,7 @@ listaServices
         if(razap.includes(buscarp) || tamaniop.includes(buscarp) || descripcionp.includes(buscarp)){
             const nuevaLinea = crearNuevaLinea(imagen, raza, id);
             div.appendChild(nuevaLinea); 
-            }
+        }
         
     })
 })
