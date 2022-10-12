@@ -2,6 +2,35 @@ import {listaClientes} from "../service/cliente_service.js";
 import { detalleUsuarios } from "./barraUsuario.js";
 import { detallePets } from "./detalle_pets.js";
 
+/*
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === 'visible') {
+    console.log("PLAY")
+  } else {
+    console.log("PAUSE")
+  }
+});
+*/
+function handleVisibilityChange() {
+  if(document.hidden) {
+    console.log("HIDDEN: ");
+    /*setInterval((window.location.href ="index.html"), 10000)*/
+    /*Agregar ventana de close*/
+  } else {
+    console.log("VISIBLE: ")
+    /*Agregar booleano que se active cuando esta activa*/
+    /*tomar el tiempo de inicio de sesion*/
+    /*si no se usa en determinado tiempo cerrar sesion*/
+    const test = dato1.email;
+    /*guarda en el sessionStorage*/
+    sessionStorage.setItem("lastname", test);
+    sessionStorage.getItem("lastname");
+  }
+}
+
+
+
+
   var dato1 = {};
 
     //Funcion capturar datos
@@ -26,7 +55,7 @@ import { detallePets } from "./detalle_pets.js";
           console.log("ya tengo usuario")
           document.querySelector(".box_botonInicio").style.display="none";
           document.querySelector(".box_detalle_user").style.display="block";
-
+          document.addEventListener("visibilitychange", handleVisibilityChange, false); //Visibilidad usuario
           detalleUsuarios(nombreCompletoAdd,imagenAdd);
           detallePets();
           return count = false; 
@@ -104,6 +133,7 @@ import { detallePets } from "./detalle_pets.js";
         { theme: "outline", size: "large" }  // customization attributes
       );
       google.accounts.id.prompt(); // also display the One Tap dialog
+      
     }
 
   
