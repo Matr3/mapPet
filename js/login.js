@@ -21,10 +21,10 @@ function handleVisibilityChange() {
     /*Agregar booleano que se active cuando esta activa*/
     /*tomar el tiempo de inicio de sesion*/
     /*si no se usa en determinado tiempo cerrar sesion*/
-    const test = dato1.email;
+    //const test = dato1.email;
     /*guarda en el sessionStorage*/
-    sessionStorage.setItem("lastname", test);
-    sessionStorage.getItem("lastname");
+    //sessionStorage.setItem("lastname", test);
+    //sessionStorage.getItem("lastname");
   }
 }
 
@@ -58,6 +58,8 @@ function handleVisibilityChange() {
           document.addEventListener("visibilitychange", handleVisibilityChange, false); //Visibilidad usuario
           detalleUsuarios(nombreCompletoAdd,imagenAdd);
           detallePets();
+          sessionStorage.setItem("email", emailAdd);
+          sessionStorage.getItem("email");
           return count = false; 
          }
         
@@ -71,10 +73,12 @@ function handleVisibilityChange() {
             console.log("creo usuario")
           document.querySelector(".box_botonInicio").style.display="none";
           document.querySelector(".box_detalle_user").style.display="block";
+          
 
           detalleUsuarios(nombreCompletoAdd,imagenAdd);
           detallePets();
-
+          sessionStorage.setItem("email", emailAdd);
+          sessionStorage.getItem("email");
           }).catch((error) => console.log(error));
 
         };
