@@ -32,15 +32,25 @@ function handleVisibilityChange() {
 
 
   var dato1 = {};
+  
+
+  function storageEmail (emailAdd,nombreCompletoAdd,imagenAdd){
+    sessionStorage.setItem("email", JSON.stringify(emailAdd));
+    sessionStorage.setItem("nombre", JSON.stringify(nombreCompletoAdd));
+    sessionStorage.setItem("imagen", JSON.stringify(imagenAdd));
+    
+    
+  }
 
     //Funcion capturar datos
     export function obtenerDatos() {
-
+      
       const emailAdd = dato1.email;
       const nombreAdd = dato1.given_name;
       const apellidoAdd = dato1.family_name;
       const nombreCompletoAdd = dato1.name;
       const imagenAdd = dato1.picture;
+      storageEmail(emailAdd,nombreCompletoAdd,imagenAdd)
       //console.log(email + " " + nombre + " " + apellido + " " + nombreCompleto + " " + imagen);
       var count = true;
       listaClientes
@@ -58,8 +68,8 @@ function handleVisibilityChange() {
           document.addEventListener("visibilitychange", handleVisibilityChange, false); //Visibilidad usuario
           detalleUsuarios(nombreCompletoAdd,imagenAdd);
           detallePets();
-          sessionStorage.setItem("email", emailAdd);
-          sessionStorage.getItem("email");
+          
+          
           return count = false; 
          }
         
@@ -79,6 +89,10 @@ function handleVisibilityChange() {
           detallePets();
           sessionStorage.setItem("email", emailAdd);
           sessionStorage.getItem("email");
+          sessionStorage.setItem("nombre", nombreCompletoAdd);
+          sessionStorage.getItem("nombre");
+          sessionStorage.setItem("imagen", imagenAdd);
+          sessionStorage.getItem("imagen");
           }).catch((error) => console.log(error));
 
         };
@@ -124,21 +138,32 @@ function handleVisibilityChange() {
       
     }
 
-   
-
-    window.onload = function () {
-      google.accounts.id.initialize({
-        client_id: "404534087235-cn6uhb4iiua6vjg91orae16aq4qij8ad.apps.googleusercontent.com",
-        callback: handleCredentialResponse,
-        auto_select: true
-      });
-      google.accounts.id.renderButton(
-        document.getElementById("buttonDiv"),
-        { theme: "outline", size: "large" }  // customization attributes
-      );
-      google.accounts.id.prompt(); // also display the One Tap dialog
+    if(sessionStorage.getItem("email")){
+      console.log("Sesion: "+sessionStorage.getItem("email"))
+      document.querySelector(".box_botonInicio").style.display="none";
+      document.querySelector(".box_detalle_user").style.display="block";
+      const nombre = sessionStorage.getItem("nombre");
+      const imagen = sessionStorage.getItem("imagen");
+          detalleUsuarios(nombre,imagen);
+          detallePets();
+        
       
+    }else{
+      window.onload = function () {
+        google.accounts.id.initialize({
+          client_id: "404534087235-cn6uhb4iiua6vjg91orae16aq4qij8ad.apps.googleusercontent.com",
+          callback: handleCredentialResponse,
+          auto_select: true
+        });
+        google.accounts.id.renderButton(
+          document.getElementById("buttonDiv"),
+          { theme: "outline", size: "large" }  // customization attributes
+        );
+        google.accounts.id.prompt(); // also display the One Tap dialog
+        
+      }
     }
+    
 
   
    
