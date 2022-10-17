@@ -42,6 +42,22 @@
     margin-bottom: 8px;
     
 }
+.input_formulario{
+    padding: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-size: 1rem;
+    color: #000000;
+    width: 560px;
+    height: 56px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    
+    border: 1px solid #2c2c2c;
+    margin-bottom: 8px;
+    
+}
+
 .input_mensaje{
     padding: 5px;
     font-family: 'Open Sans', sans-serif;

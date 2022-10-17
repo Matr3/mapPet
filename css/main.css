@@ -44,7 +44,15 @@
 .buscados, .encontrados{
     background-color: whitesmoke;
     margin: 3rem auto;
-    width: 1200px;
+    max-width: 80%;
+    /*border: solid 1px gray;*/
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgb(188, 188, 188);
+}
+.buscados_form{
+    background-color: whitesmoke;
+    margin: 3rem auto;
+    max-width: 100%;
     /*border: solid 1px gray;*/
     border-radius: 5px;
     box-shadow: 2px 2px 2px rgb(188, 188, 188);
@@ -53,7 +61,7 @@
     
     background-color: whitesmoke;
     margin: 0 auto;
-    width: 1200px;
+    /*max-width: 1200px;*/
     /*border: solid 1px gray;*/
     border-radius: 5px;
     box-shadow: 2px 2px 2px rgb(188, 188, 188);
@@ -158,10 +166,11 @@
 
 /*Main pagina buscados*/
 .buscados_cuerpo{
-    margin: 0 5rem;
+    /*margin: 0 5rem;*/
 }
 .perfil_cuerpo{
-    margin:3rem;
+    margin: 3rem auto;
+    max-width: 80%;
 }
 .titulo_mapa{
     font-family: 'Open Sans', sans-serif;
@@ -173,9 +182,10 @@
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(240,229,55,1) 85%, rgba(240,229,55,1) 99%);
 border-radius: 5px;
     box-shadow: 3px 3px 3px rgb(188, 188, 188);
+    
 }
 .detalle_cuerpo, .carga_pets{
-    width: 1200px;
+    width: 80%;
     margin: 5% auto;
     
 }
@@ -227,10 +237,12 @@ border-radius: 5px;
     background-color: whitesmoke;
     border-radius: 5px;
     box-shadow: 2px 2px 2px rgb(188, 188, 188);
+    max-width: 100%;
+    margin: 0 10%;
 }
 .box_botonInicio{
     background-color: whitesmoke;
-    width: 1200px;
+    width: 100%;
     height: 250px;
     padding: 30px;
     border-radius: 5px;
@@ -242,9 +254,16 @@ border-radius: 5px;
     background-color: #f0e537;
     background-image: linear-gradient(90deg, #f0e537 0%, #F76B1C 100%); 
     /*https://cssgradient.io/*/
-    width: 1200px;
+   
     height: 60px;
-    margin: 0 auto;
+   
+}
+.form{
+    width: 100%;
+    
+}
+.det{
+    margin: 0 10%;
 }
 .espacio{
     margin: 10px;

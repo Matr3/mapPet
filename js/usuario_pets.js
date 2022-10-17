@@ -72,10 +72,9 @@ export function perfilUser(){
           if(emailUser === emailStorage){
                 const nuevaLinea = crearNuevaLinea(imagen, raza, id);
                 div.appendChild(nuevaLinea).className = "pets_detalles";  
-          }else{
-            const nuevaLinea = crearContenidoPerfil();
-            div.appendChild(nuevaLinea).className = "pets_detalles";
           }
+            
+          
           
         });
       })
