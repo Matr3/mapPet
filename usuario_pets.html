@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/reset.css">    
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/search.css">
-    <link rel="stylesheet" href="css/maps.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/flexbox.css">
@@ -15,74 +14,59 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <!--Api google maps-->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script type="module" src="js/maps_marcadores.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN5uKtimx71A6YXqkXYEyUOzLYR-XG2G4&callback=initMap&v=weekly" defer></script>
+    <!--Login google-->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script type ="module" src="js/loginPerfil.js"></script>
     <!--Carga CRUB de Pets Buscados y Encontrados-->
-    <script type="module" src="js/buscados.js"></script>
-    <script type="module" src="js/encontrados_all.js"></script>
+    <script type="module" src="js/barraUsuario.js"></script>
+    <script type="module" src="js/usuario_pets.js"></script>
     <script type="module" src="js/search.js"></script>
-
     
     <title>Map Pet - ::Si Buscas o Encontraste una mascota...::</title>
 </head>
 <body>
-    <header class="caja">
-        <a href="./index.html">                    
-            <img class="logo_imgen" src="img/Pet Finder.png" alt="mappet">
-        </a>
-            <section class="container">
-                <div class="buscador">
-                  <form id="form">
-                    <input type="text" name="buscador" id="buscadorPrincipal" placeholder="Buscar a la mascota.">
-                    <input type="button" value="Buscar" id="btnBuscar">
-                  </form>
-                </div>
-            </section>
-        <span><a class="link_login" href="usuario_pets.html">Login</a></span>
-    </header>
-    <main class="contenido">
-        <section class="maps">
-            <div class="contenedor">
-                <!--<h3 class="titulo_mapa">Map Pet</h3> -->
-                
-                    <!--The div element for the map -->
-                    <div id="map" class="mapa_banner"></div>
-
-                    <!-- 
-                    The `defer` attribute causes the callback to execute after the full HTML
-                    document has been parsed. For non-blocking uses, avoiding race conditions,
-                    and consistent behavior across browsers, consider loading using Promises
-                    with https://www.npmjs.com/package/@googlemaps/js-api-loader.
-                    -->
+    <header >
+        <section class="caja">
+            <a href="./index.html">                    
+                <img class="logo_imgen" src="img/Pet Finder.png" alt="mappet">
+            </a>
+        <div class="container">
+            <div class="buscador">
+              <form id="form">
+                <input type="text" name="buscador" id="buscadorPrincipal" placeholder="Busca a la mascota.">
+                <input type="button" value="Buscar" id="btnBuscar">
+              </form>
             </div>
+        </div>
+
         </section>
         <nav class="menu">
             <ul class="menu_links">
-                <li id="Btbuscar" class="menu_links_lista"><a class="links_decoration" href="buscar_pets.html">BUSCAR</a></li>
+                <li class="menu_links_lista"><a class="links_decoration" href="buscar_pets.html">BUSCAR</a></li>
                 <li class="menu_links_lista"><a class="links_decoration" href="mapa_pets.html">MAPPET</a></li>
                 <li class="menu_links_lista "><a class="links_decoration" href="buscar_pets.html">ENCONTRADO</a></li>
                 <li class="menu_links_lista "><a class="links_decoration last" href="https://fckland.github.io/TrabajoFinal/">ANIMALIS Shop</a></li>
             </ul>
         </nav>
-        <section class="buscados">
-            <div class="buscados_titulo">
-                <h2 class="buscados_titulo_estilo">Buscados</h2>
-                <a class="btn_todo" href="./buscados.html">Ver todo →</a>
-            </div>
-            
-            <div class="tarjeta_buscados" data-buscados>
-            </div>
+    </header>
+    <main class="perfil_cuerpo">
+        <section class="box_botonInicio">
+            <div id="buttonDiv"></div>
+            <p class="descripcion_detalles">Acceda con su cuenta de google para mas información</p>
         </section>
-        <section class="encontrados">
-            <div class="encontrados_titulo">
-                <h2 class="encontrados_titulo_estilo">Encontrados</h2>
-                <a class="btn_todo" href="./encontrados.html">Ver todo →</a>
-            </div>
-            
-            <div class="tarjeta_encontrados" data-encontrados>
-            </div>
+        <section class="box_detalle_user" data-usuario>
+        
+        
+                <!--
+                    <div class="user_display">
+                    <div>Imagen</div>
+                    <div>Nombre Y Apellido</div>
+                </div>
+                -->
+    
+        </section>
+        <section class="perfilPets" data-buscados-all>
+        
         </section>
     </main>
     <footer>
@@ -97,13 +81,12 @@
                 </div>
                 <div class="contacto">
                     <form action="#" class="contacto_form">
-                        <fieldset class="estilos_form">
+                        <fieldset>
                             <legend class="title_contacto">Hable con nosotros</legend>
                             <label for="nombre"></label>
                             <input class="input_nombre" type="text" placeholder="Nombre" required data-tipo="nombre" pattern="[\s\S]{4,40}">
                             <label for="mensaje"></label>
                             <textarea class="input_mensaje" type="text" placeholder="Escribe tu mensaje" required data-tipo="mensaje" pattern="[\s\S]{5,120}"></textarea>
-                            
                         </fieldset>
                         <button class="btn_contacto">Enviar mensaje</button>
                     </form>

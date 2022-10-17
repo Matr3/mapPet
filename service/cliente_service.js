@@ -6,7 +6,7 @@ const listaBuscados = () => fetch("https://62faaedbffd7197707f152a5.mockapi.io/p
 
 const listaUsuarios = () => fetch("https://62faaedbffd7197707f152a5.mockapi.io/user").then((respuesta) => respuesta.json()).catch((error) => error);
 
-const crearBusqueda = (selector,imagen, raza, color, descripcion,tamanio,email,latlgn,fecha,nombreUser) => {
+const crearBusqueda = (selector,imagen, raza, color, descripcion,tamanio,email,latlgn,fecha,nombreUser,emailUser) => {
     //console.log(imagen, categoria, nombre_prod, precio_prod, descripcion_prod)
     return fetch((`${url}`),{
         method:"POST",
@@ -21,7 +21,8 @@ const crearBusqueda = (selector,imagen, raza, color, descripcion,tamanio,email,l
             email,
             latlgn,
             fecha,
-            nombreUser
+            nombreUser,
+            emailUser
         })
     })
 }
@@ -43,9 +44,9 @@ const crearUsuario = (email, nombre, apellido, nombreCompleto, imagen) => {
     })
 }
 
-const eliminarCliente = (id) =>{
+const eliminarPets = (id) =>{
     console.log("eliminar a", id)
-    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/prod/${id}`, {
+    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/pets/${id}`, {
         method: "DELETE"
     })
 }
@@ -55,28 +56,22 @@ const detallePets = (id) =>{
     .then( (respuesta) => respuesta.json())
 }
 
-const actualizarProducto = (imagen, categoria, nombre_prod, precio_prod, descripcion_prod,id) =>{
-    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/prod/${id}`,{
+const actualizarPets = (imagen,selector, raza, color,tamanio,descripcion,email,fecha,latlgn,id) =>{
+    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/pets/${id}`,{
         method: "PUT",
         headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({imagen, categoria, nombre_prod, precio_prod, descripcion_prod})
+        body: JSON.stringify({imagen,selector, raza, color,tamanio,descripcion,email,fecha,latlgn})
     })
     .then( (respuesta) => respuesta)
     .catch( (err) => console.log(err));
 }
 
-export const clientServices = {
-    //listaClientes,
- 
-    
-    eliminarCliente,
-    
-}
+
 export const listaServices = {
-    eliminarCliente,
+    eliminarPets,
     listaBuscados,
     crearBusqueda,
-    actualizarProducto,
+    actualizarPets,
     detallePets,
 
 }

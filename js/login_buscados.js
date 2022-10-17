@@ -1,5 +1,16 @@
 import {listaClientes} from "../service/cliente_service.js";
-import { detalleUsuarios } from "./barraUsuario.js";
+import { detalleUsuarios } from "./barraUsuarioFormulario.js";
+
+function storageEmail (emailAdd,nombreCompletoAdd,imagenAdd){
+  sessionStorage.setItem("email", emailAdd);
+  sessionStorage.getItem("email");
+  sessionStorage.setItem("nombre", nombreCompletoAdd);
+  sessionStorage.getItem("nombre");
+  sessionStorage.setItem("imagen", imagenAdd);
+  sessionStorage.getItem("imagen");
+  console.log("entre")
+  
+}
 
 function estilos(){
   document.querySelector(".maps").style.display="block";
@@ -32,7 +43,8 @@ function estilos(){
           document.querySelector(".box_detalle_user").style.display="block";
 
           detalleUsuarios(nombreCompletoAdd,imagenAdd);
-          estilos()
+          estilos();
+          storageEmail (emailAdd,nombreCompletoAdd,imagenAdd);
           return count = false; 
          }
         
@@ -96,7 +108,18 @@ function estilos(){
     }
 
    
+    if(sessionStorage.getItem("email")){
+      console.log("Sesion: "+sessionStorage.getItem("email"))
+      document.querySelector(".box_botonInicio").style.display="none";
+      document.querySelector(".box_detalle_user").style.display="block";
+      const nombre = sessionStorage.getItem("nombre").replace(/"/g, '');
+      const imagen = sessionStorage.getItem("imagen").replace(/"/g, '');
 
+          detalleUsuarios(nombre,imagen);
+          estilos();
+        
+      
+    }else{
     window.onload = function () {
       google.accounts.id.initialize({
         client_id: "404534087235-cn6uhb4iiua6vjg91orae16aq4qij8ad.apps.googleusercontent.com",
@@ -110,6 +133,6 @@ function estilos(){
       google.accounts.id.prompt(); // also display the One Tap dialog
     }
 
-  
+  }
    
 

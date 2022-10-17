@@ -1,6 +1,8 @@
 import {listaClientes} from "../service/cliente_service.js";
 import { detalleUsuarios } from "./barraUsuario.js";
-import { detallePets } from "./detalle_pets.js";
+import { perfilUser } from "./usuario_pets.js"
+
+
 
 /*
 document.addEventListener("visibilitychange", () => {
@@ -69,8 +71,9 @@ function handleVisibilityChange() {
           document.querySelector(".box_botonInicio").style.display="none";
           document.querySelector(".box_detalle_user").style.display="block";
           document.addEventListener("visibilitychange", handleVisibilityChange, false); //Visibilidad usuario
+          
           detalleUsuarios(nombreCompletoAdd,imagenAdd);
-          detallePets();
+          perfilUser();
           storageEmail (emailAdd,nombreCompletoAdd,imagenAdd);
           
           return count = false; 
@@ -87,10 +90,10 @@ function handleVisibilityChange() {
           document.querySelector(".box_botonInicio").style.display="none";
           document.querySelector(".box_detalle_user").style.display="block";
           
-
           detalleUsuarios(nombreCompletoAdd,imagenAdd);
-          detallePets();
-          storageEmail (emailAdd,nombreCompletoAdd,imagenAdd);
+          perfilUser();
+          
+
           }).catch((error) => console.log(error));
 
         };
@@ -143,8 +146,8 @@ function handleVisibilityChange() {
       const nombre = sessionStorage.getItem("nombre").replace(/"/g, '');
       const imagen = sessionStorage.getItem("imagen").replace(/"/g, '');
 
-          detalleUsuarios(nombre,imagen);
-          detallePets();
+      detalleUsuarios(nombre,imagen);
+      perfilUser();
         
       
     }else{

@@ -60,6 +60,16 @@
     display: flex;
     justify-content: space-around;
 }
+.perfil_cuerpo{
+        display: flex;
+        flex-direction: column;
+}
+.perfilPets{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 /*Main pagina detalle_pets*/
 .pets_detalles{
     display: flex;

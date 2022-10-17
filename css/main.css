@@ -49,6 +49,15 @@
     border-radius: 5px;
     box-shadow: 2px 2px 2px rgb(188, 188, 188);
 }
+.perfilPets{
+    
+    background-color: whitesmoke;
+    margin: 0 auto;
+    width: 1200px;
+    /*border: solid 1px gray;*/
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgb(188, 188, 188);
+}
 
 .buscados_titulo, .encontrados_titulo{
     background-color: #f0e537;
@@ -150,6 +159,9 @@
 /*Main pagina buscados*/
 .buscados_cuerpo{
     margin: 0 5rem;
+}
+.perfil_cuerpo{
+    margin:3rem;
 }
 .titulo_mapa{
     font-family: 'Open Sans', sans-serif;
@@ -257,6 +269,20 @@ border-radius: 5px;
     font-weight: bold;
     font-size: 2rem;
 }
-
-
+.articulo_edicion {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem;
+    margin-left: 6rem;
+    position: absolute;
+}
+.btn_borrar {
+    background: transparent;
+    border: none;
+    padding: 1px 6px;
+    cursor: pointer;
+}
+.position_icon {
+    padding: 5px;
+}
 

@@ -13,3 +13,10 @@
     -webkit-filter:brightness(2);
     filter:brightness(2);
 }
+.link_login{
+    text-decoration: none;
+    color: #464646;
+    font-family: 'Open Sans', sans-serif;
+    font-style:normal;
+    font-weight: bold;
+}

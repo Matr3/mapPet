@@ -42,6 +42,7 @@ formAgregarProducto.addEventListener("submit", (evento) => {
     }else{
         var fecha = Date();
         const nombreUser = document.querySelector(".raza_detalles").textContent;
+        const emailUser = sessionStorage.getItem("email").replace(/"/g, '');
         const selectorBusqueda = document.querySelector("[data-tipo=selector]");
         const selector = selectorBusqueda.options[selectorBusqueda.selectedIndex].text;
         const raza = document.querySelector("[data-tipo=animal]").value;
@@ -52,9 +53,9 @@ formAgregarProducto.addEventListener("submit", (evento) => {
         const latlgn = {lat: lat, lng: lng};
 
         listaServices
-        .crearBusqueda(selector,imagen, raza, color, descripcion,tamanio,email,latlgn,fecha,nombreUser)
+        .crearBusqueda(selector,imagen, raza, color, descripcion,tamanio,email,latlgn,fecha,nombreUser,emailUser)
         .then((respuesta) => {
-             //window.location.href = "productos.html?nombre=document.querySelector(".raza_detalles").textContent";
+             window.location.href = "usuario_pets.html";
         }).catch((error) => console.log(error));
 
     }

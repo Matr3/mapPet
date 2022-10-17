@@ -1,4 +1,4 @@
-
+import {obtenerDatos} from "./login_buscados.js"
 
 export function detalleUsuarios(nombreCompletoAdd,imagenAdd){
 
