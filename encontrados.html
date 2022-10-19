@@ -22,29 +22,31 @@
     <title>Map Pet - ::Si Buscas o Encontraste una mascota...::</title>
 </head>
 <body>
-    <header >
-        <section class="caja">
+    <header class="caja">
+        <section class="cajaTitulo">
             <a href="./index.html">                    
                 <img class="logo_imgen" src="img/Pet Finder.png" alt="mappet">
             </a>
-        <div class="container">
-            <div class="buscador">
-              <form id="form">
-                <input type="text" name="buscador" id="buscadorPrincipal" placeholder="Busca a la mascota.">
-                <input type="button" value="Buscar" id="btnBuscar">
-              </form>
-            </div>
-        </div>
-
+                <section class="container">
+                    <div class="buscador">
+                      <form id="form">
+                        <input type="text" name="buscador" id="buscadorPrincipal" placeholder="Buscar a la mascota.">
+                        <input type="button" value="Buscar" id="btnBuscar">
+                      </form>
+                    </div>
+                </section>
+            <span><a class="link_login" href="usuario_pets.html">Login</a></span>
         </section>
-        <nav class="menu">
-            <ul class="menu_links">
-                <li class="menu_links_lista"><a class="links_decoration" href="buscar_pets.html">BUSCAR</a></li>
-                <li class="menu_links_lista"><a class="links_decoration" href="mapa_pets.html">MAPPET</a></li>
-                <li class="menu_links_lista "><a class="links_decoration" href="buscar_pets.html">ENCONTRADO</a></li>
-                <li class="menu_links_lista "><a class="links_decoration last" href="https://fckland.github.io/TrabajoFinal/">ANIMALIS Shop</a></li> 
-            </ul>
-        </nav>
+        <section class="cajaBotonera">
+            <nav class="menu">
+                <ul class="menu_links">
+                    <li id="Btbuscar" class="menu_links_lista"><a class="links_decoration" href="buscar_pets.html">BUSCAR</a></li>
+                    <li class="menu_links_lista"><a class="links_decoration" href="mapa_pets.html">MAPPET</a></li>
+                    <li class="menu_links_lista "><a class="links_decoration" href="buscar_pets.html">ENCONTRADO</a></li>
+                    <li class="menu_links_lista "><a class="links_decoration" href="https://fckland.github.io/TrabajoFinal/">ANIMALIS Shop</a></li>
+                </ul>
+            </nav>
+        </section> 
     </header>
     <main class="buscados_cuerpo">
         <section class="buscados">
