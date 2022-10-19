@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/efectoColor.css">
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,24 +24,37 @@
     <script type="module" src="js/buscados.js"></script>
     <script type="module" src="js/encontrados_all.js"></script>
     <script type="module" src="js/search.js"></script>
-
+    <!--Icon de fontwesome-->
+    <script src="https://kit.fontawesome.com/a1140612d3.js" crossorigin="anonymous"></script>
     
     <title>Map Pet - ::Si Buscas o Encontraste una mascota...::</title>
 </head>
 <body>
     <header class="caja">
-        <a href="./index.html">                    
-            <img class="logo_imgen" src="img/Pet Finder.png" alt="mappet">
-        </a>
-            <section class="container">
-                <div class="buscador">
-                  <form id="form">
-                    <input type="text" name="buscador" id="buscadorPrincipal" placeholder="Buscar a la mascota.">
-                    <input type="button" value="Buscar" id="btnBuscar">
-                  </form>
-                </div>
-            </section>
-        <span><a class="link_login" href="usuario_pets.html">Login</a></span>
+        <section class="cajaTitulo">
+            <a href="./index.html">                    
+                <img class="logo_imgen" src="img/Pet Finder.png" alt="mappet">
+            </a>
+                <section class="container">
+                    <div class="buscador">
+                      <form id="form">
+                        <input type="text" name="buscador" id="buscadorPrincipal" placeholder="Buscar a la mascota.">
+                        <input type="button" value="Buscar" id="btnBuscar">
+                      </form>
+                    </div>
+                </section>
+            <span><a class="link_login" href="usuario_pets.html">Login</a></span>
+        </section>
+        <section class="cajaBotonera">
+            <nav class="menu">
+                <ul class="menu_links">
+                    <li id="Btbuscar" class="menu_links_lista"><a class="links_decoration" href="buscar_pets.html">BUSCAR</a></li>
+                    <li class="menu_links_lista"><a class="links_decoration" href="mapa_pets.html">MAPPET</a></li>
+                    <li class="menu_links_lista "><a class="links_decoration" href="buscar_pets.html">ENCONTRADO</a></li>
+                    <li class="menu_links_lista "><a class="links_decoration" href="https://fckland.github.io/TrabajoFinal/">ANIMALIS Shop</a></li>
+                </ul>
+            </nav>
+        </section> 
     </header>
     <main class="contenido">
         <section class="maps">
@@ -58,14 +72,7 @@
                     -->
             </div>
         </section>
-        <nav class="menu">
-            <ul class="menu_links">
-                <li id="Btbuscar" class="menu_links_lista"><a class="links_decoration" href="buscar_pets.html">BUSCAR</a></li>
-                <li class="menu_links_lista"><a class="links_decoration" href="mapa_pets.html">MAPPET</a></li>
-                <li class="menu_links_lista "><a class="links_decoration" href="buscar_pets.html">ENCONTRADO</a></li>
-                <li class="menu_links_lista "><a class="links_decoration last" href="https://fckland.github.io/TrabajoFinal/">ANIMALIS Shop</a></li>
-            </ul>
-        </nav>
+        
         <section class="buscados">
             <div class="buscados_titulo">
                 <h2 class="buscados_titulo_estilo">Buscados</h2>
@@ -93,6 +100,8 @@
                         <a href="./index.html">                    
                             <img class="logo_imgen" src="img/Pet Finder.png" alt="mappet">
                         </a>
+                        <a href="#" target="_blank"><i class="colorIcon fa fa-instagram fa-5x"></i></a>
+                        <a href="#" target="_blank"><i class="colorIcon fa-brands fa-facebook fa-5x"></i></a>
                     </div>
                 </div>
                 <div class="contacto">

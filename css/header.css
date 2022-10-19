@@ -1,6 +1,6 @@
 .caja{
     background-color: #fff159;
-    height: 5rem;
+    /*height: 5rem;*/
     
 }
 
@@ -9,7 +9,7 @@
     transition: .5s;
 }
 
-.logo_imgen:hover{
+.logo_imgen:hover, .colorIcon:hover{
     -webkit-filter:brightness(2);
     filter:brightness(2);
 }
@@ -19,4 +19,9 @@
     font-family: 'Open Sans', sans-serif;
     font-style:normal;
     font-weight: bold;
+}
+
+.colorIcon{
+    color: orangered;;
+    padding: 0 10px 0;
 }

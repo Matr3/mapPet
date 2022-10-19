@@ -2,9 +2,14 @@
 /*headers*/
 .caja{
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    flex-direction: column;
+}
+.cajaTitulo{
+    display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
  .menu_links{
     display: flex;
@@ -106,9 +111,14 @@
     align-items: center;
 }
 /*Footer*/
+.rodapie{
+    display: flex;
+    align-items: center;
+}
 .rodapie .menu_contacto{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .menu_contacto .menu_contacto__box{
     display: flex;

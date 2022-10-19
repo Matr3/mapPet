@@ -1,5 +1,7 @@
 /*Estilos Css*/
-
+body{
+    background-color: #dbac5b;
+}
 .menu{
     margin: 0 auto;
     
@@ -19,8 +21,8 @@
     padding: 12px;
     height: 3rem;
     width: 15rem;
-    background-color: white;
-    border-left: solid 1px rgb(143, 143, 143);
+    background-color:  #fff159;
+    
     margin: 0 auto;
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
