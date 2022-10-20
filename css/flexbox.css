@@ -44,11 +44,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+        flex-wrap: wrap;
 }
 .tarjeta_buscados{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 .buscados .tarjeta_buscados{
     display: flex;
@@ -124,9 +126,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .menu_contacto__box .menu_contacto__contenido{
     display: flex;
+    gap: 3rem;
 }
 .menu_contacto__box .main{
     display: flex;
