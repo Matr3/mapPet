@@ -45,7 +45,7 @@ body{
 }
 .buscados, .encontrados{
     background-color: rgb(208 134 24 / 27%);
-    margin: 3rem auto;
+    margin: 7rem auto;
     max-width: 80%;
     /* border: solid 1px gray; */
     border-radius: 25px;
@@ -137,14 +137,15 @@ body{
     background-color:rgba(255, 251, 0, 0.356);
     max-width: 174px;
     height: 250px;
-    border-radius: 25px;
+    
+    border-radius: 0.4rem;
    
 }
 .mascotas:hover{
     background-color: rgba(255, 251, 0, 0.3);
     transition: all .5s;
     transform: scale(1.1);
-    box-shadow: 4px 4px 4px 4px rgba(59, 59, 59, 0.3);
+    box-shadow: 0 0 10px #000000d5;
 }
 .link_mascotas{
     text-decoration: none;
