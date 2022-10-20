@@ -70,7 +70,7 @@ body{
     padding: 16px;
 }
 .buscados_titulo_estilo, .encontrados_titulo_estilo{
-    font-family: 'Open Sans', sans-serif;;
+    font-family: 'Lemon', cursive;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -173,7 +173,7 @@ body{
     max-width: 80%;
 }
 .titulo_mapa{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lemon', cursive;
     color: #263850;
 }
 /*Main pagina detalle_pets*/
