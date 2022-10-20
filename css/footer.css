@@ -1,6 +1,6 @@
 /*Estilos Css*/
 .rodapie{
-    background-color: #fff159;
+    background-color: #000000;
    margin: 0 auto;
    
       
@@ -99,7 +99,7 @@
     background: #5595E9;
 }
 .rodapie_end{
-    background-color: #464646;
+    background-color: #f0a700;
     border-top: solid 2px orangered;
     height: 70px;
     padding-top: 32px;
