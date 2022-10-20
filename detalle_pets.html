@@ -19,11 +19,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+    <!--Libreria Scroll-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--Carga CRUB de Pets Buscados y Encontrados-->
     <script type="module" src="js/detalle_pets.js"></script>
     <script type="module" src="js/buscados.js"></script>
     <script type="module" src="js/search.js"></script>
-    
+    <!--Icon de fontwesome-->
+    <script src="https://kit.fontawesome.com/a1140612d3.js" crossorigin="anonymous"></script>    
     
     
 
@@ -90,7 +93,7 @@
        
         
         
-        <section class="buscados">
+        <section class="buscados" data-aos="fade-right" data-aos-duration="3000">
             <div class="buscados_titulo">
                 <h2 class="buscados_titulo_estilo">Buscados</h2>
                 <a class="btn_todo" href="./buscados.html">Ver todo →</a>
@@ -107,16 +110,19 @@
                         <a href="./index.html">                    
                             <img class="logo_imgen" src="img/Pet Finder.png" alt="mappet">
                         </a>
+                        <a href="#" target="_blank"><i class="colorIcon fa fa-instagram fa-5x"></i></a>
+                        <a href="#" target="_blank"><i class="colorIcon fa-brands fa-facebook fa-5x"></i></a>
                     </div>
                 </div>
                 <div class="contacto">
                     <form action="#" class="contacto_form">
-                        <fieldset>
+                        <fieldset class="estilos_form">
                             <legend class="title_contacto">Hable con nosotros</legend>
                             <label for="nombre"></label>
                             <input class="input_nombre" type="text" placeholder="Nombre" required data-tipo="nombre" pattern="[\s\S]{4,40}">
                             <label for="mensaje"></label>
                             <textarea class="input_mensaje" type="text" placeholder="Escribe tu mensaje" required data-tipo="mensaje" pattern="[\s\S]{5,120}"></textarea>
+                            
                         </fieldset>
                         <button class="btn_contacto">Enviar mensaje</button>
                     </form>
@@ -125,9 +131,14 @@
                         
         </section>
         <div class="rodapie_end">
-            <h4 class="desarrollo">Desarrollado por Marcelo Tremari 2022</h4>  
+            <h4 class="desarrollo">Trabajo Practico Codo a Codo 4.0</h4>  
         </div>
     </footer>
+    <!--Libreria Scroll llama a javascript-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
    
 </body>

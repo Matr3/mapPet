@@ -86,10 +86,12 @@
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 30px;
 }
 /*Main pagina detalle_pets*/
 .pets_detalles{
     display: flex;
+    justify-content: center;
 }
 /*Main pagina buscar_pets*/
 .contenido_cargaPets{

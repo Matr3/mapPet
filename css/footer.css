@@ -84,19 +84,26 @@
 
 .btn_contacto{
     margin-top: 15px;
-    color: #FFFFFF;
     width: 144px;
     height: 51px;
-    background: #2A7AE4;
     border-style: none;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
+    border: none;
+    border-radius: 25px;
+    background:  orangered;
+    color: white;
+    transition: .5s;
 }
 .btn_contacto:hover{
-    background: #5595E9;
+    
+    transform: scale(1.1);
+    background: orangered;
+    color: black;
+    cursor: pointer;
 }
 .rodapie_end{
     background-color: #f0a700;
@@ -105,8 +112,8 @@
     padding-top: 32px;
 }
 .desarrollo{
-    color: #ffffff;
-    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+    font-family: 'Lemon', cursive;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;

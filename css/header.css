@@ -8,10 +8,13 @@
     height: 80px;
     transition: .5s;
 }
+.colorIcon{
+    transition: .5s;
+}
 
 .logo_imgen:hover, .colorIcon:hover{
-    -webkit-filter:brightness(2);
-    filter:brightness(2);
+    transform: scale(1.1);
+    cursor: pointer;
 }
 .link_login{
     text-decoration: none;

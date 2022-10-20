@@ -53,7 +53,7 @@
     background: black;
     color: white;
     margin-left: -5px;
-    transition: all 0.1s;
+    transition: 0.5s;
   }
   
   .container .buscador input[type="button"]:hover {

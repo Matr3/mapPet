@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+    <!--Libreria Scroll-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--Api google maps-->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script type="module" src="js/maps_marcadores.js"></script>
@@ -73,7 +75,7 @@
             </div>
         </section>
         
-        <section class="buscados espacio">
+        <section class="buscados espacio" data-aos="fade-right" data-aos-duration="1000">
             <div class="buscados_titulo">
                 <h2 class="buscados_titulo_estilo">Buscados</h2>
                 <a class="btn_todo" href="./buscados.html">Ver todo →</a>
@@ -82,7 +84,7 @@
             <div class="tarjeta_buscados" data-buscados>
             </div>
         </section>
-        <section class="encontrados espacio">
+        <section class="encontrados espacio" data-aos="fade-left" data-aos-duration="3000">
             <div class="encontrados_titulo">
                 <h2 class="encontrados_titulo_estilo">Encontrados</h2>
                 <a class="btn_todo" href="./encontrados.html">Ver todo →</a>
@@ -121,10 +123,13 @@
                         
         </section>
         <div class="rodapie_end">
-            <h4 class="desarrollo">Desarrollado por Marcelo Tremari 2022</h4>  
+            <h4 class="desarrollo">Trabajo Practico Codo a Codo 4.0</h4>  
         </div>
     </footer>
-
-    
+    <!--Libreria Scroll llama a javascript-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
