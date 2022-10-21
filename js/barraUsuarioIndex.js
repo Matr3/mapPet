@@ -15,7 +15,7 @@ const crearUsuario = () => {
         </picture>
         <div class="content">
             <h1 class="raza_detalles">${nombreCompletoAdd}</h1>
-            <a class="btCuenta" href="../usuario_pets.html"><sapn class="miCuenta">Mi Cuenta</span></a>
+            <a class="btCuenta" href="./usuario_pets.html"><sapn class="miCuenta">Mi Cuenta</span></a>
         </div>
     </div>
         `;
