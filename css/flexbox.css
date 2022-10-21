@@ -91,7 +91,7 @@
 /*Main pagina detalle_pets*/
 .pets_detalles{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 /*Main pagina buscar_pets*/
 .contenido_cargaPets, .box_ingreso{
@@ -122,7 +122,7 @@
 .rodapie .menu_contacto{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    
 }
 .menu_contacto .menu_contacto__box{
     display: flex;
@@ -147,7 +147,7 @@
 }
 
 /*Estilo caja js buscados encontrados*/
-.wh_box{
+.wh_box, .wh_boxLarge{
     display:flex;
     justify-content: center;
     align-items: center;

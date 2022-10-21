@@ -100,9 +100,24 @@ body{
     width: 174px;
     overflow: hidden;
 	border-radius: 50%;
+    box-shadow: 1px 0px 7px 2px rgba(63, 63, 63, 0.7);
 	border: rgb(225, 100, 10) solid 5px;
-    animation: img_Rotate 5s backwards;
-	animation-delay: 2s;
+    animation: img_Rotate 3s backwards;
+
+}
+
+.wh_boxLarge{
+    background-color: rgb(48, 48, 48);
+    border-bottom: 1px solid  #f0e537;
+    height: 350px;
+    width: 350px;
+    overflow: hidden;
+	border-radius: 50%;
+    box-shadow: 1px 0px 7px 2px rgba(63, 63, 63, 0.7);
+	border: rgb(225, 100, 10) solid 5px;
+    animation: img_Rotate 3s backwards 2s;
+	
+    
 }
 
 @keyframes img_Rotate{
@@ -118,6 +133,10 @@ body{
     max-width: 174px;
     max-height: 174px;
 }
+.bng_boxLarge{
+    max-width: 350px;
+    max-height: 350px;
+}
 
 .img{
     width: 100%;
@@ -126,8 +145,8 @@ body{
 .descripcion{
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
+    font-weight:bolder;
+    font-size: 16px;
     line-height: 16px;
     color: #464646;
     /*align-self: stretch;*/
@@ -163,7 +182,7 @@ body{
 }
 
 .detalles_tarjeta{
-    padding: 5px;
+    padding: 15px 0;
 }
 
 /*Main pagina buscados*/
@@ -204,13 +223,23 @@ body{
     margin: 7rem auto;
 }
 .img_pets{
-    width: 350px;
-    box-shadow: 0 0 10px #000000d5;
+    width: 100%;
+    height: 100%;
+    
 }
 .detalles{
     padding: 2rem;
 }
 .raza_detalles{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 19px;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: black;
+}
+.titleUser{
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
     font-weight: 700;
@@ -242,18 +271,18 @@ body{
 }
 .color_detalles{
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     color: #464646;
-    padding: 10px 10px;
+    padding: 30px 10px;
    
 }
 .descripcion_detalles{
     font-family: 'Lemon', cursive;
     font-style: normal;
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: #464646;
     padding: 10px 10px;
-    margin: 5rem;
+   
 }
 .box_detalle_pets{
     
@@ -290,6 +319,7 @@ body{
     border-radius: 50%;
 }
 .email_stylos{
+    margin-top: 55px;
     padding-left: 10px;
 }
 .text_email{

@@ -1,0 +1,111 @@
+@media screen and (max-width:1200px) {
+    .buscados, .encontrados {
+        margin: 7rem 2rem;
+    }
+    .mapa_banner {
+        height: 50vw;
+
+    }
+    .menu_contacto__box {
+        transform: scale(0.7);
+    }
+    .contenido_cargaPets, .box_ingreso {
+
+        margin-bottom: 7rem;
+    }
+
+    .formulario_contenedor {
+        width: 100%;
+    }
+}
+@media screen and (max-width:768px) {
+    .buscados, .encontrados {
+        margin: 1rem 2rem;
+    }
+    .espacio_margin {
+        padding: 1rem 5rem;
+    }
+    .mapa_banner {
+        height: 80vw;
+
+    }
+    .buscados_titulo_estilo, .encontrados_titulo_estilo {
+        font-weight: 400;
+        font-size: 26px;
+
+    }
+    
+    .buscados .buscados_titulo, .encontrados .encontrados_titulo{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .contenedor {
+        margin-top: 1rem;
+    }
+    .rodapie .menu_contacto {
+        flex-wrap: wrap;
+    }
+    .contacto {
+        width: 80%;
+    }
+    .menu_contacto__box {
+        transform: scale(0.7);
+    }
+    .menu_contacto {
+        /* margin: 3rem auto; */
+    }
+    .container .buscador {
+        margin: 30px 0;
+    }
+    .encontrados .tarjeta_encontrados, .buscados .tarjeta_buscados  {
+        justify-content: center;
+        align-items: center;
+
+    }
+    .menu_contacto__box .menu_contacto__contenido {
+        gap: 0rem;
+    }
+    .contenido_cargaPets, .box_ingreso {
+
+        margin-bottom: 3rem;
+    }
+    .detalle_cuerpo, .carga_pets {
+        margin: 2rem auto;
+    }
+    .agregar__form__imagen {
+        flex-direction: column;
+
+    }
+    .titulo_mapa, .title_addPets{
+        font-size: 26px;
+
+    }
+    .buscados_form .buscados_titulo {
+
+        justify-content: space-around;
+
+    }
+    .pets_detalles {
+        margin: 2rem auto; 
+    }
+    .pets_detalles {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:360px) {
+
+    .espacio {
+        margin: 0px;
+        padding: 10px;
+    }
+    .formulario_contenedor {
+        text-align: left;
+        padding: 0px; 
+        width: auto;
+    }
+    .tarjeta_buscados {
+        justify-content: center;
+
+    }
+}

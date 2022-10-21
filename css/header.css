@@ -3,7 +3,9 @@
     height: 5rem;*/
     padding: 15px;
 }
-
+.cajaTitulo{
+    margin-bottom: 15px;
+}
 .logo_imgen{
     height: 80px;
     transition: .5s;

@@ -6,19 +6,22 @@ export function detallePets(){
 
 //backticks
 const crearNuevaLinea = (imagen, raza, color, descripcion, email) => {
-    const linea = document.createElement("div");
+    const linea = document.createElement("article");
 
     const contenido = `
-    <div>
-        <img class="img_pets" src="${imagen}" alt="Imagen del Producto ${raza}">
+    <div class="wh_boxLarge">
+        <div class="bng_boxLarge">
+            <img class="img_pets" src="${imagen}" alt="Imagen del Producto ${raza}">
+        </div>
     </div>
     <div class="detalles">
         <h1 class="raza_detalles">${raza}</h1>
         <h5 class="color_detalles">${color}</h5>
+        <h2 class="descripcion_detalles">Descripción:</h2>
         <p class="descripcion_detalles">${descripcion}</p>
-        <email class="email_stylos">
-        <a class="text_email" href="mailto:${email}">Contactate</a> 
-        </email>
+        <div class="email_stylos">
+            <a class="text_email" href="mailto:${email}">Contactate</a> 
+        </div>
 
         
     </div>
