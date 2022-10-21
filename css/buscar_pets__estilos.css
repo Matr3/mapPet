@@ -78,8 +78,7 @@
     align-items: center;
     justify-content: space-around;
     color: #FFFFFF;
-    background: #2A7AE4;
-    border-style: none;
+    background: orangered;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -88,9 +87,15 @@
     margin: 0 1rem;
     width: 90%;
     height: 50px;
+    border: none;
+    border-radius: 25px;
+    transition: .5s;
 }
 .input__image-label:hover{
-    background: #5595E9;
+    transform: scale(1.1);
+    background: orangered;
+    color: black;
+    cursor: pointer;
 }
 
 input[type="file"]#input__imagen{
@@ -128,17 +133,23 @@ input[type="file"]#input__imagen{
     color: #FFFFFF;
     width: 559px;
     height: 51px;
-    background: #2A7AE4;
+    background: orangered;
     border-style: none;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
+    border: none;
+    border-radius: 25px;
+    transition: .5s;
     
 }
 .btn_agregar:hover{
-    background: #5595E9;
+    transform: scale(1.1);
+    background: orangered;
+    color: black;
+    cursor: pointer;
 }
 .top_limit{
     margin-top: 2rem;

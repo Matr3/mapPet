@@ -28,8 +28,9 @@ body{
     transition: .6S;
 }
 .links_decoration:hover{
-    color: rgb(54, 54, 54);
-    background: orangered;
+    transform: scale(1.1);
+    color: orangered;
+    cursor: pointer;
 
 }
 .act{
@@ -75,7 +76,7 @@ body{
     font-weight: 700;
     font-size: 32px;
     line-height: 38px;
-    color: #464646;
+    color: black;
 }
 .btn_todo{
     text-decoration: none;
@@ -101,7 +102,7 @@ body{
 	border-radius: 50%;
 	border: rgb(225, 100, 10) solid 5px;
     animation: img_Rotate 5s backwards;
-	animation-delay: 1s;
+	animation-delay: 2s;
 }
 
 @keyframes img_Rotate{
@@ -174,7 +175,7 @@ body{
 }
 .titulo_mapa{
     font-family: 'Lemon', cursive;
-    color: #263850;
+    color: #000000;
 }
 /*Main pagina detalle_pets*/
 .contenido_cargaPets{
@@ -191,11 +192,11 @@ body{
     margin: 5% auto;
 }
 .title_addPets{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lemon', cursive;
     font-style: normal;
     font-size: 2rem;
     font-weight: bold;
-    color: #464646;
+    color: black;
     padding: 10px 10px;
 }
 .pets_detalles{
