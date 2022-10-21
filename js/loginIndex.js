@@ -1,61 +1,27 @@
 import {listaClientes} from "../service/cliente_service.js";
-import { detalleUsuarios } from "./barraUsuario.js";
-import { perfilUser } from "./usuario_pets.js"
+import { detalleUsuarios } from "./barraUsuarioIndex.js";
 
-
-
-/*
-document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === 'visible') {
-    console.log("PLAY")
-  } else {
-    console.log("PAUSE")
-  }
-});
-*/
-function handleVisibilityChange() {
-  if(document.hidden) {
-    console.log("HIDDEN: ");
-    /*setInterval((window.location.href ="index.html"), 10000)*/
-    /*Agregar ventana de close*/
-  } else {
-    console.log("VISIBLE: ")
-    /*Agregar booleano que se active cuando esta activa*/
-    /*tomar el tiempo de inicio de sesion*/
-    /*si no se usa en determinado tiempo cerrar sesion*/
-    //const test = dato1.email;
-    /*guarda en el sessionStorage*/
-    //sessionStorage.setItem("lastname", test);
-    //sessionStorage.getItem("lastname");
-  }
+function storageEmail (emailAdd,nombreCompletoAdd,imagenAdd){
+  sessionStorage.setItem("email", emailAdd);
+  sessionStorage.getItem("email");
+  sessionStorage.setItem("nombre", nombreCompletoAdd);
+  sessionStorage.getItem("nombre");
+  sessionStorage.setItem("imagen", imagenAdd);
+  sessionStorage.getItem("imagen");
+  console.log("entre")
+  
 }
 
-
-
-
   var dato1 = {};
-  
-
-  function storageEmail (emailAdd,nombreCompletoAdd,imagenAdd){
-    sessionStorage.setItem("email", emailAdd);
-    sessionStorage.getItem("email");
-    sessionStorage.setItem("nombre", nombreCompletoAdd);
-    sessionStorage.getItem("nombre");
-    sessionStorage.setItem("imagen", imagenAdd);
-    sessionStorage.getItem("imagen");
-    
-    
-  }
 
     //Funcion capturar datos
     export function obtenerDatos() {
-      
+
       const emailAdd = dato1.email;
       const nombreAdd = dato1.given_name;
       const apellidoAdd = dato1.family_name;
       const nombreCompletoAdd = dato1.name;
       const imagenAdd = dato1.picture;
-      storageEmail(emailAdd,nombreCompletoAdd,imagenAdd)
       //console.log(email + " " + nombre + " " + apellido + " " + nombreCompleto + " " + imagen);
       var count = true;
       listaClientes
@@ -70,12 +36,10 @@ function handleVisibilityChange() {
           console.log("ya tengo usuario")
           document.querySelector(".box_botonInicio").style.display="none";
           document.querySelector(".box_detalle_user").style.display="block";
-          document.querySelector(".box_ingreso").style.display="none";
-          
+
           detalleUsuarios(nombreCompletoAdd,imagenAdd);
-          perfilUser();
-          storageEmail (emailAdd,nombreCompletoAdd,imagenAdd);
           
+          storageEmail (emailAdd,nombreCompletoAdd,imagenAdd);
           return count = false; 
          }
         
@@ -89,10 +53,8 @@ function handleVisibilityChange() {
             console.log("creo usuario")
           document.querySelector(".box_botonInicio").style.display="none";
           document.querySelector(".box_detalle_user").style.display="block";
-          document.querySelector(".box_ingreso").style.display="none";
-          
+
           detalleUsuarios(nombreCompletoAdd,imagenAdd);
-          perfilUser();
           
 
           }).catch((error) => console.log(error));
@@ -140,35 +102,32 @@ function handleVisibilityChange() {
       
     }
 
+   
     if(sessionStorage.getItem("email")){
       console.log("Sesion: "+sessionStorage.getItem("email"))
       document.querySelector(".box_botonInicio").style.display="none";
       document.querySelector(".box_detalle_user").style.display="block";
-      document.querySelector(".box_ingreso").style.display="none";
       const nombre = sessionStorage.getItem("nombre").replace(/"/g, '');
       const imagen = sessionStorage.getItem("imagen").replace(/"/g, '');
 
-      detalleUsuarios(nombre,imagen);
-      perfilUser();
+          detalleUsuarios(nombre,imagen);
+          
         
       
     }else{
-      window.onload = function () {
-        google.accounts.id.initialize({
-          client_id: "404534087235-cn6uhb4iiua6vjg91orae16aq4qij8ad.apps.googleusercontent.com",
-          callback: handleCredentialResponse,
-          auto_select: true
-        });
-        google.accounts.id.renderButton(
-          document.getElementById("buttonDiv"),
-          { theme: "outline", size: "large" }  // customization attributes
-        );
-        google.accounts.id.prompt(); // also display the One Tap dialog
-        
-      }
+    window.onload = function () {
+      google.accounts.id.initialize({
+        client_id: "404534087235-cn6uhb4iiua6vjg91orae16aq4qij8ad.apps.googleusercontent.com",
+        callback: handleCredentialResponse,
+        auto_select: true
+      });
+      google.accounts.id.renderButton(
+        document.getElementById("buttonDiv"),
+        { theme: "outline", size: "large" }  // customization attributes
+      );
+      google.accounts.id.prompt(); // also display the One Tap dialog
     }
-    
 
-  
+  }
    
 

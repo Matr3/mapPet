@@ -13,9 +13,11 @@ const crearUsuario = () => {
         <picture>
             <img class="img_user" src="${imagenAdd}" alt="Usuario ${nombreCompletoAdd}" referrerpolicy="no-referrer"/ >
         </picture>
-        <div>
+        <div class="content">
             <h1 class="raza_detalles">${nombreCompletoAdd}</h1>
+            <a class="btCuenta" href="../usuario_pets.html"><sapn class="miCuenta">Mi Cuenta</span></a>
         </div>
+
     </div>
         `;
 

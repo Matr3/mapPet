@@ -68,7 +68,7 @@ function handleVisibilityChange() {
           console.log("ya tengo usuario")
           document.querySelector(".box_botonInicio").style.display="none";
           document.querySelector(".box_detalle_user").style.display="block";
-          document.addEventListener("visibilitychange", handleVisibilityChange, false); //Visibilidad usuario
+          document.querySelector(".box_ingreso").style.display="none";
           detalleUsuarios(nombreCompletoAdd,imagenAdd);
           detallePets();
           storageEmail (emailAdd,nombreCompletoAdd,imagenAdd);
@@ -86,6 +86,7 @@ function handleVisibilityChange() {
             console.log("creo usuario")
           document.querySelector(".box_botonInicio").style.display="none";
           document.querySelector(".box_detalle_user").style.display="block";
+          document.querySelector(".box_ingreso").style.display="none";
           
 
           detalleUsuarios(nombreCompletoAdd,imagenAdd);
@@ -140,6 +141,7 @@ function handleVisibilityChange() {
       console.log("Sesion: "+sessionStorage.getItem("email"))
       document.querySelector(".box_botonInicio").style.display="none";
       document.querySelector(".box_detalle_user").style.display="block";
+      document.querySelector(".box_ingreso").style.display="none";
       const nombre = sessionStorage.getItem("nombre").replace(/"/g, '');
       const imagen = sessionStorage.getItem("imagen").replace(/"/g, '');
 
@@ -156,7 +158,7 @@ function handleVisibilityChange() {
         });
         google.accounts.id.renderButton(
           document.getElementById("buttonDiv"),
-          { theme: "outline", size: "large" }  // customization attributes
+          { theme: "dark", size: "large" }  // customization attributes
         );
         google.accounts.id.prompt(); // also display the One Tap dialog
         

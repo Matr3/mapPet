@@ -41,6 +41,7 @@ function estilos(){
           console.log("ya tengo usuario")
           document.querySelector(".box_botonInicio").style.display="none";
           document.querySelector(".box_detalle_user").style.display="block";
+          document.querySelector(".box_ingreso").style.display="none";
 
           detalleUsuarios(nombreCompletoAdd,imagenAdd);
           estilos();
@@ -58,6 +59,7 @@ function estilos(){
             console.log("creo usuario")
           document.querySelector(".box_botonInicio").style.display="none";
           document.querySelector(".box_detalle_user").style.display="block";
+          document.querySelector(".box_ingreso").style.display="none";
 
           detalleUsuarios(nombreCompletoAdd,imagenAdd);
           
@@ -109,9 +111,11 @@ function estilos(){
 
    
     if(sessionStorage.getItem("email")){
+      console.log("tets")
       console.log("Sesion: "+sessionStorage.getItem("email"))
       document.querySelector(".box_botonInicio").style.display="none";
       document.querySelector(".box_detalle_user").style.display="block";
+      document.querySelector(".box_ingreso").style.display="none";
       const nombre = sessionStorage.getItem("nombre").replace(/"/g, '');
       const imagen = sessionStorage.getItem("imagen").replace(/"/g, '');
 

@@ -26,13 +26,13 @@
     <!--Carga CRUB de Pets Buscados y Encontrados-->
     <script type="module" src="js/add_pets.js"></script>
     <script type="module" src="js/buscados.js"></script>
-    <!--Libreria Scroll-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--Login google-->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script type ="module" src="js/login_buscados.js"></script>
     <!--Icon de fontwesome-->
     <script src="https://kit.fontawesome.com/a1140612d3.js" crossorigin="anonymous"></script>
+    <!--Libreria Scroll-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     
     <title>Map Pet - ::Si Buscas o Encontraste una mascota...::</title>
@@ -51,7 +51,20 @@
                       </form>
                     </div>
                 </section>
-            <span><a class="link_login" href="usuario_pets.html">Login</a></span>
+                <section class="box_botonInicio">
+                    <div id="buttonDiv"></div>
+                </section>
+                <section class="box_detalle_user" data-usuario>
+            
+            
+                    <!--
+                        <div class="user_display">
+                        <div>Imagen</div>
+                        <div>Nombre Y Apellido</div>
+                    </div>
+                    -->
+        
+            </section>
         </section>
         <section class="cajaBotonera">
             <nav class="menu">
@@ -68,20 +81,8 @@
     <main class="carga_pets">
         
         <div class="contenido_cargaPets">
-            <section class="box_botonInicio">
-                <div id="buttonDiv"></div>
+            <section class="box_ingreso">
                 <p class="descripcion_detalles">Acceda con su cuenta de google para mas información</p>
-            </section>
-            <section class="box_detalle_user form" data-usuario>
-            
-            
-                    <!--
-                        <div class="user_display">
-                        <div>Imagen</div>
-                        <div>Nombre Y Apellido</div>
-                    </div>
-                    -->
-        
             </section>
             <section class="maps">
                 <div class="contenedor espacio">
@@ -155,7 +156,7 @@
             </section>
         </div>
         
-        <section class="buscados_form" data-aos="fade-right" data-aos-duration="3000">
+        <section class="buscados_form">
             <div class="buscados_titulo">
                 <h2 class="buscados_titulo_estilo">Buscados</h2>
                 <a class="btn_todo" href="./buscados.html">Ver todo →</a>

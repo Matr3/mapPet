@@ -41,14 +41,14 @@ body{
 }
 .buscados, .encontrados{
     
-    margin: 7rem auto;
+    margin: 7rem 5rem;
     max-width: 100%;
     /* border: solid 1px gray; */
 
 }
 .buscados_form{
     
-    margin: 3rem auto;
+    
     max-width: 100%;
     /*border: solid 1px gray;*/
 
@@ -60,7 +60,7 @@ body{
 .perfilPets{
     
 
-    margin: 0 auto;
+    margin: 0;
     /*max-width: 1200px;*/
     /*border: solid 1px gray;*/
 
@@ -144,6 +144,7 @@ body{
 .mascotas{
     max-width: 174px;
     height: 250px;
+    text-align: center;
    
 }
 .mascotas:hover{
@@ -170,8 +171,8 @@ body{
     /*margin: 0 5rem;*/
 }
 .perfil_cuerpo{
-    margin: 3rem auto;
-    max-width: 80%;
+    margin: 7rem 5rem;
+
 }
 .titulo_mapa{
     font-family: 'Lemon', cursive;
@@ -183,8 +184,8 @@ body{
     
 }
 .detalle_cuerpo, .carga_pets{
-    width: 80%;
-    margin: 5% auto;
+   
+    margin: 7rem 5rem;
     
 }
 .formulario_carga{
@@ -211,22 +212,48 @@ body{
 }
 .raza_detalles{
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
     line-height: 19px;
     padding: 10px 10px;
+    text-decoration: none;
+    color: black;
+}
+.content{
+    text-align: center;
+}
+.btCuenta{
+    text-decoration: none;
+}
+.miCuenta{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 19px;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: black;
+    transition: .5s;
+}
+.miCuenta:hover{
+    color: orangered;
+    cursor: pointer;
+
 }
 .color_detalles{
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
     color: #464646;
     padding: 10px 10px;
+   
 }
 .descripcion_detalles{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lemon', cursive;
     font-style: normal;
     font-size: 1rem;
     color: #464646;
     padding: 10px 10px;
+    margin: 5rem;
 }
 .box_detalle_pets{
     
@@ -234,11 +261,7 @@ body{
     margin: 0 10%;
 }
 .box_botonInicio{
-    margin: 0 auto;
 
-    width: 100%;
-    height: 32vw;
-    padding: 30px;
 
     
 }
