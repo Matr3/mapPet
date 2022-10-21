@@ -50,7 +50,20 @@
                       </form>
                     </div>
                 </section>
-            <span><a class="link_login" href="usuario_pets.html">Login</a></span>
+                <section class="box_botonInicio">
+                    <div id="buttonDiv"></div>
+                </section>
+                <section class="box_detalle_user" data-usuario>
+            
+            
+                    <!--
+                        <div class="user_display">
+                        <div>Imagen</div>
+                        <div>Nombre Y Apellido</div>
+                    </div>
+                    -->
+        
+            </section>
         </section>
         <section class="cajaBotonera">
             <nav class="menu">
@@ -67,20 +80,8 @@
     <main class="carga_pets">
         
         <div class="contenido_cargaPets">
-            <section class="box_botonInicio">
-                <div id="buttonDiv"></div>
+            <section class="box_ingreso">
                 <p class="descripcion_detalles">Acceda con su cuenta de google para mas información</p>
-            </section>
-            <section class="box_detalle_user" data-usuario>
-            
-            
-                    <!--
-                        <div class="user_display">
-                        <div>Imagen</div>
-                        <div>Nombre Y Apellido</div>
-                    </div>
-                    -->
-        
             </section>
             <section class="maps">
                 <div class="contenedor espacio">
@@ -97,7 +98,7 @@
                 </div>
             </section>
             
-            <section class="formulario_carga" data-aos="fade-right" data-aos-duration="2000">
+            <section class="formulario_carga">
                 <form action="#" class="formulario_contenedor" data-form>
                     <fieldset>
                         <legend class="title_addPets">Agregar una imagen</legend>
@@ -116,35 +117,35 @@
                         <input class="form-control input" id="formFileLg" type="file" required data-tipo="imagen_prod">
                         -->
                         <div class="input-container top_limit">
-                            <select name="select" class="input_nombre" data-tipo="selector">
+                            <select name="select" class="input_formulario" data-tipo="selector">
                                 <option value="value1">Perdiste tu mascota?</option>
                                 <option value="value2">Encontraste alguna mascota?</option>
                             </select>
                         </div>
                         
                         <div class="input-container">
-                            <input name="animal" id="animal" class="input_nombre" type="text" placeholder="Raza y Animal" required data-tipo="animal" pattern="[\s\S]{4,40}">
+                            <input name="animal" id="animal" class="input_formulario type="text" placeholder="Raza y Animal" required data-tipo="animal" pattern="[\s\S]{4,40}">
                             <label class="input-label" for="animal"></label>
                             
                         </div>
                         
                         <div class="input-container">
-                            <input name="color" id="color" class="input_nombre" type="text" placeholder="Color del animal" required data-tipo="color" pattern="[\s\S]{4,20}">
+                            <input name="color" id="color" class="input_formulario" type="text" placeholder="Color del animal" required data-tipo="color" pattern="[\s\S]{4,20}">
                             <label class="input-label" for="color"></label>
                             
                         </div>
                         <div class="input-container">
-                            <input name="tamanio" id="tamanio" class="input_nombre" type="text" placeholder="Tamaño y peso del animal" required data-tipo="tamanio" pattern="[(s\S]{1,100}">
+                            <input name="tamanio" id="tamanio" class="input_formulario" type="text" placeholder="Tamaño y peso del animal" required data-tipo="tamanio" pattern="[(s\S]{1,100}">
                             <label class="input-label" for="tamanio"></label>
                             
                         </div>
                         <div class="input-container">
-                            <textarea name="descripcion" id="descripcion" class="input_mensaje" type="text" placeholder="Descripción del animal" required data-tipo="descripcion" pattern="[\s\S]{5,150}"></textarea>
+                            <textarea name="descripcion" id="descripcion" class="input_formulario" type="text" placeholder="Descripción del animal" required data-tipo="descripcion" pattern="[\s\S]{5,150}"></textarea>
                             <label class="input-label" for="descripcion"></label>
                             
                         </div>
                         <div class="input-container">
-                            <input name="email" id="email" class="input_nombre" type="text" placeholder="Email de Contacto" required data-tipo="email" pattern="[\s\S]{5,30}">
+                            <input name="email" id="email" class="input_formulario" type="text" placeholder="Email de Contacto" required data-tipo="email" pattern="[\s\S]{5,30}">
                             <label class="input-label" for="email"></label>
                             
                         </div>
