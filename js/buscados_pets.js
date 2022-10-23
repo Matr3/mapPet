@@ -44,12 +44,13 @@ const div = document.querySelector("[data-search]");
 listaServices
   .listaBuscados()
   .then((data) => {
-    data.forEach(({ raza, tamanio, descripcion, imagen, id}) => {
+    data.forEach(({ raza, tamanio, color, descripcion, imagen, id}) => {
+        const colorp = color.toLowerCase();
         const razap = raza.toLowerCase();
         const tamaniop = tamanio.toLowerCase();
         const descripcionp = descripcion.toLowerCase();
         
-        if(razap.includes(buscarp) || tamaniop.includes(buscarp) || descripcionp.includes(buscarp)){
+        if(razap.includes(buscarp) || tamaniop.includes(buscarp) || descripcionp.includes(buscarp) || color.includes(buscarp) ){
             const nuevaLinea = crearNuevaLinea(imagen, raza, id);
             div.appendChild(nuevaLinea); 
         }
