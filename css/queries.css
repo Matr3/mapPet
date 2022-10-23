@@ -197,5 +197,7 @@
         justify-content: center;
 
     }
-    
+    .logo_imgen{
+        height: 50px;
+    }
 }
