@@ -151,7 +151,7 @@
       #menu{
         z-index:1;
         min-width:100%;
-        min-height:60%;
+        min-height:100%;
         position: fixed;
         top:0;
         height:0;
@@ -161,12 +161,12 @@
         padding-top:20px;
         transition: all 0.3s ease-in-out;
         
+        
       }
       
       #menu.overlay{
         visibility: visible;
         opacity: 1;
-
         background:rgba(0,0,0, 85%);
       }
       
