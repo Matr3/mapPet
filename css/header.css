@@ -30,3 +30,9 @@
     color: orangered;;
     padding: 0 10px 0;
 }
+.formSearch{
+    background-color: white; 
+    display:flex; 
+    padding-left:10px; 
+    border-radius: 25px;
+}

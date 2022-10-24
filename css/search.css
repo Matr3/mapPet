@@ -36,12 +36,9 @@
  
   
   .container .buscador input[type="text"] {
-    min-width: 400px;
+    width: 400px;
     padding: 0.5rem;
-    padding-left: 1.25rem;
     border: none;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
     margin-right: 0;
   }
   
@@ -76,7 +73,9 @@
     }
 
     .container .buscador input[type="text"] {
-      min-width: 220px;
+      width: 100%;
     }
+   
   
 }  
+ 

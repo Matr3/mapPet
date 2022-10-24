@@ -19,6 +19,9 @@
     }
 }
 @media screen and (max-width:768px) {
+    .block{
+        display: none;
+    }
     .buscados, .encontrados {
         margin: 1rem 2rem;
     }
@@ -55,7 +58,7 @@
         /* margin: 3rem auto; */
     }
     .container .buscador {
-        margin: 30px 0;
+        margin: 15px;
     }
     .encontrados .tarjeta_encontrados, .buscados .tarjeta_buscados  {
         justify-content: center;
@@ -95,7 +98,7 @@
         cursor: pointer;
         height: 27px;
         width: 27px;
-        margin: 50px;
+        padding: 10px;
         overflow: visible;
         position: relative;
         z-index:2;
@@ -108,7 +111,7 @@
         height: 4px;
         opacity: 1;
         position: absolute;
-        left: 15px;
+        left: 10px;
         transition: 0.3s ease-in-out;
       }
       #burger-menu span:before,
