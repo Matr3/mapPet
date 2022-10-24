@@ -151,7 +151,7 @@
       #menu{
         z-index:1;
         min-width:100%;
-        min-height:100%;
+        min-height:60%;
         position: fixed;
         top:0;
         height:0;
