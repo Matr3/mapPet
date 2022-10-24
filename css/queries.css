@@ -180,6 +180,18 @@
         margin-bottom:30px;
         text-decoration:none;
       }
+      .caja {
+        display: flex;
+        flex-direction: row;
+    }
+      .cajaTitulo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-content: center;
+      }
+
 }
 
 @media screen and (max-width:360px) {
