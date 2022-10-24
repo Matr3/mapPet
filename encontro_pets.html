@@ -33,6 +33,9 @@
 </head>
 <body>
     <header class="caja">
+        <div id="burger-menu">
+            <span></span>
+        </div>
         <section class="cajaTitulo">
             <a href="./index.html">                    
                 <img class="logo_imgen" src="img/Pet Finder.png" alt="mappet">
@@ -45,18 +48,23 @@
                       </form>
                     </div>
                 </section>
-            <span><a class="link_login" href="usuario_pets.html">Login</a></span>
+                
+            
+                
         </section>
         <section class="cajaBotonera">
-            <nav class="menu">
+            <nav class="menu" id="menu">
                 <ul class="menu_links">
                     <li id="Btbuscar" class="menu_links_lista"><a class="links_decoration" href="buscar_pets.html">BUSCAR</a></li>
                     <li class="menu_links_lista"><a class="links_decoration" href="mapa_pets.html">MAPPET</a></li>
                     <li class="menu_links_lista "><a class="links_decoration" href="buscar_pets.html">ENCONTRADO</a></li>
                     <li class="menu_links_lista "><a class="links_decoration" href="https://fckland.github.io/TrabajoFinal/">ANIMALIS Shop</a></li>
+                    <li class="menu_links_lista box_botonInicio"><div id="buttonDiv"></div></li>
+                    <li class="menu_links_lista box_detalle_user" data-usuario></li>
                 </ul>
             </nav>
-        </section> 
+        </section>
+        
     </header>
     <main>
         <section class="maps"  class="mapa_banner">
@@ -161,6 +169,7 @@
             <h4 class="desarrollo">Trabajo Practico Codo a Codo 4.0</h4>  
         </div>
     </footer>
+    <script src="js/burgerMenu.js"></script>
     <!--Libreria Scroll llama a javascript-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
