@@ -10,9 +10,9 @@ const comprimirImagen = (imagen) => {
         const $canvas = document.createElement("canvas");
         const imagenG = new Image();
         imagenG.onload = () => {
-            $canvas.width = imagenG.width;
-            $canvas.height = imagenG.height;
-            $canvas.getContext("2d").drawImage(imagenG, 0, 0);
+            $canvas.width = 800;
+            $canvas.height = (imagenG.height * $canvas.width)/imagenG.width;
+            $canvas.getContext("2d").drawImage(imagenG, 0, 0, $canvas.width, $canvas.height);
             $canvas.toBlob(
                 (blob) => {
                     if (blob === null) {
