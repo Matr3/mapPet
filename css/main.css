@@ -79,7 +79,7 @@ body{
 	border-radius: 50%;
     box-shadow: 1px 0px 7px 2px rgba(63, 63, 63, 0.7);
 	border: rgb(225, 100, 10) solid 5px;
-    animation: img_Rotate 3s backwards 2s;
+    animation: img_Rotate 1s backwards 2s;
 	
     
 }

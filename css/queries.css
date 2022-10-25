@@ -210,6 +210,10 @@
     .buscados_titulo, .encontrados_titulo {
         padding: 0px;
     }
+    .wh_boxLarge {
+        width: 250px;
+        height: 250px;
+    }
 
 }
 
