@@ -188,6 +188,7 @@
         text-decoration:none;
       }
       .titleUser, .miCuenta, .btInicio{
+        padding-bottom: 15px;
         color:  orangered;
         font-family: 'Lemon', cursive;
         font-style: normal;

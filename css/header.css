@@ -86,3 +86,6 @@
     text-align: center;
     transition: .6S;
 }
+#buttonDiv{
+    margin: 15px 0;
+}
