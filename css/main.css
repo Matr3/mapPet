@@ -2,43 +2,7 @@
 body{
     background-color: #f0a700;
 }
-.menu{
-    margin: 0 auto;
-    
-   /* border-bottom: solid 3px #040404;
-    box-shadow: 3px 3px 3px rgb(59, 59, 59);*/
-}
-.menu_links{
-    margin: 0 5%;
-    
-}
-.links_decoration{
-    padding: 12px;
-    height: 3rem;
-    width: 15rem;
-    /*background-color:  #fff159;*/
-    
-    margin: 0 auto;
-    text-decoration: none;
-    font-family: 'Lemon', cursive;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: black;
-    text-align: center;
-    transition: .6S;
-}
-.links_decoration:hover{
-    transform: scale(1.1);
-    color: orangered;
-    cursor: pointer;
 
-}
-.act{
-    background: orangered;
-}
-.act:hover{
-    background-color: white;
-}
 .buscados, .encontrados{
     
     margin: 7rem 5rem;

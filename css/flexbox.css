@@ -3,6 +3,7 @@
 .caja{
     display: flex;
     flex-direction: column;
+    
 }
 .cajaTitulo{
     display: flex;
@@ -27,6 +28,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 15px;
 }
 .maps .contenedor{
     display: flex;
@@ -107,7 +109,7 @@
 .box_botonInicio{
     display: flex;
     align-items: center;
-    flex-direction: column;
+    gap: 10px;
 }
 .formulario_carga{
     

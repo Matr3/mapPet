@@ -123,7 +123,7 @@ function storageEmail (emailAdd,nombreCompletoAdd,imagenAdd){
       });
       google.accounts.id.renderButton(
         document.getElementById("buttonDiv"),
-        { theme: "outline", size: "large" }  // customization attributes
+        { theme: "outline", type: "icon" }  // customization attributes
       );
       google.accounts.id.prompt(); // also display the One Tap dialog
     }
