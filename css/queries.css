@@ -214,6 +214,9 @@
         width: 250px;
         height: 250px;
     }
+    .mapa_marcadores{
+        height: 550px;
+    }
 
 }
 
