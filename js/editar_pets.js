@@ -1,6 +1,6 @@
 import { listaServices } from "../service/cliente_service.js";
-import {lat} from "../js/maps_buscados.js";
-import { lng } from "../js/maps_buscados.js";
+import {lat} from "../js/maps_marcadores.js";
+import { lng } from "../js/maps_marcadores.js";
 
 const url = new URL (window.location);
 const id = url.searchParams.get("id");
@@ -15,6 +15,30 @@ const descripcion = document.querySelector("[data-tipo=descripcion]");
 const email = document.querySelector("[data-tipo=email]");
 
 const imagenDiv = document.querySelector(".agregar__imagen-div");
+
+const comprimirImagen = (imagen) => {
+    return new Promise((resolve, reject) => {
+        const $canvas = document.createElement("canvas");
+        const imagenG = new Image();
+        imagenG.onload = () => {
+            $canvas.width = 800;
+            $canvas.height = (imagenG.height * $canvas.width)/imagenG.width;
+            $canvas.getContext("2d").drawImage(imagenG, 0, 0, $canvas.width, $canvas.height);
+            $canvas.toBlob(
+                (blob) => {
+                    if (blob === null) {
+                        return reject(blob);
+                    } else {
+                        resolve(blob);
+                    }
+                },
+                "image/jpeg",
+                50 / 100
+            );
+        };
+        imagenG.src = URL.createObjectURL(imagen);
+    });
+};
 
 let fileImagen = "";
 
@@ -42,12 +66,25 @@ let fileImagen = "";
                     const btnAgregarImagen = document.querySelector(".agregar__imagen");
                     
                     btnAgregarImagen.addEventListener('change', cargar);
-                    function cargar(ev) {
-                        var arch = new FileReader();
-                        
-                        arch.readAsDataURL(ev.target.files[0]);
-                        arch.addEventListener('load',leer);
-                    }
+
+                    async function cargar(ev) {
+                            console.log("entre")
+                            
+                            const size = 50000;
+                            if(ev.target.files[0].size <= size){
+                                var arch = new FileReader();
+                                arch.readAsDataURL(ev.target.files[0]);
+                                arch.addEventListener('load',leer);
+
+                            }else{
+                                const archivo = ev.target.files[0];
+                                const blob = await comprimirImagen(archivo);
+                                console.log("pesado")
+                                var arch = new FileReader();
+                                arch.readAsDataURL(blob);
+                                arch.addEventListener('load',leer);
+                                }
+                        }
                     function leer(ev) {
                         document.getElementById('box__imagen').style.backgroundImage = "url('" + ev.target.result + "')";
                         fileImagen = ev.target.result;

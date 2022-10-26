@@ -4,20 +4,6 @@ export function perfilUser(){
     //backticks
     const emailStorage = sessionStorage.getItem("email");
 
-    const crearContenidoPerfil = () => {
-      const caja = document.createElement("div");
-      const contenidoDiv = `
-      <div >
-      
-      <p class="descripcion">Bienvenida a Mappet, usted no tiene ninguna mascota perdido o encontrada. Ingrese en buscar si perdio a una mascota o ingrese en encontrado si se encontro una mascota perdida.</p>
-     </div>
-      `;
-      caja.innerHTML = contenidoDiv;
-
-      return caja;
-    };
-
-
 
     const crearNuevaLinea = (imagen, raza, id) => {
         const linea = document.createElement("div");

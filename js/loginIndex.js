@@ -1,5 +1,22 @@
 import {listaClientes} from "../service/cliente_service.js";
 import { detalleUsuarios } from "./barraUsuarioIndex.js";
+import { perfilUser } from "./usuario_pets.js";
+import { detallePets } from "./detalle_pets.js";
+
+const carga_pets = document.querySelector(".carga_pets");
+const perfilPets = document.querySelector(".perfilPets");
+const box_detalle_pets = document.querySelector(".box_detalle_pets");
+const perfil_cuerpo = document.querySelector(".box_ingreso");
+
+
+
+function estilos(){
+  document.querySelector(".box_ingreso").style.display="none";
+  document.querySelector(".maps").style.display="block";
+  document.querySelector(".formulario_carga").style.display="flex";
+  
+}
+
 
 function storageEmail (emailAdd,nombreCompletoAdd,imagenAdd){
   sessionStorage.setItem("email", emailAdd);
@@ -8,7 +25,7 @@ function storageEmail (emailAdd,nombreCompletoAdd,imagenAdd){
   sessionStorage.getItem("nombre");
   sessionStorage.setItem("imagen", imagenAdd);
   sessionStorage.getItem("imagen");
-  console.log("entre")
+ 
   
 }
 
@@ -36,10 +53,24 @@ function storageEmail (emailAdd,nombreCompletoAdd,imagenAdd){
           console.log("ya tengo usuario")
           document.querySelector(".box_botonInicio").style.display="none";
           document.querySelector(".box_detalle_user").style.display="block";
-
           detalleUsuarios(nombreCompletoAdd,imagenAdd);
-          
           storageEmail (emailAdd,nombreCompletoAdd,imagenAdd);
+          if(carga_pets){
+            console.log("entre1"); 
+            estilos();
+          }else if(perfilPets){
+            console.log("entre2"); 
+            perfilUser();
+          }else if(box_detalle_pets){
+            console.log("entre3"); 
+            detallePets();     
+          }else if(perfil_cuerpo){
+            console.log("entre4");
+            document.querySelector(".box_ingreso").style.display="none";
+            perfilUser();   
+          }
+          
+          
           return count = false; 
          }
         
@@ -53,9 +84,19 @@ function storageEmail (emailAdd,nombreCompletoAdd,imagenAdd){
             console.log("creo usuario")
           document.querySelector(".box_botonInicio").style.display="none";
           document.querySelector(".box_detalle_user").style.display="block";
-
           detalleUsuarios(nombreCompletoAdd,imagenAdd);
-          
+          if(carga_pets){
+            estilos();
+          }else if(perfilPets){
+            perfilUser();
+          }else if(box_detalle_pets){
+            detallePets();     
+          }else if(perfil_cuerpo){
+            console.log("entre");
+            document.querySelector(".box_ingreso").style.display="none";
+            perfilUser();   
+          }
+
 
           }).catch((error) => console.log(error));
 
@@ -63,25 +104,7 @@ function storageEmail (emailAdd,nombreCompletoAdd,imagenAdd){
       })
         
      .catch((err) => console.log(err));
-          
-          /*else{
-            
-            listaClientes
-        .crearUsuario(email, nombre, apellido, nombreCompleto, imagen)
-        .then((respuesta) => {
-            document.querySelector(".box_botonInicio").style.display="none";
-            document.querySelector(".box_detalle_user").style.display="block";
-            //cuando termino de capturar los datos llamo a la funcion detalle_pets.js
-          //detalleUsuarios(imagen,nombreCompleto);
-            detallePets();
-            //console.log(imagen, categoria, nombre_prod, precio_prod, descripcion_prod)
-            //window.location.href ="productos.html"
-
-        }).catch((error) => console.log(error));
-          */
-      
-      
-      
+ 
     }
 
     //Funcion usada de https://es.stackoverflow.com/
@@ -109,9 +132,21 @@ function storageEmail (emailAdd,nombreCompletoAdd,imagenAdd){
       document.querySelector(".box_detalle_user").style.display="block";
       const nombre = sessionStorage.getItem("nombre").replace(/"/g, '');
       const imagen = sessionStorage.getItem("imagen").replace(/"/g, '');
-
+      console.log("entre"); 
           detalleUsuarios(nombre,imagen);
-          
+          if(carga_pets){
+            estilos();
+          }else if(perfilPets){
+            perfilUser();
+          }else if(box_detalle_pets){
+            document.querySelector(".box_ingreso").style.display="none";
+            detallePets();     
+          }else if(perfil_cuerpo){
+            document.querySelector(".box_ingreso").style.display="none";
+            perfilUser(); 
+            console.log("entre");    
+          }
+
         
       
     }else{

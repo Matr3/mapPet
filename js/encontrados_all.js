@@ -28,7 +28,7 @@ const crearNuevaLinea = (imagen, raza, id) => {
     return linea;
   };
 
-  
+const act = document.querySelector(".activar");  
 const div = document.querySelector("[data-encontrados]");
 
 let cont_b = 0;
@@ -36,9 +36,14 @@ listaServices
   .listaBuscados()
   .then((data) => {
     data.forEach(({ selector, imagen, raza, id}) => {
-      
-      if (cont_b < 6){
-          if(selector === encontro){
+      if(selector === encontro){
+      if(act){
+        const nuevaLinea = crearNuevaLinea(imagen, raza, id);
+          div.appendChild(nuevaLinea);
+          console.log("entre ahi")
+        }
+        else if (cont_b < 6){
+
             const nuevaLinea = crearNuevaLinea(imagen, raza, id);
             div.appendChild(nuevaLinea);
             cont_b++;

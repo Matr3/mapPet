@@ -27,19 +27,25 @@ const crearNuevaLinea = (imagen, raza, id) => {
   };
 
 
-  
+const cant = document.querySelector(".cant");
 const div = document.querySelector("[data-buscados]");
 let cont_b = 0;
 listaServices
   .listaBuscados()
   .then((data) => {
     data.forEach(({ selector, imagen, raza, id}) => {
-      if (cont_b < 6){
-          if(selector === busca){
-            const nuevaLinea = crearNuevaLinea(imagen, raza, id);
-            div.appendChild(nuevaLinea);
-            cont_b++;
-          }
+      if(selector === busca){
+        if(cant){
+          const nuevaLinea = crearNuevaLinea(imagen, raza, id);
+          div.appendChild(nuevaLinea);
+          console.log("entre ahi")
+        }
+        else if (cont_b < 6){
+              console.log("entre aca")
+              const nuevaLinea = crearNuevaLinea(imagen, raza, id);
+              div.appendChild(nuevaLinea);
+              cont_b++;
+            }
       }
     });
   })

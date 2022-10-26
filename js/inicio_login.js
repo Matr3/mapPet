@@ -1,6 +1,3 @@
-
-
-
 const btnLogin = document.querySelector("#onclick");
 
 btnLogin.addEventListener("click", (event)=>{

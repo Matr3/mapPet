@@ -1,6 +1,9 @@
 import { listaServices } from "../service/cliente_service.js";
 var map;
 var markers = [];
+const carga_pets = document.querySelector(".carga_pets");
+export var lng = " "; 
+export var lat = " ";
 /*const infoContent = "../img/paw-solid.svg";*/
 
 function initMap() {
@@ -13,13 +16,34 @@ function initMap() {
   });
 
 
+  if(carga_pets){
+  // This event listener will call addMarker() when the map is clicked.
+    map.addListener('click', function(event) {
+      lat = event.latLng.lat();
+      lng = event.latLng.lng();
+      guardarMarker(lat,lng)
+      deleteMarkers();
+      addMarkerBuscado(event.latLng);
+    });
+  }else{
+    // Adds a marker at the center of the map.
+    addMarker(obelisco);
+  }
   
-  // Adds a marker at the center of the map.
-  addMarker(obelisco);
 
 }
 
 // Adds a marker to the map and push to the array.
+function addMarkerBuscado(location) {
+    
+  const marker = new google.maps.Marker({
+    position: location,
+    map: map
+  });
+  
+  markers.push(marker);
+}
+
 function addMarker() {
   listaServices
     .listaBuscados()
@@ -72,4 +96,30 @@ function addMarker() {
 
 }
 
+function guardarMarker(lat,lng){
+  lat = lat;
+  lng = lng;
+}
+  // Sets the map on all markers in the array.
+  function setMapOnAll(map) {
+    for (let i = 0; i < markers.length; i++) {
+      markers[i].setMap(map);     
+    }
+  }
+
+  // Removes the markers from the map, but keeps them in the array.
+  function clearMarkers() {
+    setMapOnAll(null);
+  }
+
+  // Shows any markers currently in the array.
+  function showMarkers() {
+    setMapOnAll(map);
+  }
+
+  // Deletes all markers in the array by removing references to them.
+  function deleteMarkers() {
+    clearMarkers();
+    markers = [];
+  }
 window.initMap = initMap;

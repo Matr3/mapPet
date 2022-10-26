@@ -1,6 +1,6 @@
 import {listaServices} from "../service/cliente_service.js"
-import {lat} from "../js/maps_buscados.js";
-import { lng } from "../js/maps_buscados.js";
+import {lat} from "../js/maps_marcadores.js";
+import { lng } from "../js/maps_marcadores.js";
 
 
 let imagen = "";
@@ -35,7 +35,7 @@ const btnAgregarImagen = document.querySelector(".agregar__imagen");
 btnAgregarImagen.addEventListener('change', cargar);
 
 async function cargar(ev) {
-  
+    console.log("entre")
     
     const size = 50000;
     if(ev.target.files[0].size <= size){
