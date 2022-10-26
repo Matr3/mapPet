@@ -217,6 +217,10 @@
     .mapa_marcadores{
         height: 550px;
     }
+    .youtube, .skewed{
+        width: 100%;
+    }
+
 
 }
 
@@ -235,4 +239,8 @@
         justify-content: center;
 
     }
+    .video{
+        padding: 15px;
+    }
+
 }

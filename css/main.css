@@ -11,18 +11,13 @@ body{
 
 }
 .video{
-    
-    
-    max-width: 100%;
-    /* border: solid 1px gray; */
-           padding: 50px 0; 
-        position: relative;
-        background: orangered;
-        height: 60vh;
-        border-top-left-radius: 50% 57%;
-        border-top-right-radius: 50% 57%;
+    clip-path: polygon(0 0,100% 50px,100% 100%,0 100%);
+    margin-top: -40px;
+    padding: 50px;
+    background-color: orangered;
 
 }
+
 .buscados_form{
     
     
@@ -325,5 +320,8 @@ body{
 }
 .box_ingreso{
     margin: 0 auto;
+}
+.youtube{
+    border-radius: 25px;
 }
 
