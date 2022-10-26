@@ -5,9 +5,22 @@ body{
 
 .buscados, .encontrados{
     
-    margin: 7rem 5rem;
+    margin: 4rem 5rem;
     max-width: 100%;
     /* border: solid 1px gray; */
+
+}
+.video{
+    
+    
+    max-width: 100%;
+    /* border: solid 1px gray; */
+           padding: 50px 0; 
+        position: relative;
+        background: orangered;
+        height: 60vh;
+        border-top-left-radius: 50% 57%;
+        border-top-right-radius: 50% 57%;
 
 }
 .buscados_form{
@@ -19,7 +32,7 @@ body{
 }
 .espacio_margin{
     
-    padding: 5rem;
+    padding: 2rem;
 }
 .perfilPets, .perfilPetsUser{
     
