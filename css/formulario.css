@@ -4,3 +4,7 @@
 .formulario_carga{
     display: none;
 }
+.espacio_margin{
+    margin: 4rem 5rem;
+    max-width: 100%;
+}

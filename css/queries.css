@@ -1,6 +1,7 @@
 @media screen and (max-width:1200px) {
-    .buscados, .encontrados {
+    .buscados, .encontrados, .espacio_margin_form {
         margin: 2rem 2rem;
+        padding: 32px;
     }
     .mapa_banner {
         height: 50vw;
