@@ -63,6 +63,7 @@ function storageEmail (emailAdd,nombreCompletoAdd,imagenAdd){
             perfilUser();
           }else if(box_detalle_pets){
             console.log("entre3"); 
+            document.querySelector(".box_ingreso").style.display="none";
             detallePets();     
           }else if(perfil_cuerpo){
             console.log("entre4");
@@ -90,6 +91,7 @@ function storageEmail (emailAdd,nombreCompletoAdd,imagenAdd){
           }else if(perfilPets){
             perfilUser();
           }else if(box_detalle_pets){
+            document.querySelector(".box_ingreso").style.display="none";
             detallePets();     
           }else if(perfil_cuerpo){
             console.log("entre");
