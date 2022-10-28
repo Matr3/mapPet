@@ -1,26 +1,27 @@
-const openModalBtn = document.querySelectorAll('[data-btn]')
-const modal = document.querySelectorAll('[data-modal]')
-const closeModalBtn = document.querySelectorAll('[data-close="true"]')
-const btnLength = openModalBtn.length
-const closeBtnLength = closeModalBtn.length
+/* THINGS TO THINK ABOUT*/
+/* 
+1. Grab the button element and set it to a variable to that I can do things with it
+2. Add an event listener to the button element and set it to "click". This tells javascript, "Hey, when I CLICK this button"... 
+3. Write a function for the event listener so that when the button is clicked, it performs an action that you want. So the next thing you tell the event listener is, "Hey, when I click this button, do the thing inside the function"
+*/
 
-function openModal() {
-  for (let i = 0; i < btnLength; i++) {
-    openModalBtn[i].addEventListener('click', function() {
-      modal[i].classList.add('open');
-    })
-    closeModal(i)
-  }
+// 1.
+const btnOpenEl = document.querySelector(".btn-modal-open");
+const btnCloseEl = document.querySelector(".btn-modal-close");
+console.log(btnCloseEl);
+const modal = document.getElementById("overlay");
+
+//2.                                The function!
+btnOpenEl.addEventListener("click", openModal);
+//                                   Another One!
+btnCloseEl.addEventListener("click", closeModal)
+
+//3.
+/* For the modal i'm going to be setting two different event listeners on two different buttons. The functions provided will open the modal and close the modal*/
+function openModal(){
+  modal.style.display = "block";
 }
 
-function closeModal(i) {
-  for (let j = 0; j < closeBtnLength; j++) {
-    closeModalBtn[j].addEventListener('click', function(event) {
-      if (event.target.dataset.close) {
-        modal[i].classList.remove('open')
-      }
-    })
-  }
+function closeModal(){
+  modal.style.display = "none";
 }
-
-openModal()
