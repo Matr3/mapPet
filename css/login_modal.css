@@ -1,0 +1,121 @@
+button {
+    outline: none;
+    border: none;
+  }
+  .btn {
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 3px solid transparent;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  
+  .btn_primary {
+    background-color:orangered;
+    color: #fff;
+    transition: .5s;
+  }
+  .btn_primary:hover{
+    transform: scale(1.1);
+    background: orangered;
+    color: black;
+    cursor: pointer;
+  }
+  .modal {
+    position: fixed;
+    top:100px;
+    align-content: center;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    background-color: rgba(0,0,0,0.5);
+    z-index:-1;
+    opacity: 0;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .open{
+    z-index: 2;
+    opacity: 1;
+  }
+  .centrar{
+
+    display: flex;
+    justify-content: center;
+
+  }
+  
+  .modal__window {
+    background-color: orangered;
+    border-radius: 25px;
+    border: 1px solid black;
+    cursor: default;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+
+    
+    @media screen and (min-width: 576px) {
+      margin: 50px;
+      max-width: 500px;
+      height: initial;
+      border-radius: 4px;
+      min-height: fit-content;
+    }
+  }
+  
+  .modal__header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .modal__body {
+    padding: 10px;
+    flex: 1 0 auto;
+  }
+  
+  .modal__footer {
+
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+  
+  .close-btn {
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    background-color: orangered;
+    justify-content: center;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+  }
+  .close-btn:hover {
+    background-color: black;
+    opacity: 0.6;
+  }
+  .close-btn__span {
+    width: 16px;
+    height: 2px;
+    position: absolute;
+    background-color: grey;
+    transform: rotate(45deg);
+  }
+  
+  .close-btn__span_second-child {
+    transform: rotate(-45deg);
+  }

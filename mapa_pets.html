@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/maps.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/login_modal.css">
     <link rel="stylesheet" href="css/flexbox.css">
     <link rel="stylesheet" href="css/queries.css">
     <!--Fonts-->
@@ -29,6 +30,8 @@
     <script type ="module" src="js/loginIndex.js"></script>
     <!--Icon de fontwesome-->
     <script src="https://kit.fontawesome.com/a1140612d3.js" crossorigin="anonymous"></script>
+    <!--Boton Modal Login google-->
+    <script type="module" src="js/loginModal.js"></script>
     
     <title>Map Pet - ::Si Buscas o Encontraste una mascota...::</title>
 </head>
@@ -63,7 +66,22 @@
                     <li class="menu_links_lista "><a class="links_decoration" href="buscados.html">Buscados</a></li>
                     <li class="menu_links_lista "><a class="links_decoration" href="encontrados.html">Encontrados</a></li>
                     <li class="menu_links_lista "><a class="links_decoration" href="https://fckland.github.io/TrabajoFinal/">ANIMALIS Shop</a></li>
-                    <li class="menu_links_lista box_botonInicio textInicio">Ingresa<div id="buttonDiv"></div></li>
+                    <li class="menu_links_lista box_botonInicio textInicio">
+                        <button class="btn btn_primary" data-btn>Ingreso</button>
+                        <div class="modal" data-modal data-close="true">
+                            <div class="modal__window">
+                            <div class="modal__header">
+                                <h3>Inicio Sesión</h3>
+                                <button class="close-btn" data-close="true">
+                                <span class="close-btn__span" data-close="true"></span>
+                                <span class="close-btn__span close-btn__span_second-child" data-close="true"></span>
+                                </button>
+                            </div>
+                            <div class="modal__body">
+                                <div class="centrar" id="buttonDiv"></div>      
+                            </div>
+                        </div>
+                    </li>
                     <li class="menu_links_lista box_detalle_user" data-usuario></li>
                 </ul>
             </nav>

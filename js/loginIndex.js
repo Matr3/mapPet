@@ -160,7 +160,7 @@ function storageEmail (emailAdd,nombreCompletoAdd,imagenAdd){
       });
       google.accounts.id.renderButton(
         document.getElementById("buttonDiv"),
-        { theme: "red", type: "icon"}  // customization attributes
+        { theme: "outline", size: "large"}  // customization attributes
       );
       google.accounts.id.prompt(); // also display the One Tap dialog
     }

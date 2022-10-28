@@ -51,6 +51,7 @@
     }
     .rodapie .menu_contacto {
         flex-wrap: wrap;
+        width: 100%;
     }
     .contacto {
         width: 80%;
