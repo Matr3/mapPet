@@ -25,6 +25,9 @@
     }
 }
 @media screen and (max-width:768px) {
+    .video{
+        padding: 7rem 2rem;
+    }
     .formSearch {
 
         margin-left: 15px;
@@ -247,6 +250,7 @@
     .skewed{
         padding: 15px;
     }
+    
 
 
 }
@@ -268,7 +272,7 @@
     }
     
     .video{
-        padding: 50px 15px;
+        padding: 7rem 1rem;
         
     }
     .youtube{
