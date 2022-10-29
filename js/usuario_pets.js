@@ -11,11 +11,12 @@ export function perfilUser(){
         <div class="mascotas">
         
         <div class="wh_box">
-        <div class="bng_box">
         <div class="articulo_edicion">
         <a class="position_icon" href="editar_pets.html?id=${id}"><img class="icon" src="./img/editar.png" alt=""></a>
-        <button type="button" id="${id}" class="btn_borrar"><img src="./img/borrar.png"/></button>
+        <button type="button" id="${id}" class="btn_borrar"><img class="borrar" src="./img/borrar.png"/></button>
          </div>
+        <div class="bng_box">
+        
         <img class="img" src="${imagen}" alt="${raza}">
         </div>
         </div>
@@ -64,5 +65,5 @@ export function perfilUser(){
           
         });
       })
-      .catch((error) => alert(error));
+      .catch((error) => console.log(error));
 }

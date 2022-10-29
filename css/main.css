@@ -324,6 +324,9 @@ body{
 .position_icon {
     padding: 5px;
 }
+.icon:hover, .borrar:hover{
+    filter: contrast(40%) sepia(1) hue-rotate(1deg) saturate(10000%);
+}
 .box_ingreso{
     margin: 0 auto;
 }
