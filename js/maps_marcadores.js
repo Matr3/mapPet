@@ -78,7 +78,7 @@ function addMarker() {
         const marker = new google.maps.Marker({
           position: location,
           content: contentString,
-          /*icon: infoContent,*/
+          icon: "ico/marcador-de-posicion.ico",
           map: map
         });
         marker.addListener("click", () => {
