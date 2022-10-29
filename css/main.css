@@ -337,7 +337,7 @@ body{
     padding: 15px;
 }
 .frase{
-    width: 350px;
+    width: auto;
 }
 .frasedelMes{
     font-family: 'Lemon', cursive;
