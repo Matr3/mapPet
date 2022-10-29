@@ -49,4 +49,4 @@ listaServices
       }
     });
   })
-  .catch((error) => alert("Oops! Error. Comuniquese con Matr3"));
+  .catch((error) => console.log("Oops! Error. Comuniquese con Matr3"));

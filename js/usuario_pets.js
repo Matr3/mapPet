@@ -38,7 +38,7 @@ export function perfilUser(){
           
           window.location.href = "./usuario_pets.html";
         })
-        .catch((err) => alert("Ocurrió un error"));
+        .catch((err) => console.log("Ocurrió un error"));
     });
       
         return linea;

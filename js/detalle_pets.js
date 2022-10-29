@@ -45,7 +45,7 @@ const div = document.querySelector("[data-detalle]");
         div.appendChild(nuevaLinea).className = "pets_detalles";
 
     })
-    .catch((error) => alert("Oops! Error. Comuniquese con Matr3"));
+    .catch((error) => console.log("Oops! Error. Comuniquese con Matr3"));
 }
 
 
