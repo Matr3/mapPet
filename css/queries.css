@@ -98,7 +98,7 @@
     .menu_contacto__box .menu_contacto__contenido {
         gap: 0rem;
     }
-    .contenido_cargaPets, .box_ingreso {
+    .registroMargin {
 
         margin: 3rem;
     }
@@ -281,5 +281,11 @@
     }
     .contacto {
         padding: 0;
+    }
+    .espacio_margin_form, .buscados{
+        padding: 0;
+    }
+    .marginIngreso{
+        padding: 2rem;
     }
 }
