@@ -8,7 +8,6 @@
 // 1.
 const btnOpenEl = document.querySelector(".btn-modal-open");
 const btnCloseEl = document.querySelector(".btn-modal-close");
-console.log(btnCloseEl);
 const modal = document.getElementById("overlay");
 
 //2.                                The function!

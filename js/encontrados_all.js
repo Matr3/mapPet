@@ -40,7 +40,7 @@ listaServices
       if(act){
         const nuevaLinea = crearNuevaLinea(imagen, raza, id);
           div.appendChild(nuevaLinea);
-          console.log("entre ahi")
+
         }
         else if (cont_b < 6){
 

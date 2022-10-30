@@ -38,10 +38,9 @@ listaServices
         if(cant){
           const nuevaLinea = crearNuevaLinea(imagen, raza, id);
           div.appendChild(nuevaLinea);
-          console.log("entre ahi")
         }
         else if (cont_b < 6){
-              console.log("entre aca")
+
               const nuevaLinea = crearNuevaLinea(imagen, raza, id);
               div.appendChild(nuevaLinea);
               cont_b++;

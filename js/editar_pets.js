@@ -50,7 +50,7 @@ let fileImagen = "";
             
             listaServices.detallePets(id)
                 .then((pets) => {
-                    console.log(id)
+
                     /*cargo todos los input*/
                     selector.text = pets.selector;
                     raza.value = pets.raza;
@@ -68,7 +68,7 @@ let fileImagen = "";
                     btnAgregarImagen.addEventListener('change', cargar);
 
                     async function cargar(ev) {
-                            console.log("entre")
+
                             
                             const size = 50000;
                             if(ev.target.files[0].size <= size){
@@ -79,7 +79,7 @@ let fileImagen = "";
                             }else{
                                 const archivo = ev.target.files[0];
                                 const blob = await comprimirImagen(archivo);
-                                console.log("pesado")
+
                                 var arch = new FileReader();
                                 arch.readAsDataURL(blob);
                                 arch.addEventListener('load',leer);
@@ -105,12 +105,12 @@ let fileImagen = "";
         
             try{
                 const latlgn = {lat: lat, lng: lng};
-                    console.log(latlgn);
+
                 const modificado = await listaServices.actualizarPets
                 (fileImagen,selector.text,raza.value,color.value,tamanio.value,descripcion.value,email.value,fecha,latlgn,id)
-                console.log("antes");
+ 
                 window.location.href =("usuario_pets.html");
-                console.log("despues")
+      
         
             }catch(error){
                 console.log(error)

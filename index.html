@@ -153,9 +153,11 @@
                         <input type="hidden" name="access_key" value="46fb5db9-4818-4677-b3ce-d45c76bc6dae">
                         <fieldset class="estilos_form">
                             <legend class="title_contacto">Hable con nosotros</legend>
-                            <label for="email"></label>
-                            <input class="input_nombre" id="email" type="email" name="email" placeholder="Escriba su email" required data-tipo="nombre" pattern="[\s\S]{4,40}">
-                            <label for="mensaje"></label>
+                            <div class="input-container">
+                                <label for="email"></label>
+                                <input class="input_nombre" id="email" type="email" name="email" placeholder="Escriba su email" required data-tipo="nombre" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                                <span class="input-message-error"></span>
+                            </div>
                             <textarea class="input_mensaje" id="msg" type="text" name="message" placeholder="Escribe tu mensaje" required data-tipo="mensaje" pattern="[\s\S]{5,120}"></textarea>
                             
                             <input type="hidden" name="redirect" value="https://web3forms.com/success">

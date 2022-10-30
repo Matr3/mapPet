@@ -50,23 +50,22 @@ function storageEmail (emailAdd,nombreCompletoAdd,imagenAdd){
 
          
          if(user.includes(emailAdd)){
-          console.log("ya tengo usuario")
           document.querySelector(".box_botonInicio").style.display="none";
           document.querySelector(".box_detalle_user").style.display="block";
           detalleUsuarios(nombreCompletoAdd,imagenAdd);
           storageEmail (emailAdd,nombreCompletoAdd,imagenAdd);
           if(carga_pets){
-            console.log("entre1"); 
+            
             estilos();
           }else if(perfilPets){
-            console.log("entre2"); 
+            
             perfilUser();
           }else if(box_detalle_pets){
-            console.log("entre3"); 
+            
             document.querySelector(".box_ingreso").style.display="none";
             detallePets();     
           }else if(perfil_cuerpo){
-            console.log("entre4");
+           
             document.querySelector(".box_ingreso").style.display="none";
             perfilUser();   
           }
@@ -78,11 +77,11 @@ function storageEmail (emailAdd,nombreCompletoAdd,imagenAdd){
         } 
         );
         if(count){
-          console.log("voy crear usuario")
+          
           listaClientes
           .crearUsuario(emailAdd, nombreAdd, apellidoAdd, nombreCompletoAdd, imagenAdd)
           .then((respuesta) => {
-            console.log("creo usuario")
+            
           document.querySelector(".box_botonInicio").style.display="none";
           document.querySelector(".box_detalle_user").style.display="block";
           detalleUsuarios(nombreCompletoAdd,imagenAdd);
@@ -94,7 +93,7 @@ function storageEmail (emailAdd,nombreCompletoAdd,imagenAdd){
             document.querySelector(".box_ingreso").style.display="none";
             detallePets();     
           }else if(perfil_cuerpo){
-            console.log("entre");
+            
             document.querySelector(".box_ingreso").style.display="none";
             perfilUser();   
           }
@@ -129,12 +128,12 @@ function storageEmail (emailAdd,nombreCompletoAdd,imagenAdd){
 
    
     if(sessionStorage.getItem("email")){
-      console.log("Sesion: "+sessionStorage.getItem("email"))
+
       document.querySelector(".box_botonInicio").style.display="none";
       document.querySelector(".box_detalle_user").style.display="block";
       const nombre = sessionStorage.getItem("nombre").replace(/"/g, '');
       const imagen = sessionStorage.getItem("imagen").replace(/"/g, '');
-      console.log("entre"); 
+
           detalleUsuarios(nombre,imagen);
           if(carga_pets){
             estilos();
@@ -145,8 +144,7 @@ function storageEmail (emailAdd,nombreCompletoAdd,imagenAdd){
             detallePets();     
           }else if(perfil_cuerpo){
             document.querySelector(".box_ingreso").style.display="none";
-            perfilUser(); 
-            console.log("entre");    
+            perfilUser();   
           }
 
         

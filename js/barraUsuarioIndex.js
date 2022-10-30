@@ -2,8 +2,6 @@ import {obtenerDatos} from "./loginIndex.js"
 
 export function detalleUsuarios(nombreCompletoAdd,imagenAdd){
 
-    console.log("picture: "+imagenAdd+" //     nombre: "+nombreCompletoAdd);
-
     
 //backticks
 const crearUsuario = () => {
