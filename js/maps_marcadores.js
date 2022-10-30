@@ -12,7 +12,7 @@ function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 12,
     center: obelisco,
-    
+  
   });
 
 
@@ -38,7 +38,8 @@ function addMarkerBuscado(location) {
     
   const marker = new google.maps.Marker({
     position: location,
-    map: map
+    map: map,
+    icon: "ico/marcador-de-posicion.ico"
   });
   
   markers.push(marker);
