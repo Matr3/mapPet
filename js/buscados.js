@@ -3,8 +3,8 @@ import { listaServices } from "../service/cliente_service.js";
 const busca = "Perdiste tu mascota?";
 //const encontro = "Encontraste alguna mascota?";
 const crearNuevaLinea = (imagen, raza, id) => {
-    const linea = document.createElement("div");
-    const contenido = `
+  const linea = document.createElement("div");
+  const contenido = `
     <div class="mascotas">
     <a class="link_mascotas" href="./detalle_pets.html?id=${id}&categoria=${raza}">
     <div class="wh_box">
@@ -21,10 +21,10 @@ const crearNuevaLinea = (imagen, raza, id) => {
     </a>
  </div>
     `;
-    linea.innerHTML = contenido;
-  
-    return linea;
-  };
+  linea.innerHTML = contenido;
+
+  return linea;
+};
 
 
 const cant = document.querySelector(".cant");
@@ -33,18 +33,18 @@ let cont_b = 0;
 listaServices
   .listaBuscados()
   .then((data) => {
-    data.forEach(({ selector, imagen, raza, id}) => {
-      if(selector === busca){
-        if(cant){
+    data.forEach(({ selector, imagen, raza, id }) => {
+      if (selector === busca) {
+        if (cant) {
           const nuevaLinea = crearNuevaLinea(imagen, raza, id);
           div.appendChild(nuevaLinea);
         }
-        else if (cont_b < 6){
+        else if (cont_b < 6) {
 
-              const nuevaLinea = crearNuevaLinea(imagen, raza, id);
-              div.appendChild(nuevaLinea);
-              cont_b++;
-            }
+          const nuevaLinea = crearNuevaLinea(imagen, raza, id);
+          div.appendChild(nuevaLinea);
+          cont_b++;
+        }
       }
     });
   })

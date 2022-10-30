@@ -17,10 +17,10 @@ btnCloseEl.addEventListener("click", closeModal)
 
 //3.
 /* For the modal i'm going to be setting two different event listeners on two different buttons. The functions provided will open the modal and close the modal*/
-function openModal(){
+function openModal() {
   modal.style.display = "block";
 }
 
-function closeModal(){
+function closeModal() {
   modal.style.display = "none";
 }

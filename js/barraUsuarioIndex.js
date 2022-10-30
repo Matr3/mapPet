@@ -1,12 +1,12 @@
-import {obtenerDatos} from "./loginIndex.js"
+import { obtenerDatos } from "./loginIndex.js"
 
-export function detalleUsuarios(nombreCompletoAdd,imagenAdd){
+export function detalleUsuarios(nombreCompletoAdd, imagenAdd) {
 
-    
-//backticks
-const crearUsuario = () => {
-    const linea = document.createElement("div");
-    const contenido = `
+
+    //backticks
+    const crearUsuario = () => {
+        const linea = document.createElement("div");
+        const contenido = `
     <div class="user_display">
         <picture>
             <img class="img_user" src="${imagenAdd}" alt="Usuario ${nombreCompletoAdd}" referrerpolicy="no-referrer"/ >
@@ -26,8 +26,8 @@ const crearUsuario = () => {
 
 
 
-        const nuevaLinea1 = crearUsuario();
-        div.appendChild(nuevaLinea1).className = "user_detalles";
+    const nuevaLinea1 = crearUsuario();
+    div.appendChild(nuevaLinea1).className = "user_detalles";
 
-   
+
 }

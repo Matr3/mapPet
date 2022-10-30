@@ -1,60 +1,71 @@
-.caja{
+.caja {
     /*background-color: #fff159;
     height: 5rem;*/
     padding: 15px;
 }
-.cajaTitulo{
+
+.cajaTitulo {
     margin-bottom: 15px;
 }
-.logo_imgen{
+
+.logo_imgen {
     height: 80px;
     transition: .5s;
 }
-.colorIcon{
+
+.colorIcon {
     transition: .5s;
 }
 
-.logo_imgen:hover, .colorIcon:hover{
+.logo_imgen:hover,
+.colorIcon:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
-.link_login{
+
+.link_login {
     text-decoration: none;
     color: #464646;
     font-family: 'Open Sans', sans-serif;
-    font-style:normal;
+    font-style: normal;
     font-weight: bold;
 }
 
-.colorIcon{
-    color: orangered;;
+.colorIcon {
+    color: orangered;
+    ;
     padding: 0 10px 0;
 }
-.formSearch{
-    background-color: white; 
-    display:flex; 
-    padding-left:15px; 
+
+.formSearch {
+    background-color: white;
+    display: flex;
+    padding-left: 15px;
     border-radius: 25px;
 }
-.iconActivity{
+
+.iconActivity {
     display: none;
     width: 50px;
 }
-.menu{
+
+.menu {
     margin: 0 auto;
-    
-   /* border-bottom: solid 3px #040404;
+
+    /* border-bottom: solid 3px #040404;
     box-shadow: 3px 3px 3px rgb(59, 59, 59);*/
 }
-.menu_links{
+
+.menu_links {
     margin: 0 5%;
-    
+
 }
-.links_decoration{
+
+.links_decoration {
     padding: 12px 20px;
-    
+
     /*background-color:  #fff159;*/
-    
+
     margin: 0 auto;
     text-decoration: none;
     font-family: 'Lemon', cursive;
@@ -64,19 +75,23 @@
     text-align: center;
     transition: .6S;
 }
-.links_decoration:hover{
+
+.links_decoration:hover {
     transform: scale(1.1);
     color: orangered;
     cursor: pointer;
 
 }
-.act{
+
+.act {
     background: orangered;
 }
-.act:hover{
+
+.act:hover {
     background-color: white;
 }
-.textInicio{
+
+.textInicio {
     padding: 12px;
     text-decoration: none;
     font-family: 'Lemon', cursive;
@@ -86,6 +101,7 @@
     text-align: center;
     transition: .6S;
 }
-#buttonDiv{
+
+#buttonDiv {
     margin: 15px 0;
 }

@@ -1,10 +1,10 @@
-
-.maps{
+.maps {
     display: none;
     height: auto;
     width: 100%;
 }
-.agregar__imagen-div{
+
+.agregar__imagen-div {
     background-image: url("../img/no-img-photo.jpg");
     background-size: cover;
     background-position: center;
@@ -15,29 +15,33 @@
 }
 
 
-.btn_admin{
+.btn_admin {
     box-sizing: border-box;
     color: #2a7ae4;
     border: 1px solid #2a7ae4;
     width: 183px;
-    height: 51px;    
+    height: 51px;
 }
-.btn_admin:hover{
+
+.btn_admin:hover {
     background: #D4E4FA;
 }
-.formulario{
+
+.formulario {
     background: #E5E5E5;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 91px 0;
 }
-.formulario_contenedor{
+
+.formulario_contenedor {
     text-align: left;
     padding: 32px;
     width: 80%;
 }
-.title_addProducto{
+
+.title_addProducto {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -46,25 +50,26 @@
     color: #464646;
     padding-bottom: 15px;
 }
-.agregar__box{
+
+.agregar__box {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.agregar__form{
+.agregar__form {
     box-sizing: border-box;
     width: 100%;
     max-width: 510px;
 }
 
-.agregar__form__imagen{
+.agregar__form__imagen {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.agregar__imagen-div{
+.agregar__imagen-div {
     background-image: url("../img/no-img-photo.jpg");
     background-size: cover;
     background-position: center;
@@ -74,7 +79,7 @@
     margin-bottom: 1rem;
 }
 
-.input__image-label{
+.input__image-label {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -92,27 +97,29 @@
     border-radius: 25px;
     transition: .5s;
 }
-.input__image-label:hover{
+
+.input__image-label:hover {
     transform: scale(1.1);
     background: orangered;
     color: black;
     cursor: pointer;
 }
 
-input[type="file"]#input__imagen{
+input[type="file"]#input__imagen {
     display: none;
 }
 
-.input-container{
+.input-container {
     padding: 16px 0;
 }
-.form-control{
+
+.form-control {
     min-height: calc(1.5em + (1rem + 2px));
     padding: 0.9rem 1rem;
     font-size: 1.2rem;
 }
 
-.input{
+.input {
     padding-left: 10px;
     width: 549px;
     height: 56px;
@@ -121,7 +128,8 @@ input[type="file"]#input__imagen{
     border: none;
     border-bottom: 1px solid #C8C8C8;
 }
-.input_descripcion{
+
+.input_descripcion {
     padding-left: 10px;
     width: 549px;
     height: 82px;
@@ -130,7 +138,8 @@ input[type="file"]#input__imagen{
     border: none;
     border-bottom: 1px solid #C8C8C8;
 }
-.btn_agregar{
+
+.btn_agregar {
     color: #FFFFFF;
     width: 100%;
     height: 51px;
@@ -144,28 +153,32 @@ input[type="file"]#input__imagen{
     border: none;
     border-radius: 25px;
     transition: .5s;
-    
+
 }
-.btn_agregar:hover{
+
+.btn_agregar:hover {
     transform: scale(1.1);
     background: orangered;
     color: black;
     cursor: pointer;
 }
-.top_limit{
+
+.top_limit {
     margin-top: 2rem;
 }
-.mensaje__error{
+
+.mensaje__error {
     display: none;
 }
 
-.input__invalido .mensaje__error, .input-message-error{
+.input__invalido .mensaje__error,
+.input-message-error {
     font-family: 'Lemon', cursive;
     display: block;
     color: red;
 }
 
 
-.input__invalido .input{
+.input__invalido .input {
     border: 1px solid red;
 }

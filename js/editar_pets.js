@@ -1,8 +1,8 @@
 import { listaServices } from "../service/cliente_service.js";
-import {lat} from "../js/maps_marcadores.js";
+import { lat } from "../js/maps_marcadores.js";
 import { lng } from "../js/maps_marcadores.js";
 
-const url = new URL (window.location);
+const url = new URL(window.location);
 const id = url.searchParams.get("id");
 
 var fecha = Date();
@@ -22,7 +22,7 @@ const comprimirImagen = (imagen) => {
         const imagenG = new Image();
         imagenG.onload = () => {
             $canvas.width = 800;
-            $canvas.height = (imagenG.height * $canvas.width)/imagenG.width;
+            $canvas.height = (imagenG.height * $canvas.width) / imagenG.width;
             $canvas.getContext("2d").drawImage(imagenG, 0, 0, $canvas.width, $canvas.height);
             $canvas.toBlob(
                 (blob) => {
@@ -42,79 +42,78 @@ const comprimirImagen = (imagen) => {
 
 let fileImagen = "";
 
-        const obtenerPets = () => {
+const obtenerPets = () => {
 
-            if(id === null){
-                console.log("error")
+    if (id === null) {
+        console.log("error")
+    }
+
+    listaServices.detallePets(id)
+        .then((pets) => {
+
+            /*cargo todos los input*/
+            selector.text = pets.selector;
+            raza.value = pets.raza;
+            color.value = pets.color;
+            tamanio.value = pets.tamanio;
+            descripcion.value = pets.descripcion;
+            email.value = pets.email;
+            imagenDiv.style.backgroundImage = `url("${pets.imagen}")`;
+            fileImagen = pets.imagen;
+
+            /*pongo un escuchador en el boton de carga
+            de imagen para su modificacion*/
+            const btnAgregarImagen = document.querySelector(".agregar__imagen");
+
+            btnAgregarImagen.addEventListener('change', cargar);
+
+            async function cargar(ev) {
+
+
+                const size = 50000;
+                if (ev.target.files[0].size <= size) {
+                    var arch = new FileReader();
+                    arch.readAsDataURL(ev.target.files[0]);
+                    arch.addEventListener('load', leer);
+
+                } else {
+                    const archivo = ev.target.files[0];
+                    const blob = await comprimirImagen(archivo);
+
+                    var arch = new FileReader();
+                    arch.readAsDataURL(blob);
+                    arch.addEventListener('load', leer);
+                }
             }
-            
-            listaServices.detallePets(id)
-                .then((pets) => {
-
-                    /*cargo todos los input*/
-                    selector.text = pets.selector;
-                    raza.value = pets.raza;
-                    color.value = pets.color;
-                    tamanio.value = pets.tamanio;
-                    descripcion.value = pets.descripcion;
-                    email.value = pets.email;
-                    imagenDiv.style.backgroundImage = `url("${pets.imagen}")`;
-                    fileImagen = pets.imagen;
-                    
-                    /*pongo un escuchador en el boton de carga
-                    de imagen para su modificacion*/
-                    const btnAgregarImagen = document.querySelector(".agregar__imagen");
-                    
-                    btnAgregarImagen.addEventListener('change', cargar);
-
-                    async function cargar(ev) {
-
-                            
-                            const size = 50000;
-                            if(ev.target.files[0].size <= size){
-                                var arch = new FileReader();
-                                arch.readAsDataURL(ev.target.files[0]);
-                                arch.addEventListener('load',leer);
-
-                            }else{
-                                const archivo = ev.target.files[0];
-                                const blob = await comprimirImagen(archivo);
-
-                                var arch = new FileReader();
-                                arch.readAsDataURL(blob);
-                                arch.addEventListener('load',leer);
-                                }
-                        }
-                    function leer(ev) {
-                        document.getElementById('box__imagen').style.backgroundImage = "url('" + ev.target.result + "')";
-                        fileImagen = ev.target.result;
-                        document.querySelector(".archivo__faltante").parentElement.classList.remove("input__invalido");
-                    }
-                    
-                }).catch((error) => console.log(error));
-        };
-        obtenerPets();
-
-        document.querySelector(".formulario_contenedor").addEventListener("submit", (evento) => {
-            evento.preventDefault();
-            modificarPets();
-        });
-        
-        
-        const modificarPets = async () => {
-        
-            try{
-                const latlgn = {lat: lat, lng: lng};
-
-                const modificado = await listaServices.actualizarPets
-                (fileImagen,selector.text,raza.value,color.value,tamanio.value,descripcion.value,email.value,fecha,latlgn,id)
- 
-                window.location.href =("usuario_pets.html");
-      
-        
-            }catch(error){
-                console.log(error)
+            function leer(ev) {
+                document.getElementById('box__imagen').style.backgroundImage = "url('" + ev.target.result + "')";
+                fileImagen = ev.target.result;
+                document.querySelector(".archivo__faltante").parentElement.classList.remove("input__invalido");
             }
-        }
 
-        
+        }).catch((error) => console.log(error));
+};
+obtenerPets();
+
+document.querySelector(".formulario_contenedor").addEventListener("submit", (evento) => {
+    evento.preventDefault();
+    modificarPets();
+});
+
+
+const modificarPets = async () => {
+
+    try {
+        const latlgn = { lat: lat, lng: lng };
+
+        const modificado = await listaServices.actualizarPets
+            (fileImagen, selector.text, raza.value, color.value, tamanio.value, descripcion.value, email.value, fecha, latlgn, id)
+
+        window.location.href = ("usuario_pets.html");
+
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+

@@ -1,11 +1,11 @@
-export function valida(input){
+export function valida(input) {
     const tipoInput = input.dataset.tipo;
 
 
-    if(input.validity.valid){
+    if (input.validity.valid) {
         input.parentElement.classList.remove("input-container--invalid");
         input.parentElement.querySelector(".input-message-error").innerHTML = "";
-    }else{
+    } else {
         input.parentElement.classList.add("input-container--invalid");
         input.parentElement.querySelector(".input-message-error").innerHTML = mostrarMensajeError(tipoInput, input);
     }
@@ -17,7 +17,7 @@ const tipoError = [
     "patternMismatch",
 ];
 
-const mensajesError ={
+const mensajesError = {
     nombre: {
         valueMissing: "Este Campo no puede estar vacio",
         typeMismatch: "El correo no es valido",
@@ -37,10 +37,10 @@ const mensajesError ={
     },
 }
 
-function mostrarMensajeError(tipoInput, input){
+function mostrarMensajeError(tipoInput, input) {
     let mensaje = "";
     tipoError.forEach((error) => {
-        if(input.validity[error]){
+        if (input.validity[error]) {
             mensaje = mensajesError[tipoInput][error];
         }
     })

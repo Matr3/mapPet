@@ -1,5 +1,5 @@
-import {listaServices} from "../service/cliente_service.js"
-import {lat} from "../js/maps_marcadores.js";
+import { listaServices } from "../service/cliente_service.js"
+import { lat } from "../js/maps_marcadores.js";
 import { lng } from "../js/maps_marcadores.js";
 
 
@@ -11,7 +11,7 @@ const comprimirImagen = (imagen) => {
         const imagenG = new Image();
         imagenG.onload = () => {
             $canvas.width = 800;
-            $canvas.height = (imagenG.height * $canvas.width)/imagenG.width;
+            $canvas.height = (imagenG.height * $canvas.width) / imagenG.width;
             $canvas.getContext("2d").drawImage(imagenG, 0, 0, $canvas.width, $canvas.height);
             $canvas.toBlob(
                 (blob) => {
@@ -36,21 +36,21 @@ btnAgregarImagen.addEventListener('change', cargar);
 
 async function cargar(ev) {
     console.log("entre")
-    
+
     const size = 50000;
-    if(ev.target.files[0].size <= size){
+    if (ev.target.files[0].size <= size) {
         var arch = new FileReader();
         arch.readAsDataURL(ev.target.files[0]);
-        arch.addEventListener('load',leer);
+        arch.addEventListener('load', leer);
 
-    }else{
+    } else {
         const archivo = ev.target.files[0];
         const blob = await comprimirImagen(archivo);
         console.log("pesado")
         var arch = new FileReader();
         arch.readAsDataURL(blob);
-        arch.addEventListener('load',leer);
-        }
+        arch.addEventListener('load', leer);
+    }
 }
 
 function leer(ev) {
@@ -69,11 +69,11 @@ const formAgregarProducto = document.querySelector(".formulario_contenedor");
 formAgregarProducto.addEventListener("submit", (evento) => {
     evento.preventDefault();
 
-    if(!imagen){
-        
+    if (!imagen) {
+
         document.querySelector(".archivo__faltante").parentElement.classList.add("input__invalido");
 
-    }else{
+    } else {
         var fecha = Date();
         const nombreUser = document.querySelector(".titleUser").textContent;
         const emailUser = sessionStorage.getItem("email").replace(/"/g, '');
@@ -84,22 +84,18 @@ formAgregarProducto.addEventListener("submit", (evento) => {
         const tamanio = document.querySelector("[data-tipo=tamanio]").value;
         const descripcion = document.querySelector("[data-tipo=descripcion]").value;
         const email = document.querySelector("[data-tipo=email]").value;
-        const latlgn = {lat: lat, lng: lng};
+        const latlgn = { lat: lat, lng: lng };
         const vacio = " ";
         console.log(lat)
-        if(lat === vacio ){
+        if (lat === vacio) {
             console.log("marque en el mapa donde se perdio o encontro la mascota");
-        }else{
+        } else {
             listaServices
-            .crearBusqueda(selector,imagen, raza, color, descripcion,tamanio,email,latlgn,fecha,nombreUser,emailUser)
-            .then((respuesta) => {
-                window.location.href = "usuario_pets.html";
-            }).catch((error) => console.log(error));
+                .crearBusqueda(selector, imagen, raza, color, descripcion, tamanio, email, latlgn, fecha, nombreUser, emailUser)
+                .then((respuesta) => {
+                    window.location.href = "usuario_pets.html";
+                }).catch((error) => console.log(error));
         }
-       
-            
-  
-        
 
     }
 });

@@ -1,14 +1,14 @@
 import { listaServices } from "../service/cliente_service.js";
 
-export function detallePets(){
+export function detallePets() {
     const url = new URL(window.location);
     const id = url.searchParams.get("id");
 
-//backticks
-const crearNuevaLinea = (imagen, raza, color, descripcion, email) => {
-    const linea = document.createElement("article");
+    //backticks
+    const crearNuevaLinea = (imagen, raza, color, descripcion, email) => {
+        const linea = document.createElement("article");
 
-    const contenido = `
+        const contenido = `
     <div class="wh_boxLarge">
         <div class="bng_boxLarge">
             <img class="img_pets" src="${imagen}" alt="Imagen del Producto ${raza}">
@@ -27,25 +27,25 @@ const crearNuevaLinea = (imagen, raza, color, descripcion, email) => {
     </div>
     `;
 
-    linea.innerHTML = contenido;
+        linea.innerHTML = contenido;
 
-    return linea;
-};
-
-
-const div = document.querySelector("[data-detalle]");
+        return linea;
+    };
 
 
+    const div = document.querySelector("[data-detalle]");
 
-   listaServices
-    .detallePets(id)
-    .then((data) => {
 
-        const nuevaLinea = crearNuevaLinea(data.imagen, data.raza, data.color, data.descripcion, data.email);
-        div.appendChild(nuevaLinea).className = "pets_detalles";
 
-    })
-    .catch((error) => console.log("Oops! Error. Comuniquese con Matr3"));
+    listaServices
+        .detallePets(id)
+        .then((data) => {
+
+            const nuevaLinea = crearNuevaLinea(data.imagen, data.raza, data.color, data.descripcion, data.email);
+            div.appendChild(nuevaLinea).className = "pets_detalles";
+
+        })
+        .catch((error) => console.log("Oops! Error. Comuniquese con Matr3"));
 }
 
 

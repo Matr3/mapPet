@@ -1,13 +1,13 @@
 import { listaServices } from "../service/cliente_service.js";
 
-export function perfilUser(){
-    //backticks
-    const emailStorage = sessionStorage.getItem("email");
+export function perfilUser() {
+  //backticks
+  const emailStorage = sessionStorage.getItem("email");
 
 
-    const crearNuevaLinea = (imagen, raza, id) => {
-        const linea = document.createElement("div");
-        const contenido = `
+  const crearNuevaLinea = (imagen, raza, id) => {
+    const linea = document.createElement("div");
+    const contenido = `
         <div class="mascotas">
         
         <div class="wh_box">
@@ -29,41 +29,41 @@ export function perfilUser(){
         
     </div>
         `;
-        linea.innerHTML = contenido;
-        const btn = linea.querySelector("button");
-        btn.addEventListener("click", () => {
-          const id = btn.id;
-        listaServices
+    linea.innerHTML = contenido;
+    const btn = linea.querySelector("button");
+    btn.addEventListener("click", () => {
+      const id = btn.id;
+      listaServices
         .eliminarPets(id)
         .then((respuesta) => {
-          
+
           window.location.href = "./usuario_pets.html";
         })
         .catch((err) => console.log("Ocurrió un error"));
     });
-      
-        return linea;
-      };
 
-
-      
-    const div = document.querySelector("[data-buscados-all]");
+    return linea;
+  };
 
 
 
-    listaServices
-      .listaBuscados()
-      .then((data) => {
-        data.forEach(({ emailUser, imagen, raza, id}) => {
-                
-          if(emailUser === emailStorage){
-                const nuevaLinea = crearNuevaLinea(imagen, raza, id);
-                div.appendChild(nuevaLinea).className = "pets_detalles";  
-          }
-            
-          
-          
-        });
-      })
-      .catch((error) => console.log(error));
+  const div = document.querySelector("[data-buscados-all]");
+
+
+
+  listaServices
+    .listaBuscados()
+    .then((data) => {
+      data.forEach(({ emailUser, imagen, raza, id }) => {
+
+        if (emailUser === emailStorage) {
+          const nuevaLinea = crearNuevaLinea(imagen, raza, id);
+          div.appendChild(nuevaLinea).className = "pets_detalles";
+        }
+
+
+
+      });
+    })
+    .catch((error) => console.log(error));
 }

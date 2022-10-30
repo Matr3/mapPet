@@ -6,12 +6,12 @@ const listaBuscados = () => fetch("https://62faaedbffd7197707f152a5.mockapi.io/p
 
 const listaUsuarios = () => fetch("https://62faaedbffd7197707f152a5.mockapi.io/user").then((respuesta) => respuesta.json()).catch((error) => error);
 
-const crearBusqueda = (selector,imagen, raza, color, descripcion,tamanio,email,latlgn,fecha,nombreUser,emailUser) => {
+const crearBusqueda = (selector, imagen, raza, color, descripcion, tamanio, email, latlgn, fecha, nombreUser, emailUser) => {
     //console.log(imagen, categoria, nombre_prod, precio_prod, descripcion_prod)
-    return fetch((`${url}`),{
-        method:"POST",
-        headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({
+    return fetch((`${url}`), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
             selector,
             imagen,
             raza,
@@ -30,40 +30,40 @@ const crearBusqueda = (selector,imagen, raza, color, descripcion,tamanio,email,l
 
 const crearUsuario = (email, nombre, apellido, nombreCompleto, imagen) => {
     console.log(email, nombre, apellido, nombreCompleto, imagen)
-    return fetch((`${url1}`),{
-        method:"POST",
-        headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({
+    return fetch((`${url1}`), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
             email,
             nombre,
             apellido,
             nombreCompleto,
             imagen
-      
+
         })
     })
 }
 
-const eliminarPets = (id) =>{
+const eliminarPets = (id) => {
     console.log("eliminar a", id)
     return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/pets/${id}`, {
         method: "DELETE"
     })
 }
 
-const detallePets = (id) =>{
+const detallePets = (id) => {
     return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/pets/${id}`)
-    .then( (respuesta) => respuesta.json())
+        .then((respuesta) => respuesta.json())
 }
 
-const actualizarPets = (imagen,selector, raza, color,tamanio,descripcion,email,fecha,latlgn,id) =>{
-    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/pets/${id}`,{
+const actualizarPets = (imagen, selector, raza, color, tamanio, descripcion, email, fecha, latlgn, id) => {
+    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/pets/${id}`, {
         method: "PUT",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({imagen,selector, raza, color,tamanio,descripcion,email,fecha,latlgn})
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ imagen, selector, raza, color, tamanio, descripcion, email, fecha, latlgn })
     })
-    .then( (respuesta) => respuesta)
-    .catch( (err) => console.log(err));
+        .then((respuesta) => respuesta)
+        .catch((err) => console.log(err));
 }
 
 
