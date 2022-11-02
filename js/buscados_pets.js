@@ -37,11 +37,15 @@ const crearNuevaLineaError = () => {
     `;
   lineaError.innerHTML = contenidoError;
 
-  return linea;
+  return lineaError;
 };
 
+var contiene = true;
 const div = document.querySelector("[data-search]");
-listaServices
+
+
+
+  listaServices
   .listaBuscados()
   .then((data) => {
     data.forEach(({ raza, tamanio, color, descripcion, imagen, id }) => {
@@ -50,11 +54,17 @@ listaServices
       const tamaniop = tamanio.toLowerCase();
       const descripcionp = descripcion.toLowerCase();
 
-      if (razap.includes(buscarp) || tamaniop.includes(buscarp) || descripcionp.includes(buscarp) || color.includes(buscarp)) {
+      if (razap.includes(buscarp) || tamaniop.includes(buscarp) || descripcionp.includes(buscarp) || colorp.includes(buscarp)) {
         const nuevaLinea = crearNuevaLinea(imagen, raza, id);
         div.appendChild(nuevaLinea);
+    
       }
 
     })
   })
   .catch((error) => console.log(error));
+
+
+
+
+  

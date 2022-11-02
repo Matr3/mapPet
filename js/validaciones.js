@@ -34,6 +34,7 @@ const mensajesError = {
     email: {
         valueMissing: "Este Campo no puede estar vacio",
         typeMismatch: "El correo no es valido",
+        patternMismatch: "El correo no es valido",
     },
 }
 

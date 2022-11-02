@@ -1,6 +1,5 @@
 import { listaServices } from "../service/cliente_service.js"
-import { lat } from "../js/maps_marcadores.js";
-import { lng } from "../js/maps_marcadores.js";
+import { lat, lng } from "../js/maps_marcadores.js";
 
 
 let imagen = "";
@@ -35,7 +34,6 @@ const btnAgregarImagen = document.querySelector(".agregar__imagen");
 btnAgregarImagen.addEventListener('change', cargar);
 
 async function cargar(ev) {
-    console.log("entre")
 
     const size = 50000;
     if (ev.target.files[0].size <= size) {
@@ -86,7 +84,6 @@ formAgregarProducto.addEventListener("submit", (evento) => {
         const email = document.querySelector("[data-tipo=email]").value;
         const latlgn = { lat: lat, lng: lng };
         const vacio = " ";
-        console.log(lat)
         if (lat === vacio) {
             console.log("marque en el mapa donde se perdio o encontro la mascota");
         } else {

@@ -4,6 +4,7 @@ import { perfilUser } from "./usuario_pets.js";
 import { detallePets } from "./detalle_pets.js";
 
 const carga_pets = document.querySelector(".carga_pets");
+const search_pets = document.querySelector(".search_pets");
 const perfilPets = document.querySelector(".perfilPets");
 const box_detalle_pets = document.querySelector(".box_detalle_pets");
 const perfil_cuerpo = document.querySelector(".box_ingreso");
@@ -68,6 +69,8 @@ export function obtenerDatos() {
 
             document.querySelector(".box_ingreso").style.display = "none";
             perfilUser();
+          } else if (search_pets) {
+          
           }
 
 
