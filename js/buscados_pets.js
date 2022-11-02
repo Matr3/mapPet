@@ -27,20 +27,6 @@ const crearNuevaLinea = (imagen, raza, id) => {
 
   return linea;
 };
-const crearNuevaLineaError = () => {
-  const lineaError = document.createElement("div");
-  const contenidoError = `
-    <div class="mascotas">
-    
-    <img class="img" src="./img/errorBusqueda.png" alt="">
- </div>
-    `;
-  lineaError.innerHTML = contenidoError;
-
-  return lineaError;
-};
-
-var contiene = true;
 const div = document.querySelector("[data-search]");
 
 
@@ -48,19 +34,23 @@ const div = document.querySelector("[data-search]");
   listaServices
   .listaBuscados()
   .then((data) => {
-    data.forEach(({ raza, tamanio, color, descripcion, imagen, id }) => {
-      const colorp = color.toLowerCase();
-      const razap = raza.toLowerCase();
-      const tamaniop = tamanio.toLowerCase();
-      const descripcionp = descripcion.toLowerCase();
 
-      if (razap.includes(buscarp) || tamaniop.includes(buscarp) || descripcionp.includes(buscarp) || colorp.includes(buscarp)) {
-        const nuevaLinea = crearNuevaLinea(imagen, raza, id);
-        div.appendChild(nuevaLinea);
+      data.forEach(({ raza, tamanio, color, descripcion, imagen, id }) => {
+        const colorp = color.toLowerCase();
+        const razap = raza.toLowerCase();
+        const tamaniop = tamanio.toLowerCase();
+        const descripcionp = descripcion.toLowerCase();
+  
+        if (razap.includes(buscarp) || tamaniop.includes(buscarp) || descripcionp.includes(buscarp) || colorp.includes(buscarp)) {
+          document.querySelector(".img").style.display = "none";
+          const nuevaLinea = crearNuevaLinea(imagen, raza, id);
+          div.appendChild(nuevaLinea);
+      
+        }
+  
+      })
     
-      }
-
-    })
+   
   })
   .catch((error) => console.log(error));
 
