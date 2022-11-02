@@ -42,7 +42,7 @@ const div = document.querySelector("[data-search]");
         const descripcionp = descripcion.toLowerCase();
   
         if (razap.includes(buscarp) || tamaniop.includes(buscarp) || descripcionp.includes(buscarp) || colorp.includes(buscarp)) {
-          document.querySelector(".img").style.display = "none";
+          document.querySelector(".img_search").style.display = "none";
           const nuevaLinea = crearNuevaLinea(imagen, raza, id);
           div.appendChild(nuevaLinea);
       

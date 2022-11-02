@@ -227,6 +227,19 @@ body {
     height: 100%;
 
 }
+.img_search {
+    z-index: 2;
+    width: 25%;
+    height: 25%;
+
+}
+.rotate{
+    width: 50%;
+    height: 50%;
+    z-index: -2;
+    transform: translateX(-30px) rotate(-20deg) translateY(0px);
+
+}
 
 .detalles {
     padding: 2rem;
